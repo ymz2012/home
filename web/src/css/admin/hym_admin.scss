@@ -1,0 +1,67 @@
+@media (min-width: 768px){
+  .side-nav {
+    position: fixed;
+    top: 70px;
+    left: 170px;
+    width: 170px;
+    margin-left: -170px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+}
+.table>thead>tr>th{
+  border-bottom: 1px solid #ddd;
+  height:30px;
+  font-size:14px;
+  color:#333;
+  line-height: 30px;
+}
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td{
+  padding-top:18px;
+  padding-bottom: 18px;
+}
+.table{
+  margin-bottom: 0;
+}
+.yo_txt_c{
+  text-align: center;
+  padding-top: 5px;
+}
+.yo_txt_r{
+  text-align:right;
+}
+.table>tbody>tr>td{
+  color:#666;
+    &.blue {
+      color: #3cd3db;
+    }
+    &.green{
+      color:#7cdb7a;
+    }
+  }
+.yel_btn{
+  width:30px;
+  height:30px;
+  background:url("../../image/admin/list_edit.png") no-repeat center;
+  background-size:100%;
+}
+.red_btn{
+  width:30px;
+  height:30px;
+  background:url("../../image/admin/list_delete.png") no-repeat center;
+  background-size:100%;
+}
+.blue_btn{
+  width:88px;
+  height:30px;
+  background:#30d3db;
+  color:#fff;
+}

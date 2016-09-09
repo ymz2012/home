@@ -1,0 +1,196 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  background: #f1f1f1; }
+
+.alert {
+  padding: 0.46875rem;
+  line-height: 1.5em;
+  font-size: 12px;
+  font-family: "HY QIHEI50" !important;
+  color: #999; }
+  [data-dpr="2"] .alert {
+    font-size: 24px; }
+    @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+      [data-dpr="2"] .alert {
+        font-size: 48px; } }
+  [data-dpr="3"] .alert {
+    font-size: 36px; }
+    @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+      [data-dpr="3"] .alert {
+        font-size: 72px; } }
+  @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+    .alert {
+      font-size: 24px; } }
+
+.form_box .forms {
+  background: #fff;
+  padding-left: 0.46875rem;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea; }
+  .form_box .forms li {
+    height: 1.40625rem;
+    line-height: 1.40625rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
+    padding-top: 5px; }
+    .form_box .forms li:last-child {
+      border-bottom: 0; }
+    .form_box .forms li label {
+      color: #333;
+      font-size: 14px;
+      font-family: "HY QIHEI50" !important;
+      width: 2.1875rem;
+      display: inline-block; }
+      [data-dpr="2"] .form_box .forms li label {
+        font-size: 28px; }
+        @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+          [data-dpr="2"] .form_box .forms li label {
+            font-size: 56px; } }
+      [data-dpr="3"] .form_box .forms li label {
+        font-size: 42px; }
+        @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+          [data-dpr="3"] .form_box .forms li label {
+            font-size: 84px; } }
+      @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+        .form_box .forms li label {
+          font-size: 28px; } }
+    .form_box .forms li input, .form_box .forms li select {
+      -webkit-appearance: none;
+      background: none;
+      border: 0;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      height: 1.01563rem;
+      width: 7.03125rem;
+      -webkit-box-flex: 1;
+      color: #666;
+      font-size: 14px;
+      font-family: "HY QIHEI50" !important;
+      text-align: left;
+      padding-left: 0;
+      margin-top: -5px; }
+      [data-dpr="2"] .form_box .forms li input, [data-dpr="2"] .form_box .forms li select {
+        font-size: 28px; }
+        @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+          [data-dpr="2"] .form_box .forms li input, [data-dpr="2"] .form_box .forms li select {
+            font-size: 56px; } }
+      [data-dpr="3"] .form_box .forms li input, [data-dpr="3"] .form_box .forms li select {
+        font-size: 42px; }
+        @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+          [data-dpr="3"] .form_box .forms li input, [data-dpr="3"] .form_box .forms li select {
+            font-size: 84px; } }
+      @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+        .form_box .forms li input, .form_box .forms li select {
+          font-size: 28px; } }
+      .form_box .forms li input::-webkit-input-placeholder, .form_box .forms li select::-webkit-input-placeholder {
+        color: #999;
+        font-size: 14px;
+        font-family: "HY QIHEI50" !important; }
+        [data-dpr="2"] .form_box .forms li input::-webkit-input-placeholder, [data-dpr="2"] .form_box .forms li select::-webkit-input-placeholder {
+          font-size: 28px; }
+          @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+            [data-dpr="2"] .form_box .forms li input::-webkit-input-placeholder, [data-dpr="2"] .form_box .forms li select::-webkit-input-placeholder {
+              font-size: 56px; } }
+        [data-dpr="3"] .form_box .forms li input::-webkit-input-placeholder, [data-dpr="3"] .form_box .forms li select::-webkit-input-placeholder {
+          font-size: 42px; }
+          @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+            [data-dpr="3"] .form_box .forms li input::-webkit-input-placeholder, [data-dpr="3"] .form_box .forms li select::-webkit-input-placeholder {
+              font-size: 84px; } }
+        @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+          .form_box .forms li input::-webkit-input-placeholder, .form_box .forms li select::-webkit-input-placeholder {
+            font-size: 28px; } }
+      .form_box .forms li input option:first-child, .form_box .forms li select option:first-child {
+        color: #999;
+        font-size: 14px; }
+        [data-dpr="2"] .form_box .forms li input option:first-child, [data-dpr="2"] .form_box .forms li select option:first-child {
+          font-size: 28px; }
+          @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+            [data-dpr="2"] .form_box .forms li input option:first-child, [data-dpr="2"] .form_box .forms li select option:first-child {
+              font-size: 56px; } }
+        [data-dpr="3"] .form_box .forms li input option:first-child, [data-dpr="3"] .form_box .forms li select option:first-child {
+          font-size: 42px; }
+          @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+            [data-dpr="3"] .form_box .forms li input option:first-child, [data-dpr="3"] .form_box .forms li select option:first-child {
+              font-size: 84px; } }
+        @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+          .form_box .forms li input option:first-child, .form_box .forms li select option:first-child {
+            font-size: 28px; } }
+    .form_box .forms li textarea {
+      outline: none;
+      width: 7.10938rem;
+      height: 3.25rem;
+      border: none;
+      resize: none;
+      color: #666;
+      padding-top: 0.46875rem;
+      display: block;
+      font-size: 14px;
+      font-family: "HY QIHEI50" !important;
+      box-sizing: border-box; }
+      [data-dpr="2"] .form_box .forms li textarea {
+        font-size: 28px; }
+        @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+          [data-dpr="2"] .form_box .forms li textarea {
+            font-size: 56px; } }
+      [data-dpr="3"] .form_box .forms li textarea {
+        font-size: 42px; }
+        @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+          [data-dpr="3"] .form_box .forms li textarea {
+            font-size: 84px; } }
+      @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+        .form_box .forms li textarea {
+          font-size: 28px; } }
+      .form_box .forms li textarea::-webkit-input-placeholder {
+        color: #999;
+        font-size: 14px;
+        font-family: "HY QIHEI50" !important; }
+        [data-dpr="2"] .form_box .forms li textarea::-webkit-input-placeholder {
+          font-size: 28px; }
+          @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+            [data-dpr="2"] .form_box .forms li textarea::-webkit-input-placeholder {
+              font-size: 56px; } }
+        [data-dpr="3"] .form_box .forms li textarea::-webkit-input-placeholder {
+          font-size: 42px; }
+          @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+            [data-dpr="3"] .form_box .forms li textarea::-webkit-input-placeholder {
+              font-size: 84px; } }
+        @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+          .form_box .forms li textarea::-webkit-input-placeholder {
+            font-size: 28px; } }
+    .form_box .forms li:last-child {
+      height: auto;
+      -webkit-box-align: start; }
+.form_box .form_footer {
+  height: 1.5625rem;
+  padding: 0.46875rem; }
+  .form_box .form_footer .save {
+    font-size: 14px;
+    font-family: "HY QIHEI50" !important;
+    height: 1.03125rem;
+    border-radius: 0.15625rem;
+    color: #fff;
+    text-align: center;
+    background: #3cd3db;
+    line-height: 1.03125rem; }
+    [data-dpr="2"] .form_box .form_footer .save {
+      font-size: 28px; }
+      @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+        [data-dpr="2"] .form_box .form_footer .save {
+          font-size: 56px; } }
+    [data-dpr="3"] .form_box .form_footer .save {
+      font-size: 42px; }
+      @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+        [data-dpr="3"] .form_box .form_footer .save {
+          font-size: 84px; } }
+    @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+      .form_box .form_footer .save {
+        font-size: 28px; } }
+
+/*# sourceMappingURL=address.css.map */

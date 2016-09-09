@@ -1,0 +1,39 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+.hym_body{
+  width:100%;
+  height:auto;
+  position: relative;
+  img{
+    width:100%;
+    height:auto;
+  }
+  .position{
+    position: absolute;
+    width:px2rem(430px);
+    height:px2rem(100px);
+
+    left:50%;
+    margin-left: px2rem(-210px);
+  }
+  .ios_btn_up{
+    background: url("../../image/index/mobile/download_ios.png") no-repeat center center;
+    background-size:px2rem(398px) px2rem(88px);
+    top:px2rem(225px);
+  }
+  .android_btn_up{
+    background: url("../../image/index/mobile/download_android.png") no-repeat center;
+    background-size:px2rem(398px) px2rem(88px);
+    top:px2rem(354px);
+  }
+  .ios_btn_bottom{
+    background: url("../../image/index/mobile/download_ios.png") no-repeat center;
+    background-size:px2rem(398px) px2rem(88px);
+    bottom:px2rem(290px);
+  }
+  .android_btn_bottom{
+    background: url("../../image/index/mobile/download_android.png") no-repeat center;
+    background-size:px2rem(398px) px2rem(88px);
+    bottom:px2rem(155px);
+  }
+}

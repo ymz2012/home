@@ -1,0 +1,101 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+body{
+  background:#f1f1f1;
+}
+.alert{
+  padding:px2rem-s(30px);
+  line-height: 1.5em;
+  @include font-dpr(12px);
+  @include font-normal();
+  color:#999;
+}
+.form_box {
+  .forms {
+    background: #fff;
+    padding-left: px2rem-s(30px);
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    li {
+      height: px2rem-s(90px);
+      line-height: px2rem-s(90px);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 5px;
+      padding-top:5px;
+      &:last-child {
+        border-bottom: 0;
+      }
+      label {
+        color: #333;
+        @include font-dpr(14px);
+        @include font-normal();
+        width: px2rem-s(140px);
+        display: inline-block;
+      }
+      input, select {
+        -webkit-appearance: none;
+        background: none;
+        border: 0;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        height: px2rem-s(65px);
+        width:px2rem-s(450px);
+        -webkit-box-flex: 1;
+        color: #666;
+        @include font-dpr(14px);
+        @include font-normal();
+        text-align: left;
+        padding-left:0;
+        margin-top:-5px;
+        &::-webkit-input-placeholder {
+          color: #999;
+          @include font-dpr(14px);
+          @include font-normal();
+        }
+        option:first-child{
+          color:#999;
+          @include font-dpr(14px);
+        }
+      }
+      textarea{
+        outline: none;
+        width:px2rem-s(455px);
+        height:px2rem-s(208px);
+        border:none;
+        resize:none;
+        color:#666;
+        padding-top:px2rem-s(30px);
+        display: block;
+        @include font-dpr(14px);
+        @include font-normal();
+        box-sizing: border-box;
+        &::-webkit-input-placeholder {
+          color: #999;
+          @include font-dpr(14px);
+          @include font-normal();
+        }
+      }
+      &:last-child{
+        height:auto;
+        -webkit-box-align: start;
+      }
+    }
+  }
+  .form_footer{
+    height:px2rem-s(100px);
+    padding:px2rem-s(30px);
+    .save{
+      @include font-dpr(14px);
+      @include font-normal();
+      height:px2rem-s(66px);
+      border-radius: px2rem-s(10px);
+      color:#fff;
+      text-align: center;
+      background:#3cd3db;
+      line-height: px2rem-s(66px);
+    }
+  }
+
+}

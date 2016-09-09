@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta name="env" content="${env}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script>
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>2000&&(a=2000*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=!y.match(/android/gi),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script>
+        var browser={versions:function(){var u=navigator.userAgent,app=navigator.appVersion;return{webKit:u.indexOf('AppleWebKit')>-1,ios:!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:u.indexOf('Android')>-1||u.indexOf('Linux')>-1,weixin:u.indexOf('MicroMessenger')>-1,txnews:u.indexOf('qqnews')>-1,sinawb:u.indexOf('weibo')>-1,mqq:u.indexOf('QQ')>-1};}(),language:(navigator.browserLanguage||navigator.language).toLowerCase()};var html="@font-face {font-family: 'HY QIHEI35';src: url('font/HYQiHei-35S.otf');}"+"@font-face {font-family: 'HY QIHEI50';src: url('font/HYQiHei-50S.otf');}";var dHtml=document.createElement("style");dHtml.innerHTML=html;if(browser.versions.android){document.getElementsByTagName("head")[0].appendChild(dHtml);}
+    </script>
+    <title>用户协议</title>
+    <style>
+        body {color: #666666;text-align: justify;margin-left:10px;}
+        div{text-align: justify;text-justify:auto;}
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        为切实保护数胎动用户隐私权益，优化用户体验，本应用根据现行法规及政策，制定本《隐私政策》。本《隐私政策》将详细说明在获取、管理及保护用户个人信息方面的政策和措施，适用于数胎动App向您提供的所有服务，包括您使用移动终端或其他设备获得的数胎动相关应用（以下简称数胎动）服务.
+        <br /><br />
+        个人信息的收集——
+        <br /><br />
+        本应用将在您注册数胎动账号或使用数胎动提供的服务时记录您提供的相关个人信息，包括但不限于以下信息：手机号码、个人生理及医疗相关数据。上述信息是您获得数胎动提供服务的基础，是为了帮助数胎动更精准地帮您管理您的健康数据。同时，基于优化用户体验的目的，本应用会获取与提升数胎动服务有关的其他信息，例如当您访问数胎动时，我们可能会收集一些您的用户意见或浏览器软件信息等以便优化我们的产品和服务。
+        <br /><br />
+        未经您本人允许，本应用不会向任何第三方披露您的个人信息，下列情形除外：
+        <br />
+        1 已取得您或您监护人的授权；
+        <br />
+        2 司法机关或行政机关给予法定程序要求数胎动披露的；
+        <br />
+        3 数胎动为维护自身合法权益而向用户提起诉讼或仲裁时；
+        <br />
+        4 根据您与数胎动相关服务条款、应用许可使用协议的约定；
+        <br />
+        5 法律法规规定的其他情形。
+        <br /><br />
+        1 以适当方式对用户个人信息进行加密处理；
+        <br />
+        2 在适当位置使用隐私密码对用户个人信息进行保护；
+        <br />
+        3 限制对用户个人信息的访问；
+        <br />
+        4 其他的合理措施。尽管已经采取了上述合理有效措施，并已经遵守了相关法律规定要求的标准，但数胎动仍无法百分百保证您的个人信息通过不安全途径进行交流时的安全性。因此，用户应当采取积极措施保护个人信息的安全，不随便将自己的账号密码等个人信息透露给他人。
+        <br /><br />
+        用户在使用本软件及服务时,须自行承担如下来自数胎动不可掌控的风险内容,包括但不限于:
+        <br />
+          1 由于不可抗拒的因素可能引起个人信息丢失、泄露等风险；
+        <br />
+          2 数胎动提供的个人信息保护措施仅适用于数胎动平台，一旦您离开数胎动，浏览或使用其他网站、服务及内容资源，数胎动则没有能力及义务保护您在数胎动之外的网站提交的任何个人信息，无论您登陆或浏览上述网站是否基于数胎动的链接或引导；
+        <br />
+          3 由于无线网络信号不稳定，所引起的数胎动资料同步不完整、资料丢失等风险。
+        <br /><br />
+        基于安全性考虑，在您忘记网站密码时，必须联系客服验证身份后方可获得后续的找回密码服务。
+        <br /><br />
+        对Cookie及web beacon的使用——
+        <br /><br />
+        Cookie可以帮助网站辨认注册用户，计算用户数量，通常被各网站用于判定完成注册的用户是否已经实现登录。数胎动承诺，对Cookie信息的研究仅用于提升产品或服务质量及优化用户体验的目的。如您不希望个人信息保留在Cookie中，您可以通过对浏览器Cookie的设置来清除个人信息。但完成关闭Cookie的操作后，可能会影响到您使用数胎动应用或不能充分取得数胎动的服务。
+        <br /><br />
+        以上内容同web beacon的使用。
+        <br /><br />
+        位置服务——
+        <br /><br />
+        我们将在产品中提供位置服务，数胎动和被许可人在提供服务时可能会收集使用并共享准确的位置数据，包括您设备的实施地理位置。在条件允许时，基于位置的服务会使用GPS、蓝牙和您的IP地址，再加上中保的WIFI热点和手机信号塔位置，以及其他技术来确定您的设备所处的大致位置。您可以选择关闭定位功能，但是将无法使用应用中提供的基于位置的相关服务，如果您选择开启定位功能，数胎动将默认您已理解并同意数胎动使用您的位置信息，并向您提供相应服务。
+        <br /><br />
+        以上，数胎动有权随时修改《隐私说明》的任何内容，请您务必在注册时阅读本说明中的内容，一旦注册完成，数胎动将默认您已阅读并同意注册当时版本的《隐私说明》中的所有条款。
+    </div>
+</section>
+</body>
+</html>

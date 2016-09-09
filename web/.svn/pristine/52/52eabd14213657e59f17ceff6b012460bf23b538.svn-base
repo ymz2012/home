@@ -1,0 +1,370 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+body, html {
+  background-color: #f0f0f0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.header {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 15px;
+  a {
+    display: block;
+    img {
+      display: block;
+
+    }
+  }
+}
+
+.ercode {
+  position: absolute;
+  height: 240px;
+  width: 100%;
+  top: 90px;
+  z-index: 999;
+  .ercodeIn {
+    width: 1200px;
+    margin: 0 auto;
+    height: 240px;
+    img {
+      margin-left: 950px;
+    }
+
+  }
+}
+
+.section {
+  height: 630px;
+  width: 100%;
+  min-width: 1200px;
+
+  .mainTitle {
+    height: 80px;
+    width: 1200px;
+    margin: 0 auto 10px;
+    line-height: 1;
+    .mainTitleTop {
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      width: 100%;
+      font-size: 26px;
+      color: #343434;
+    }
+
+    .mainTitleBottom {
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      color: #747474;
+    }
+  }
+
+  .mainContent {
+    height: 464px;
+    min-width: 1200px;
+    position: relative;
+    @include clearfix;
+    .mainLeft {
+      height: 100%;
+      width: 49.99999%;
+      float: left;
+      margin: 0 auto;
+      background-image: url(../../image/index/pc/web_bg_left.jpg);
+    }
+
+    .mainRight {
+      height: 100%;
+      width: 49.999999%;
+      float: left;
+      margin: 0 auto;
+      background-image: url(../../image/index/pc/web_bg_right.jpg);
+    }
+  }
+  .mainBottom {
+    width: 945px;
+    height: 95px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0px 6px 8px #e0e0e0;
+    position: relative;
+    top: -40px;
+    .arrow {
+      width: 35px;
+      height: 60px;
+      text-align: center;
+      margin-top: 17px;
+      cursor: pointer;
+      position: relative;
+      img {
+        margin-top: 16px;
+      }
+    }
+
+    .bannerLeft {
+      float: left;
+      border-right: 1px solid #d9d9d9;
+
+      .arrowsLeft {
+        width: 16px;
+        height: 28px;
+        background-image: url(../../image/index/pc/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        margin-top: 16px;
+        margin-left: 9px;
+      }
+    }
+
+    .bannerRight {
+      float: right;
+      border-left: 1px solid #d9d9d9;
+
+      .arrowsRight {
+        width: 16px;
+        height: 28px;
+        background-image: url(../../image/index/pc/arrow.png);
+        background-repeat: no-repeat;
+        background-position: -20px -30px;
+        margin-top: 16px;
+        margin-left: 11px;
+      }
+    }
+  }
+
+  .wrap-outer {
+    width: 945px;
+    margin: 0 auto;
+    height: 140px;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    overflow-x: hidden;
+  }
+  .menus {
+    width: 945px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    /*left: -269px;*/
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .tab {
+    width: 134px;
+    height: 60px;
+    cursor: pointer;
+    float: left;
+    margin-top: 17px;
+    border-right: 1px solid #d9d9d9;
+    position: relative;
+
+    &.last {
+      border-right: 0;
+    }
+
+    .tabImg {
+      width: 134px;
+      height: 50px;
+      text-align: center;
+
+      div {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        background-image: url(../../image/index/pc/menu_icon.png);
+      }
+
+      div.inoculation {
+        background-position: 0 0;
+      }
+
+      div.inoculationclick {
+        background-position: 0 -100px;
+      }
+
+      div.record {
+        width: 46px;
+        background-position: -80px 0;
+      }
+
+      div.prepare {
+        background-position: -160px 0;
+      }
+
+      div.fetal {
+        width: 40px;
+        background-position: -240px 0;
+      }
+
+      div.parenting {
+        width: 55px;
+        background-position: -320px 0;
+      }
+
+      div.tool {
+        width: 41px;
+        background-position: -400px 0;
+      }
+
+      div.communication {
+        background-position: -480px 0;
+      }
+
+      img.tabImgHight {
+        margin-top: -40px;
+      }
+    }
+
+    .tabContent {
+      width: 134px;
+      height: 14px;
+      line-height: 14px;
+      color: #857c7d;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .tab-last-child {
+    .tabImg {
+      height: 90px;
+    }
+
+    .tabImg {
+      margin-top: -40px;
+
+      div {
+        position: relative;
+        z-index: 200;
+        width: 80px !important;
+        height: 90px;
+      }
+    }
+
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  min-width: 1200px;
+  .market {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+    img {
+      margin-right: 25px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+  .companyInfo {
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+  }
+  .companyInfo {
+    color: #a7a7a7;
+    margin-top: 20px;
+    font-size: 15px;
+    div {
+      text-align: center;
+      height: 22px;
+    }
+  }
+}
+
+.mainContent {
+  .mainLeft {
+
+    .mainLeftTips {
+      height: 100%;
+      div {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: right;
+      }
+      .inoculation {
+        background-image: url("../../image/index/pc/ie8/inoculation-l.png");
+      }
+      .record {
+        background-image: url("../../image/index/pc/ie8/record-l.png");
+      }
+
+      .prepare {
+        background-image: url("../../image/index/pc/ie8/prepare-l.png");
+      }
+
+      .fetal {
+        background-image: url("../../image/index/pc/ie8/fetal-l.png");
+      }
+
+      .parenting {
+        background-image: url("../../image/index/pc/ie8/parenting-l.png");
+      }
+
+      .tool {
+        background-image: url("../../image/index/pc/ie8/tool-l.png");
+      }
+
+      .communication {
+        background-image: url("../../image/index/pc/ie8/communication-l.png");
+      }
+    }
+  }
+  .mainRight {
+    .mainRightTips {
+      height: 100%;
+      div {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: left;
+      }
+      .inoculation {
+        background-image: url("../../image/index/pc/ie8/inoculation-r.png");
+      }
+      .record {
+        background-image: url("../../image/index/pc/ie8/record-r.png");
+      }
+      .prepare {
+        background-image: url("../../image/index/pc/ie8/prepare-r.png");
+      }
+
+      .fetal {
+        background-image: url("../../image/index/pc/ie8/fetal-r.png");
+      }
+
+      .parenting {
+        background-image: url("../../image/index/pc/ie8/parenting-r.png");
+      }
+
+      .tool {
+        background-image: url("../../image/index/pc/ie8/tool-r.png");
+      }
+
+      .communication {
+        background-image: url("../../image/index/pc/ie8/communication-r.png");
+      }
+    }
+  }
+}
+

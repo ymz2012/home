@@ -1,0 +1,122 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+body, html {
+  background-color: #f0f0f0; }
+
+body {
+  overflow: hidden; }
+
+.header {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  height: 130px; }
+  .header a {
+    display: block;
+    float: left; }
+    .header a img {
+      display: block; }
+  .header span {
+    float: right;
+    height: 66px;
+    line-height: 66px;
+    font-size: 20px;
+    color: #999; }
+
+.section {
+  height: 630px;
+  width: 100%;
+  min-width: 1200px; }
+  .section .mainContent {
+    height: 464px;
+    min-width: 1200px;
+    position: relative; }
+    .section .mainContent:before, .section .mainContent:after {
+      content: " ";
+      display: table; }
+    .section .mainContent:after {
+      clear: both; }
+    .section .mainContent .mainLeft {
+      height: 100%;
+      width: 49.99999%;
+      float: left;
+      margin: 0 auto;
+      background-image: url(../../image/admin/web_bg_left.jpg); }
+    .section .mainContent .mainRight {
+      height: 100%;
+      width: 49.999999%;
+      float: left;
+      margin: 0 auto;
+      background-image: url(../../image/admin/web_bg_right.jpg); }
+
+.mainContent .mainLeft .mainLeftTips {
+  height: 100%; }
+  .mainContent .mainLeft .mainLeftTips div {
+    height: 100%; }
+  .mainContent .mainLeft .mainLeftTips .inoculation {
+    background: url("../../image/admin/inoculation-l.png") no-repeat center right; }
+.mainContent .mainRight .mainRightTips {
+  padding-top: 60px;
+  padding-left: 110px;
+  height: 100%; }
+  .mainContent .mainRight .mainRightTips .login_title {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    border-bottom: 1px solid #eaeaea;
+    color: #666;
+    font-size: 18px; }
+  .mainContent .mainRight .mainRightTips form {
+    padding: 0px 20px 25px; }
+    .mainContent .mainRight .mainRightTips form .input_group {
+      padding-top: 25px;
+      width: 100%; }
+      .mainContent .mainRight .mainRightTips form .input_group lable {
+        font-size: 14px;
+        color: #333; }
+      .mainContent .mainRight .mainRightTips form .input_group .input_box {
+        padding-top: 9px; }
+      .mainContent .mainRight .mainRightTips form .input_group .find_password_btn {
+        text-align: right;
+        color: #b4b4b4;
+        font-size: 14px;
+        padding-top: 14px;
+        height: 39px; }
+      .mainContent .mainRight .mainRightTips form .input_group .obtain_code {
+        font-size: 15px;
+        color: #2ed4db;
+        padding-left: 10px;
+        text-decoration: underline; }
+    .mainContent .mainRight .mainRightTips form .login_btn input {
+      width: 100%;
+      height: 36px;
+      color: #fff;
+      background: #2ed4db;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      border: 0;
+      outline: none;
+      -webkit-tap-highlight-color: transparent; }
+  .mainContent .mainRight .mainRightTips .user_login {
+    display: none;
+    width: 300px;
+    background: #fff;
+    border-radius: 4px; }
+  .mainContent .mainRight .mainRightTips .find_password_box {
+    width: 300px;
+    background: #fff;
+    border-radius: 4px; }
+    .mainContent .mainRight .mainRightTips .find_password_box form {
+      padding-top: 25px; }
+      .mainContent .mainRight .mainRightTips .find_password_box form .input_group {
+        padding-bottom: 20px;
+        padding-top: 0; }
+      .mainContent .mainRight .mainRightTips .find_password_box form .login_btn {
+        padding-top: 12px; }
+
+/*# sourceMappingURL=admin_login.css.map */

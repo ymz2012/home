@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>好孕妈-话题列表</title>
+    <!-- build:css({.tmp,minsrc/src}) minsrc/src/css/admin_topic_list/admin_topic_list0.min.css -->
+    <link rel="stylesheet" href="css/cdn/myreset.min.css" type="text/css"/>
+    <link href="css/cdn/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/admin/hym_admin.css">
+    <link rel="stylesheet" href="css/admin/admin_topic_list.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div id="wrapper">
+        <div class="yo_header clearfix">
+            <a href="#" class="logo_box">
+                <img src="image/admin/logo.png"/>
+            </a>
+            <div class="login_box">
+                <span style="color:#999;padding-right:36px;">游小言 您好 ! 欢迎使用好孕妈内容管理系统</span>
+                <a href="#" class="edit_code" id="edit_code">修改密码</a>
+                &nbsp; | &nbsp;
+                <a href="#" class="quit" id="quit">退出</a>
+            </div>
+        </div>
+        <div class="yo_nav">
+            <ul>
+                <li class="on topic">
+                    话题
+                </li>
+                <li class="reply">
+                    回复消息
+                </li>
+                <li class="knowledge">
+                    知识
+                </li>
+            </ul>
+        </div>
+    <div class="yo_body">
+
+        <div class="yo_content">
+            <div class="top">
+                <div class="title">话题列表</div>
+                <div class="add_topic_btn">新增话题</div>
+            </div>
+            <div class="bottom">
+                <div class="form">
+                    <form class="form-inline panel-body" style="padding-top:8px;padding-bottom:8px;">
+                        <div class="form-group controls span10 yo_date">
+                            <lable for="startTime">类型</lable>
+                            <div class="btn-group" style="margin-right:64px;">
+                                <button type="button" class="btn btn-default" style="width:160px;">全部话题类型</button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="form-group yo_date">
+                            <lable for="endTime">小组</lable>
+                            <div class="btn-group" style="margin-right:10px;">
+                                <button type="button" class="btn btn-default" style="width:111px">同龄圈</button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default">石家庄同城妈妈</button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="form-inline panel-body" style="padding-top:8px;padding-bottom:8px;">
+                        <div class="form-group controls span10 yo_date" style="width:60%; max-width: 660px;">
+                            <lable for="title">标题</lable>
+                            <input type="text" id="title" name="title" placeholder="请输入帖子标题进行搜索" class="form-control"  style="height:30px;width:80%;max-width: 602px;"/>
+                        </div>
+                        <button class="btn" style="height:32px; width:10%;background:#2ed4db;color:#fff;max-width: 160px;">搜索</button>
+                    </form>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background:#f7fafa;color:#999;font-size:12px;height:30px;">
+                        当前共<span style="color: #3cd3db;"> 4 </span>条话题已发布
+                    </div>
+                    <div class="panel-body" style="padding:0 15px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table yo_table">
+                                    <thead>
+                                    <tr >
+                                        <th class="yo_txt_c">ID</th>
+                                        <th class="yo_txt_c">类型</th>
+                                        <th class="yo_txt_c">标题</th>
+                                        <th class="yo_txt_c">小组</th>
+                                        <th class="yo_txt_c">创建时间</th>
+                                        <th class="yo_txt_c">回复</th>
+                                        <th class="yo_txt_c">状态</th>
+                                        <th class="yo_txt_c">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="yo_txt_c blue">21072247</td>
+                                        <td class="yo_txt_c">投票</td>
+                                        <td class="yo_txt_c">各位宝妈是怎样去处理宝宝粑粑状况的?</td>
+                                        <td class="yo_txt_c">2016年5月宝妈</td>
+                                        <td class="yo_txt_c">2016.08.09 15:59:13</td>
+                                        <td class="yo_txt_c">1123</td>
+                                        <td class="yo_txt_c green">已上线</td>
+                                        <td class="yo_txt_c">
+                                            <button class="btn yel_btn" id="editBtn" style="margin-right:10px;"></button>
+                                            <button class="btn red_btn" id="delBtn" style="margin-right:10px;"></button>
+                                            <button class="btn blue_btn" id="copyURL">复制URL</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="yo_txt_c blue">21072247</td>
+                                        <td class="yo_txt_c">问答</td>
+                                        <td class="yo_txt_c">排卵期同房了怎么解?</td>
+                                        <td class="yo_txt_c">备孕之家</td>
+                                        <td class="yo_txt_c">2016.08.09 15:59:13</td>
+                                        <td class="yo_txt_c">0</td>
+                                        <td class="yo_txt_c">草稿</td>
+                                        <td class="yo_txt_c">
+                                            <button class="btn yel_btn" id="alertEdit" style="margin-right:10px;"></button>
+                                            <button class="btn red_btn" id="alertDe" style="margin-right:10px;"></button>
+                                            <button class="btn blue_btn" id="copyURL">复制URL</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/admin_topic_list/admin_topic_list0.min.js -->
+<script src="js/cdn/jquery-1.9.1.min.js"></script>
+<script src="js/cdn/bootstrap.min.js"></script>
+<script src="js/admin/yo_base.js"></script>
+<!-- endbuild -->
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/admin_topic_list/admin_topic_list1.min.js -->
+<script src="js/admin/admin_login.js"></script>
+<!-- endbuild -->
+</body>
+</html>

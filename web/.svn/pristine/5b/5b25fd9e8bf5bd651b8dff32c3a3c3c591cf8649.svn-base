@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>好孕妈-后台登录</title>
+    <!-- build:css({.tmp,minsrc/src}) minsrc/src/css/index/index_ie80.min.css -->
+    <link rel="stylesheet" href="css/cdn/myreset.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/admin/admin_login.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div class="header">
+    <a href="#">
+        <img src="image/index/pc/logo.png"/>
+    </a>
+    <span>欢迎使用好孕妈内容管理系统</span>
+</div>
+
+<div class="section">
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="mainLeftTips">
+                <div class="inoculation" style="display: block;"></div>
+                <div class="record"></div>
+                <div class="prepare"></div>
+                <div class="fetal"></div>
+                <div class="parenting"></div>
+                <div class="tool"></div>
+                <div class="communication"></div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="mainRightTips">
+                <div class="inoculation" style="display: block;"></div>
+                <div class="record"></div>
+                <div class="prepare"></div>
+                <div class="fetal"></div>
+                <div class="parenting"></div>
+                <div class="tool"></div>
+                <div class="communication"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/index/index_ie80.min.js -->
+<script src="js/cdn/jquery-1.9.1.min.js"></script>
+<!-- endbuild -->
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/index/index_ie81.min.js -->
+<script src="js/index/ie8.js"></script>
+<!-- endbuild -->
+</body>
+</html>

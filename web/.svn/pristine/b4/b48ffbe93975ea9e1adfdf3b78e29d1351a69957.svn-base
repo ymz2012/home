@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta name="env" content="${env}"/>
+    <meta name="hym_uid" content="${hym_uid}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script>
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>2000&&(a=2000*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=!y.match(/android/gi),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script>
+        var browser={versions:function(){var u=navigator.userAgent,app=navigator.appVersion;return{webKit:u.indexOf('AppleWebKit')>-1,ios:!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:u.indexOf('Android')>-1||u.indexOf('Linux')>-1,weixin:u.indexOf('MicroMessenger')>-1,txnews:u.indexOf('qqnews')>-1,sinawb:u.indexOf('weibo')>-1,mqq:u.indexOf('QQ')>-1};}(),language:(navigator.browserLanguage||navigator.language).toLowerCase()};var html="@font-face {font-family: 'HY QIHEI35';src: url('font/HYQiHei-35S.otf');}"+"@font-face {font-family: 'HY QIHEI50';src: url('font/HYQiHei-50S.otf');}";var dHtml=document.createElement("style");dHtml.innerHTML=html;if(browser.versions.android){document.getElementsByTagName("head")[0].appendChild(dHtml);}
+    </script>
+    <!-- build:css({.tmp,minsrc/src}) minsrc/src/css/direct_seeding_share/direct_seeding_share0.min.css -->
+    <link rel="stylesheet" href="css/direct_seeding_share/direct_seeding_share.css" type="text/css"/>
+    <!-- endbuild -->
+    <title>${hym_title}</title>
+</head>
+<body>
+<div class="wrap" id="wrap">
+</div>
+<div style="height:100px"></div>
+<div class="footer_fixed" id="footer_fixed">
+    <div class="close" id="close"></div>
+    <div class="down" id="down"></div>
+</div>
+<script id="ejs_wrap" type="text/template">
+    <div class="banner">
+        <div class="img">
+            <img src="[%=data.pic%]" alt="">
+        </div>
+        [%if(data.stage != 3){%]
+        <div class="banner_fixed">
+            [%if(data.stage == 1){%]
+            直播开始还有 <span class="direct_seeding_time">[%if(begainday!=0){%][%=begainday%]天[%}%][%if(begainhour!=0){%][%=begainhour%]小时[%}%][%=begainminute%]分钟</span>
+            [%}else if(data.stage == 2){%]
+            直播结束还有[%if(endday != 0){%][%=endday%]天[%}%][%if(endhour!=0){%][%=endhour%]小时[%}%][%=endminute%]分钟
+            [%}%]
+        </div>
+        [%}%]
+    </div>
+    <div class="join_people">
+        <div class="people_num">
+            <span class="blue">[%=data.onlineUserCount%]人</span>参与
+        </div>
+        <div class="stage">
+            [%if(data.stage == 1){%]
+            问题征集中
+            [%}else if(data.stage == 2){%]
+            直播进行中
+            [%}else if(data.stage == 3){%]
+            直播已结束
+            [%}%]
+        </div>
+    </div>
+    [%if(rows.length < 10 && rows.length > 0){%]
+        [%for(var i =0; i< rows.length ; i++){%]
+            <div class="dialog">
+                <div class="people_img">
+                    [%if(rows[i].userIcon != 0){%]
+                    <img src="[%=rows[i].userIcon%]" alt="">
+                    [%}else{%]
+                    <img src="image/portrait_default.png" alt="">
+                    [%}%]
+                </div>
+                <div class="content">
+                    <div class="expert">
+                        <div class="name">
+                            <p>[%=rows[i].nick%] </p>[%if(rows[i].title != ""){%]<span class="label">[%=rows[i].title%]</span>[%}%]
+                        </div>
+                        <div class="time">
+                            [%=rows[i].dateline%]
+                        </div>
+                    </div>
+                    [%if(rows[i].messageType == 4){%]
+                    <div class="voice">
+                        <div class="voice_arrow"></div>
+                        <div class="box" id="box" style="width:[%= ((((rows[i].duration)- 1)*1.76*1.5)+37)/font %]rem">
+                            <div class="line " id="line">
+                                <img src="image/direct_seeding_share/live_voice_icon_3.png" alt="">
+                            </div>
+                            <audio src="[%=rows[i].message%]"></audio>
+                        </div>
+                        <p class="time_length">[%=rows[i].duration%]"</p>
+                    </div>
+                    [%}%]
+                    [%if(rows[i].messageType == 1){%]
+                    <div class="img" style="width:3.4375rem;height:4.6875rem;background:url([%=rows[i].message%])no-repeat center center;background-size:100% auto;border-radius: 4px;"></div>
+                    [%}%]
+                    [%if(rows[i].messageType != 4 && rows[i].messageType != 1){%]
+                    <div class="detail">
+                        <div class="arrow"></div>
+                        <div class="top">
+                            [%if(rows[i].messageType == 0){%]
+                            <p>[%=rows[i].message%]</p>
+                            [%}%]
+
+                            [%if(rows[i].messageType == 2){%]
+                            <div class="url">[%=rows[i].message%]</div>
+                            [%}%]
+
+                            [%if(rows[i].messageType == 5){%]
+                            <div class="img"><img src="[%=rows[i].message.img%]" alt=""></div>
+                            <p>[%=rows[i].message.content%]</p>
+                            [%}%]
+                        </div>
+                    </div>
+                            [%}%]
+                </div>
+            </div>
+            [%}%]
+    [%}%]
+    [%if(rows.length >= 10){%]
+        [%for(var i =0; i<10 ; i++){%]
+            <div class="dialog">
+            <div class="people_img">
+                [%if(rows[i].userIcon != 0){%]
+                <img src="[%=rows[i].userIcon%]" alt="">
+                [%}else{%]
+                <img src="image/portrait_default.png" alt="">
+                [%}%]
+            </div>
+            <div class="content">
+                <div class="expert">
+                    <div class="name">
+                        <p>[%=rows[i].nick%]</p>
+                        [%if(rows[i].title != ""){%]
+                        <span class="label">[%=rows[i].title%]</span>
+                        [%}%]
+                    </div>
+                    <div class="time">
+                        [%=rows[i].dateline%]
+                    </div>
+                </div>
+                [%if(rows[i].messageType == 4){%]
+                <div class="voice" id="voice">
+                    <div class="voice_arrow"></div>
+                    <div class="box" id="box" style="width:[%= ((((rows[i].duration)- 1)*1.76*1.5)+37)/font %]rem;">
+                        <div class="line" id="line">
+                            <img src="image/direct_seeding_share/live_voice_icon_3.png" alt="">
+                            <div class="line_top"></div>
+                        </div>
+                        <audio src="[%=rows[i].message%]"></audio>
+                    </div>
+                    <p class="time_length">[%=rows[i].duration%]"</p>
+                </div>
+                [%}%]
+                [%if(rows[i].messageType == 1){%]
+                <div class="img" style="width:3.4375rem;height:4.6875rem;background:url([%=rows[i].message%])no-repeat center center;background-size:100% auto;border-radius: 4px;"></div>
+                [%}%]
+                [%if(rows[i].messageType != 4 && rows[i].messageType != 1){%]
+                <div class="detail">
+                    <div class="arrow"></div>
+                    <div class="top">
+                        [%if(rows[i].messageType == 0){%]
+                        <p>[%=rows[i].message%]</p>
+                        [%}%]
+
+                        [%if(rows[i].messageType == 2){%]
+                        <div class="url">[%=rows[i].message%]</div>
+                        [%}%]
+
+                                [%if(rows[i].messageType == 5){%]
+                                <div class="img"><img src="[%=rows[i].message.img%]" alt=""></div>
+                                <p>[%=rows[i].message.content%]</p>
+                                [%}%]
+                            </div>
+                        </div>
+                        [%}%]
+                    </div>
+                </div>
+            [%}%]
+    [%}%]
+</script>
+
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/direct_seeding_share/direct_seeding_share0.min.js -->
+<script src="js/cdn/zepto.min.js" type="text/javascript"></script>
+<script src="js/cdn/ejs_production.js"></script>
+<!-- endbuild -->
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/direct_seeding_share/direct_seeding_share1.min.js -->
+<script language="javascript" type="text/javascript" src="js/cdn/fastclick.js"></script>
+<script language="javascript" type="text/javascript" src="js/cdn/rembase.js"></script>
+<script language="javascript" type="text/javascript" src="js/cdn/zepto.network.js"></script>
+<script language="javascript" type="text/javascript" src="js/config_knowledge_details.js"></script>
+<script src="js/direct_seeding_share/direct_seeding_share.js"></script>
+<!-- endbuild -->
+<script language="javascript" type="text/javascript" async src="js/ga/hym_google_analytics.js"></script>
+
+</body>
+</html>

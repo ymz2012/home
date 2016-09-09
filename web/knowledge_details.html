@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta name="env" content="${env}"/>
+    <meta name="rc_flag" content="${rc_flag}"/>
+    <meta name="hym_uid" content="37913017"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <script>
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>2000&&(a=2000*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=!y.match(/android/gi),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script>
+        var browser={versions:function(){var u=navigator.userAgent,app=navigator.appVersion;return{webKit:u.indexOf('AppleWebKit')>-1,ios:!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:u.indexOf('Android')>-1||u.indexOf('Linux')>-1,weixin:u.indexOf('MicroMessenger')>-1,txnews:u.indexOf('qqnews')>-1,sinawb:u.indexOf('weibo')>-1,mqq:u.indexOf('QQ')>-1};}(),language:(navigator.browserLanguage||navigator.language).toLowerCase()};var html="@font-face {font-family: 'HY QIHEI35';src: url('font/HYQiHei-35S.otf');}"+"@font-face {font-family: 'HY QIHEI50';src: url('font/HYQiHei-50S.otf');}";var dHtml=document.createElement("style");dHtml.innerHTML=html;if(browser.versions.android){document.getElementsByTagName("head")[0].appendChild(dHtml);}
+    </script>
+    <!-- build:css({.tmp,minsrc/src}) minsrc/src/css/konwledge_details/konwledge_details0.min.css -->
+    <link rel="stylesheet" href="css/knowledge/konwledge_details.css">
+    <!-- endbuild -->
+    <title>知识详情页</title>
+</head>
+<body>
+<section class="content_top" id="content_top">
+
+</section>
+<section class="recommend" id="recommend">
+
+</section>
+<section class="experience" id="experience">
+
+</section>
+<div class="experience_tag" id="experience_tag">
+    <div class="mom_experience exper">
+        <div id="mom_experience">
+
+        </div>
+    </div>
+    <div class="help_experience exper" style="display: none">
+        <div id="help_experience" >
+
+        </div>
+    </div>
+
+</div>
+<!--[%if(!!(kdetail.index_pic)){%]
+        <div class="picture">
+            <img src="[%=kdetail.index_pic%]" alt="">
+        </div>
+    [%}%]-->
+<script type="text/html" id="ejs_content_top">
+    [% if(kdetail.typeList.length>0){%]
+        <div class="top_btn" id="top_btn" data-groupid="[%=kdetail.topicGroupId%]" data-kid="[%=kdetail.id%]" data-title="[%=kdetail.title%]">
+            [%for (var i = 0;i<kdetail.typeList.length;i++){%]
+                <span data-gradeid="[%=kdetail.typeList[i]['id']%]" data-upgradeid="[%=kdetail.typeList[i]['upid']%]" data-tname="[%=kdetail.typeList[i]['tname']%]">[%=kdetail.typeList[i].tname%]</span>
+            [% }%]
+        </div>
+    [% } %]
+    <p class="topic_title">
+        [%=kdetail.title%]
+    </p>
+
+    <div class="word">
+        [%=kdetail.content%]
+    </div>
+    [%if(kdetail.kSource!=""||kdetail.kauthor!=""){%]
+        <div class="source">
+            [%if(kdetail.kSource!=""){%]
+            <p>来源:<span>[%=kdetail.kSource%]</span></p>
+            [%}%]
+            [%if(kdetail.kauthor!=""){%]
+            <p>作者:<span class="author">[%=kdetail.kauthor%]</span></p>
+            [%}%]
+        </div>
+    [%}%]
+    <div class="line"></div>
+    [%if(kdetail.tagList.length > 0){%]
+    <div class="knowledge_point">
+        <p>知识点:</p>
+        <p class="point_details" id="point_details">
+            [%for(var i=0;i<kdetail.tagList.length;i++){%]
+                <span  data-categoryid="[%=kdetail.tagList[i]['tagId']%]" data-tagname="[%=kdetail.tagList[i]['tagName']%]">[%=kdetail.tagList[i]['tagName']%]</span>
+            [%}%]
+        </p>
+    </div>
+    [%}%]
+</script>
+<script type="text/html" id="ejs_recommend">
+    [%if(recommendList.length>0){%]
+        <p class="recommend_title">好孕小天使为您推荐</p>
+            <ul id="introduce">
+                [%for(var j=0;j<recommendList.length;j++){%]
+                    [%if(recommendList[j].objType == 1){%]
+                        <li>
+                            <div>
+                                <span class="tool color">[工具]</span>
+                                <span data-url="[%=recommendList[j].url%]" class="url">[%=recommendList[j].title%]</span>
+                            </div>
+                        </li>
+                    [%}%]
+                    [%if(recommendList[j].objType == 2){%]
+                        <li>
+                            <div>
+                                <span class="color">[专题]</span>
+                                <span data-url="[%=recommendList[j].url%]" class="url">[%=recommendList[j].title%]</span>
+                            </div>
+                        </li>
+                    [%}%]
+                    [%if(recommendList[j].objType == 3){%]
+                        <li>
+                            <div>
+                                <span class="color">[知识]</span>
+                                <span data-url="[%=recommendList[j].url%]" class="url">[%=recommendList[j].title%]</span>
+                            </div>
+                        </li>
+                    [%}%]
+                [%}%]
+            </ul>
+    [%}%]
+</script>
+<script type="text/html" id="ejs_experience">
+    <ul>
+        <li class="y_color" data-id="7"><span>经验妙招</span></li>
+        <li data-id="6"><span>用户提问</span></li>
+    </ul>
+</script>
+<script type="text/html" id="ejs_mom_experience">
+    <div class="share_btn_box">
+        <div class="btn_box">
+            <p class="share_btn" id="share_exprence" data-groupid=[%=kdetail.topicGroupId%] data-kid=[%=kdetail.id%] data-title=[%=kdetail.title%]">分享经验妙招</p>
+        </div>
+    </div>
+    [% if(topicList.length>0){%]
+    <div class="comment_wrap" id="mom_comment">
+    [%for(var k=0;k < topicList.length;k++){%]
+    <div class="comment_box">
+        <div class="comment" data-usernik="[%=topicList[k].nick%]" data-uid="[%=topicList[k].uid%]">
+            <span class="user_pic">
+                [% if(topicList[k].icon && topicList[k].icon!='默认图片'){%]
+                    <img src="[%=topicList[k].icon%]" alt="">
+                [%} else{%]
+                    <img src="image/knowledge/default.png" alt="">
+                [%}%]
+            </span>
+            <div class="user_info">
+                [%if(!topicList[k].nick){%]
+                <p class="name">匿名用户</p>
+                [%} else {%]
+                <p class="name">[%=topicList[k].nick%]</p>
+                [%}%]
+                <div class="release">
+                    [%if(topicList[k].stepInfo!=""){%]
+                    <p class="left">[%=topicList[k].stepInfo%]</p>
+                    [%}%]
+                    <p class="right">[%=topicList[k].h5CreateDate%]</p>
+                </div>
+            </div>
+        </div>
+        <p class="word_n" data-topicid="[%=topicList[k]['id']%]">
+            [%=topicList[k].content%]
+        </p>
+        [%if(topicList[k].picList.length > 0){%]
+        <div class="topic_img" data-topicid="[%=topicList[k]['id']%]">
+            <ul>
+                [%if(topicList[k].picList.length >= 4){%]
+                [%for(var i = 0; i < 4;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}else{%]
+                [%for(var i = 0; i < topicList[k].picList.length;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}%]
+            </ul>
+            [%if(topicList[k].picList.length > 4){%]
+            <div class="num">
+                共[%=topicList[k].picList.length%]张
+            </div>
+            [%}%]
+        </div>
+        [%}%]
+        <div class="zan_comment">
+            <p class="user_comment" data-topicid="[%=topicList[k]['id']%]">
+                <span  class="pic" ><img src="image/knowledge/pinglun.png" alt=""></span>
+                [%if(topicList[k].replyNum==0||topicList[k].replyNum==""){%]
+                <span class="num">评论</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].replyNum%]</span>
+                [%}%]
+            </p>
+            [%if(topicList[k].islike==0){%]
+            <p class="zan on" data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                <span class="num">点赞</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].likeNum%]</span>
+                [%}%]
+            </p>
+            [%}else{%]
+            <p class="zan " data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                <span class="num">点赞</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].likeNum%]</span>
+                [%}%]
+            </p>
+            [%}%]
+        </div>
+    </div>
+    [%}%]
+    </div>
+    <div class="more_btn" id="mom_more_btn">
+        点击加载更多
+    </div>
+    [%} else{%]
+        <div class="comment_wrap" id="mom_comment"></div>
+        <div class="prompt" id="mom_prompt">第一个妙招等你来分享哦~</div>
+    [%}%]
+</script>
+<script type="text/html" id="ejs_more_experience">
+    [% if(topicList.length>0){%]
+    [%for(var k=0;k < topicList.length;k++){%]
+    <div class="comment_box">
+        <div class="comment" data-usernik="[%=topicList[k].nick%]" data-uid="[%=topicList[k].uid%]">
+            <span class="user_pic">
+                [% if(topicList[k].icon && topicList[k].icon!='默认图片'){%]
+                    <img src="[%=topicList[k].icon%]" alt="">
+                [%} else{%]
+                    <img src="image/knowledge/default.png" alt="">
+                [%}%]
+            </span>
+            <div class="user_info">
+                [%if(!topicList[k].nick){%]
+                <p class="disable name">匿名用户</p>
+                [%} else {%]
+                <p class="name">[%=topicList[k].nick%]</p>
+                [%}%]
+                <div class="release">
+                    [%if(topicList[k].stepInfo!=""){%]
+                    <p class="left">[%=topicList[k].stepInfo%]</p>
+                    [%}%]
+                    <p class="right">[%=topicList[k].h5CreateDate%]</p>
+                </div>
+            </div>
+        </div>
+        <p class="word_n" data-topicid="[%=topicList[k]['id']%]">
+            [%=topicList[k].content%]
+        </p>
+        [%if(topicList[k].picList.length > 0){%]
+        <div class="topic_img" data-topicid="[%=topicList[k]['id']%]">
+            <ul>
+                [%if(topicList[k].picList.length >= 4){%]
+                [%for(var i = 0; i < 4;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}else{%]
+                [%for(var i = 0; i < topicList[k].picList.length;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}%]
+            </ul>
+            [%if(topicList[k].picList.length > 4){%]
+            <div class="num">
+                共[%=topicList[k].picList.length%]张
+            </div>
+            [%}%]
+        </div>
+        [%}%]
+        <div class="zan_comment">
+            <p class="user_comment" data-topicid="[%=topicList[k]['id']%]">
+                <span class="pic" data-topicid="[%=topicList[k].id%]"><img src="image/knowledge/pinglun.png" alt=""></span>
+                [%if(topicList[k].replyNum==0||topicList[k].replyNum==""){%]
+                <span class="num">评论</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].replyNum%]</span>
+                [%}%]
+            </p>
+            [%if(topicList[k].islike==0){%]
+            <p class="zan on" data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                <span class="num">点赞</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].likeNum%]</span>
+                [%}%]
+            </p>
+            [%}else{%]
+            <p class="zan " data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                <span class="num">点赞</span>
+                [%}else{%]
+                <span class="num">[%=topicList[k].likeNum%]</span>
+                [%}%]
+            </p>
+            [%}%]
+        </div>
+
+    </div>
+    [%}%]
+[%}%]
+</script>
+
+
+<script type="text/html" id="ejs_comment_box">
+    <div class="comment_box">
+        <div class="comment" data-usernik="[%=nickName%]" data-uid="[%=createUid%]">
+            <span class="user_pic">
+                [% if(user_icon && user_icon!='默认图片'){%]
+                    <img src="[%=user_icon%]" alt="">
+                [%} else{%]
+                    <img src="image/knowledge/default.png" alt="">
+                [%}%]
+            </span>
+            <div class="user_info">
+                [%if(!nickName){%]
+                <p class="name">匿名用户</p>
+                [%} else {%]
+                <p class="name">[%=nickName%]</p>
+                [%}%]
+                <div class="release">
+                    [%if(step_info!==""){%]
+                    <p class="left">[%=step_info%]</p>
+                    [%}%]
+                    <p class="right">[%=createDate%]</p>
+                </div>
+            </div>
+        </div>
+        <p class="word_n" data-topicid="[%=id%]">
+            [%=content%]
+        </p>
+        [%if(piclist.length > 0){%]
+        <div class="topic_img" data-topicid="[%=id%]">
+            <ul>
+                [%if(piclist.length >= 4){%]
+                [%for(var i = 0; i < 4;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=piclist[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}else{%]
+                [%for(var i = 0; i < piclist.length;i++){%]
+                <li>
+                    <div class="img" style="background:url([%=piclist[i].path%]) no-repeat center center;background-size:auto 100%;">
+                    </div>
+                </li>
+                [%}%]
+                [%}%]
+            </ul>
+            [%if(piclist.length > 4){%]
+            <div class="num">
+                共[%=piclist.length%]张
+            </div>
+            [%}%]
+        </div>
+        [%}%]
+        <div class="zan_comment">
+            <p class="user_comment" data-topicid="[%=id%]">
+                <span class="pic" data-topicid="[%=id%]"><img src="image/knowledge/pinglun.png" alt=""></span>
+                <span class="num">评论</span>
+            </p>
+            [%if(islike==0){%]
+            <p class="zan on" data-topicid="[%=id%]" data-islike="[%=islike%]">
+                <span class="num">点赞</span>
+            </p>
+            [%}%]
+        </div>
+    </div>
+</script>
+<script type="text/html" id="ejs_help_experience">
+    <div class="share_btn_box">
+        <div class="btn_box">
+            <p class="share_btn" id="help_exprence" data-groupid=[%=kdetail.topicGroupId%] data-kid=[%=kdetail.id%] data-title=[%=kdetail.title%]"">我要提问</p>
+        </div>
+    </div>
+    [% if(!!topicList&&topicList.length!=0){%]
+    <div class="comment_wrap" id="help_comment">
+        [%for(var k=0;k<topicList.length;k++){%]
+            <div class="comment_box">
+                <div class="comment" data-usernik="[%=topicList[k].nick%]" data-uid="[%=topicList[k].uid%]">
+                        <span class="user_pic">
+                            [% if(topicList[k].icon && topicList[k].icon!='默认图片'){%]
+                                <img src="[%=topicList[k].icon%]" alt="">
+                            [%} else{%]
+                                <img src="image/knowledge/default.png" alt="">
+                            [%}%]
+                        </span>
+                    <div class="user_info">
+                        [%if(!topicList[k].nick){%]
+                            <p class="name">匿名用户</p>
+                        [%} else {%]
+                            <p class="name">[%=topicList[k].nick%]</p>
+                        [%}%]
+                        <div class="release">
+                            [%if(topicList[k].stepInfo!==""){%]
+                                <p class="left">[%=topicList[k].stepInfo%]</p>
+                            [%}%]
+                            <p class="right">[%=topicList[k].h5CreateDate%]</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="word_n" data-topicid="[%=topicList[k]['id']%]">
+                    [%=topicList[k].content%]
+                </p>
+                [%if(topicList[k].picList.length > 0){%]
+                <div class="topic_img" data-topicid="[%=topicList[k]['id']%]">
+                    <ul>
+                        [%if(topicList[k].picList.length >= 4){%]
+                        [%for(var i = 0; i < 4;i++){%]
+                        <li>
+                            <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                            </div>
+                        </li>
+                        [%}%]
+                        [%}else{%]
+                        [%for(var i = 0; i < topicList[k].picList.length;i++){%]
+                        <li>
+                            <div class="img" style="background:url([%=topicList[k].picList[i].path%]) no-repeat center center;background-size:auto 100%;">
+                            </div>
+                        </li>
+                        [%}%]
+                        [%}%]
+                    </ul>
+                    [%if(topicList[k].picList.length > 4){%]
+                    <div class="num">
+                        共[%=topicList[k].picList.length%]张
+                    </div>
+                    [%}%]
+                </div>
+                [%}%]
+                <div class="zan_comment">
+                    <p class="user_comment" data-topicid="[%=topicList[k]['id']%]">
+                        <span class="pic" data-topicid="[%=topicList[k]['id']%]"><img src="image/knowledge/pinglun.png" alt=""></span>
+                        [%if(topicList[k].replyNum==0||topicList[k].replyNum==""){%]
+                            <span class="num">评论</span>
+                        [%}else{%]
+                        <span class="num" >[%=topicList[k].replyNum%]</span>
+                        [%}%]
+                    </p>
+                    [%if(topicList[k].islike==0){%]
+                    <p class="zan on" data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                        [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                        <span class="num">点赞</span>
+                        [%}else{%]
+                        <span class="num">[%=topicList[k].likeNum%]</span>
+                        [%}%]
+                    </p>
+                    [%}else{%]
+                    <p class="zan " data-topicid="[%=topicList[k].id%]" data-islike="[%=topicList[k].islike%]">
+                        [%if(topicList[k].likeNum==0||topicList[k].likeNum==""){%]
+                        <span class="num">点赞</span>
+                        [%}else{%]
+                        <span class="num ">[%=topicList[k].likeNum%]</span>
+                        [%}%]
+                    </p>
+                    [%}%]
+                </div>
+            </div>
+
+        [%}%]
+    </div>
+    <div class="more_btn" id="help_more_btn">点击加载更多</div>
+    [%} else{%]
+        <div class="comment_wrap" id="help_comment">
+        <div class="prompt" id="help_prompt">谈出你的问题等待其他人来解答哦~</div>
+    [%}%]
+
+</script>
+
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/konwledge_details/konwledge_details0.min.js -->
+<script src="js/cdn/zepto.min.js" type="text/javascript"></script>
+<script src="js/cdn/ejs_production.js"></script>
+<!-- endbuild -->
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/konwledge_details/konwledge_details1.min.js -->
+<script language="javascript" type="text/javascript" src="js/cdn/fastclick.js"></script>
+<script language="javascript" type="text/javascript" src="js/cdn/rembase.js"></script>
+<script language="javascript" type="text/javascript" src="js/cdn/zepto.network.js"></script>
+<script src="js/config_knowledge_details.js"></script>
+<script src="js/knowledge_details/knowledge_details.js"></script>
+<!-- endbuild -->
+<script language="javascript" type="text/javascript" async src="js/ga/hym_google_analytics.js"></script>
+
+</body>
+</html>

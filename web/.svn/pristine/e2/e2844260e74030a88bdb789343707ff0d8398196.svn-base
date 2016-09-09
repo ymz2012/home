@@ -1,0 +1,376 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+
+body{
+  background: #f1f1f1;
+  img{
+    width: 100%;
+  }
+}
+.content_top{
+  background: #fff;
+  padding:px2rem-s(30px)px2rem-s(30px) 0;
+  @include box-sizing();
+  .top_btn{
+    display: -webkit-box;
+    color: #3cd3db;
+    span{
+      border: 1px solid #3cd3db;
+      display: inline-block;
+      width:px2rem-s(135px);
+      height:px2rem-s(44px);
+      text-align: center;
+      line-height: px2rem-s(44px);
+      @include font-dpr(12px);
+      @include font-normal;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 100000px;
+      margin-right:px2rem-s(25px);
+      margin-bottom: px2rem-s(20px);
+      /*&.left_btn{
+        margin-right:px2rem-s(25px);
+      }*/
+
+    }
+  }
+  .topic_title{
+    @include font-dpr(20px);
+    line-height: 1.5em;
+    color: #333;
+    padding:px2rem-s(15px) 0 0;
+    @include font-bold;
+  }
+  .picture{
+    width:100%;
+    img {
+      width:100%;
+      height:auto;
+      display: block;
+    }
+  }
+  .word{
+    @include font-dpr(16px);
+    @include font-normal;
+    word-break: break-all;
+    line-height: 1.5em;
+    color: #333;
+    padding:px2rem-s(18px) 0 px2rem-s(15px);
+    @include box-sizing();
+    p{
+      width:100%;
+      @include font-dpr(16px);
+      @include font-normal;
+      span{
+        @include font-dpr(16px);
+        @include font-normal;
+      }
+      img{
+        width:100%;
+        height:auto;
+
+      }
+    }
+  }
+  .source{
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    color: #999;
+    padding-bottom: px2rem-s(30px);
+    @include box-sizing();
+    @include font-dpr(12px);
+    @include font-normal;
+    & p span{
+      padding-left: px2rem-s(20px);
+      &.author{
+        display: inline-block;
+        width:px2rem-s(80px);
+      }
+    }
+  }
+  .line{
+    border-top: 1px solid #eaeaea;
+  }
+  .knowledge_point{
+    @include font-dpr(14px);
+    @include font-normal;
+    display: -webkit-box;
+    color: #999;
+    padding:px2rem-s(30px) 0 px2rem-s(30px);
+
+    @include box-sizing();
+    .point_details{
+      padding-left:px2rem-s(26px);
+      -webkit-box-flex: 1;
+      margin-top: px2rem-s(-6px);
+      & span{
+        display: inline-block;
+        color: #3cd3db;
+        padding-right:px2rem-s(22px);
+        line-height: 1.5em;
+        @include box-sizing();
+      }
+    }
+  }
+}
+.recommend{
+  background: #fff;
+  margin-top:px2rem-s(10px);
+  @include font-dpr(16px);
+  @include font-normal;
+  .recommend_title{
+    height:px2rem-s(90px);
+    line-height: px2rem-s(90px);
+    border-bottom: 1px solid #eaeaea;
+    padding-left:px2rem-s(30px);
+    @include box-sizing();
+  }
+  ul{
+    background: #fff;
+    padding-left:px2rem-s(30px);
+    border-bottom:1px solid #eaeaea;
+    li{
+
+      @include font-dpr(14px);
+      @include font-normal;
+      border-bottom:1px solid #eaeaea;
+      /*height:px2rem-s(80px);*/
+      display: -webkit-box;
+      -webkit-box-align: center;
+      div{
+        padding: px2rem-s(20px) 0;
+        width:100%;
+        display: -webkit-box;
+        -webkit-box-align: start;
+        @include font-dpr(14px);
+        @include font-normal;
+        .url{
+          display: -webkit-box;
+          -webkit-box-flex: 1;
+          width:100%;
+          line-height: 1.1em;
+          color:#333;
+        }
+        span.color{
+          display: -webkit-box;
+          color: #3cd3db;
+          padding-right: px2rem-s(20px);
+        }
+        p{
+          padding-left:px2rem-s(20px);
+          @include box-sizing();
+        }
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
+.experience{
+  margin-top:px2rem-s(10px);
+  background: #fff;
+  ul{
+    height:px2rem-s(80px);
+    display: -webkit-box;
+    border-bottom:1px solid #eaeaea;
+    li{
+      width:50%;
+      text-align: center;
+      line-height:px2rem-s(80px);
+
+      span{
+        @include font-dpr(14px);
+        @include font-normal;
+        display: inline-block;
+        width:px2rem-s(200px);
+
+      }
+      &.y_color{
+        span{
+          border-bottom:px2rem-s(3px) solid #3cd3db;
+          color:#3cd3db;
+        }
+
+      }
+    }
+  }
+}
+.mom_experience,.help_experience{
+  background: #fff;
+  .share_btn_box{
+    padding:0 px2rem-s(30px);
+    @include box-sizing();
+    .btn_box{
+      height:px2rem-s(126px);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      border-bottom: 1px solid #eaeaea;
+      .share_btn{
+        text-align:center;
+        width:px2rem-s(260px);
+        height:px2rem-s(68px);
+        line-height:px2rem-s(68px);
+        background: #3cd3db;
+        border-radius: 10000000px;
+        color: #fff;
+        @include font-dpr(14px);
+        @include font-normal;
+      }
+    }
+  }
+  .comment_box{
+    padding:0 px2rem-s(30px);
+    @include box-sizing();
+    border-bottom: 1px solid #eaeaea;
+    .comment{
+      padding:px2rem-s(25px) 0 0;
+      @include box-sizing();
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      .user_pic{
+        display: inline-block;
+        width:px2rem-s(65px);
+        height:px2rem-s(65px);
+        overflow: hidden;
+        border-radius:px2rem-s(65px) px2rem-s(65px);
+        img{
+          width:100%;
+          height:100%;
+          display: block;
+        }
+      }
+      .user_info{
+        padding-left:px2rem-s(20px);
+        -webkit-box-flex: 1;
+        .name{
+          @include font-dpr(15px);
+          @include font-normal;
+        }
+        .release{
+          width:100%;
+          margin-top:px2rem-s(15px);
+          color: #999;
+          overflow: hidden;
+          /*display: -webkit-box;
+          -webkit-box-pack: justify;*/
+          .left{
+            float: left;
+            @include font-normal;
+          }
+          .right{
+            float: right;
+            @include font-normal;
+          }
+        }
+      }
+    }
+    .word_n{
+      color: #666;
+      @include font-dpr(14px);
+      @include font-normal;
+      line-height: 1.4em;
+      padding:px2rem-s(30px) 0;
+      @include box-sizing();
+      word-break: break-all;
+      p{
+        width:100%;
+        img{
+          width:100%;
+          height:auto;
+        }
+      }
+    }
+    .topic_img{
+      position: relative;
+      margin-bottom: px2rem-s(30px);
+      ul{
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: start;
+        overflow: hidden;
+        li{
+          padding-right:px2rem-s(20px);
+          .img{
+            border-radius: px2rem-s(10px);
+            overflow: hidden;
+            width:px2rem-s(130px);
+            height:px2rem-s(130px);
+            background:red;
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+
+        }
+      }
+      .num{
+        position: absolute;
+        bottom: 0;
+        right:0;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+        width:px2rem-s(75px);
+        height:px2rem-s(30px);
+        @include font-dpr(10px);
+        @include font-normal();
+        line-height: px2rem-s(30px);
+        text-align: center;
+        border-radius: px2rem-s(7px);
+      }
+    }
+    .zan_comment{
+      display: -webkit-box;
+      -webkit-box-pack: justify;
+      padding-bottom:px2rem-s(25px);
+      p .pic{
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -2px;
+        width:px2rem-s(28px);
+        height:px2rem-s(28px);
+        padding-right:px2rem-s(10px);
+        img{
+          display: inline-block;
+          width:100%;
+        }
+      }
+      p .num{
+        display: inline-block;
+        width: px2rem-s(50px);
+        @include font-dpr(12px);
+        color: #999;
+        @include font-normal;
+      }
+      .zan{
+        line-height: px2rem-s(28px);
+        padding-left:px2rem-s(35px);
+        background:url("../../image/knowledge/zanlan.png") no-repeat center left;
+        background-size: px2rem-s(28px);
+        &.on{
+          background:url("../../image/knowledge/zanccc.png") no-repeat center left;
+          background-size: px2rem-s(28px);
+        }
+      }
+    }
+
+  }
+  .more_btn{
+    color: #666;
+    @include font-dpr(12px);
+    @include font-normal;
+    line-height: 3em;
+    text-align: center;
+  }
+  .prompt{
+    @include font-dpr(14px);
+    @include font-normal;
+    text-align: center;
+    line-height: px2rem-s(100px);
+    color: #999;
+  }
+}

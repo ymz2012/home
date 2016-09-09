@@ -1,0 +1,110 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+body{
+  background:#f1f1f1;
+}
+.search_box{
+  background:#fff;
+  height:px2rem-s(86px);
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: px2rem-s(10px);
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  input{
+    border:1px solid #eaeaea;
+    width:px2rem-s(580px);
+    height:px2rem-s(54px);
+    background:#f1f1f1 url("../../image/can_eat/eat_search.png") no-repeat px2rem-s(25px) center;
+    background-size:px2rem-s(34px);
+    padding-left:px2rem-s(80px);
+    padding-right: px2rem-s(20px);
+    -webkit-appearance: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    border-radius: px2rem-s(54px);
+    ::-webkit-input-placeholder {
+      color: #999;
+    }
+  }
+  input::-webkit-search-cancel-button {display: none;}
+}
+.search_no{
+  text-align: center;
+  padding-top:px2rem-s(20px);
+  position: fixed;
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+.prompt{
+  margin-top:px2rem-s(10px);
+  li{
+    @include font-dpr(14px);
+    line-height:px2rem-s(80px);
+    height:px2rem-s(80px);
+    padding-left:px2rem-s(30px);
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+.goodList{
+  .good_box{
+    &:first-child{
+      border-top:1px solid #eaeaea;
+    }
+    border-bottom: 1px solid #eaeaea;
+    background:#fff;
+    padding: px2rem-s(20px) px2rem-s(30px);
+    display:-webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    .img{
+      width:px2rem-s(100px);
+      height:px2rem-s(100px);
+      border-radius: px2rem-s(8px);
+      overflow: hidden;
+      background-size: auto 100%;
+      background-repeat:no-repeat;
+      background-position: center center;
+    }
+    .good{
+      padding-left: px2rem-s(20px);
+      -webkit-box-flex: 1;
+      height:px2rem-s(100px);
+      display: -webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-box-pack:justify;
+      .name{
+        @include font-dpr(16px);
+        @include font-normal();
+        color:#333;
+      }
+      ul{
+        display: -webkit-box;
+        -webkit-box-align: center;
+        color:#666;
+        @include font-dpr(12px);
+        @include font-normal();
+        li{
+          height:px2rem-s(38px);
+          -webkit-box-flex: 1;
+          display: -webkit-box;
+          -webkit-box-align: center;
+          span{
+            padding-right: px2rem-s(9px);
+          }
+          .img{
+            width:px2rem-s(30px);
+            height:px2rem-s(30px);
+            img{
+              width:100%;
+              height:100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

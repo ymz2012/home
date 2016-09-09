@@ -1,0 +1,87 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+body{
+  font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+.wrap{
+  padding-left:px2rem-s(30px);
+  padding-right:px2rem-s(30px);
+  background:#fff8fb;
+  .logo_box{
+    padding:px2rem-s(32px) 0;
+    border-bottom: 1px solid #ffdfef;
+    display:-webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    .logo_img{
+      width:px2rem-s(140px);
+      height:px2rem-s(140px);
+      img{
+        width:100%;
+        height:auto;
+      }
+    }
+    .logo_text{
+      -webkit-box-flex: 1;
+      padding-left:px2rem-s(39px);
+      p{
+        color:#666;
+        @include font-dpr(14px);
+        &.title{
+          color:#333;
+          @include font-dpr(17px);
+          padding-bottom: px2rem-s(20px);
+        }
+      }
+    }
+  }
+  .body{
+    padding-top:px2rem-s(48px);
+    padding-bottom: px2rem-s(110px);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    .down_btn{
+      .btn{
+        width:px2rem-s(334px);
+        height:px2rem-s(66px);
+        border:1px solid #847878;
+        border-radius: px2rem-s(66px);
+        @include font-dpr(15px);
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        color:#847878;
+        div{
+          display: -webkit-box;
+          -webkit-box-align: center;
+          img{
+            width:px2rem-s(34px);
+            height:px2rem-s(42px);
+          }
+          span{
+            padding-left: px2rem-s(16px);
+          }
+        }
+        &.ios{
+          margin-bottom: px2rem-s(18px);
+        }
+        &.android{
+          color: #fa86b6;
+          border-color: #fa86b6;
+        }
+      }
+    }
+    .phone_box{
+      padding-top:px2rem-s(48px);
+      padding-bottom: px2rem-s(32px);
+      .phone_img{
+        margin-left:px2rem-s(-30px);
+        width:px2rem-s(640px);
+        height:px2rem-s(716px);
+        background:url("../../image/fetal_movement_down/share_bg.png") no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+  }
+}
