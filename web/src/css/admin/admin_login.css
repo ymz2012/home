@@ -103,11 +103,11 @@ body {
       outline: none;
       -webkit-tap-highlight-color: transparent; }
   .mainContent .mainRight .mainRightTips .user_login {
-    display: none;
     width: 300px;
     background: #fff;
     border-radius: 4px; }
   .mainContent .mainRight .mainRightTips .find_password_box {
+    display: none;
     width: 300px;
     background: #fff;
     border-radius: 4px; }

@@ -1,0 +1,202 @@
+@import "../cdn/myreset.min.css";
+body, html {
+  background-color: #eff2f1;
+}
+
+body{
+  overflow: hidden;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+
+.yo_header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  min-width: 650px;
+  padding: 12px 5%;
+  margin: 0 auto;
+  height:70px;
+  background: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #dde0df;
+  .logo_box {
+    display: block;
+    float:left;
+    img {
+      display: block;
+      width:120px;
+      height:46px;
+    }
+  }
+  .login_box{
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    a{
+      color:#666;
+    }
+    a:hover{
+      color:#2ed4db;
+    }
+  }
+}
+.yo_body{
+  padding-top: 70px;
+  width: 100%;
+  min-width: 650px;
+  .yo_content{
+    width: 100%;
+    .top{
+      width: 100%;
+      height: 80px;
+      background: #fff;
+      border-bottom: 1px solid #dde0df;
+      padding-left: 60px;
+      padding-right: 7%;
+      position: relative;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+      .title{
+        color: #999;
+        font-size: 20px;
+        line-height: 80px;
+      }
+      .save_topic_btn{
+        width: 30%;
+        height: 40px;
+        max-width: 200px;
+        color: #2ed4db;
+        border: 1px solid #2ed4db;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        right: 7%;
+      }
+    }
+    .bottom{
+      padding: 11px 27px 30px;
+      .form{
+        width: 100%;
+        background: #fff;
+        box-shadow: 1px 0 2px rgba(0,0,0,0.1);
+        lable{
+          color:#99a2b1;
+          font-size: 14px;
+          padding-right:25px;
+        }
+        .input_title{
+          width: 100%;
+          min-width: 650px;
+          height: 77px;
+          display: block;
+          padding-top: 22px;
+          border-bottom: 1px solid #dde0df;
+          img{
+            display: inline-block;
+            margin-left: 20px;
+            width: 33px;
+            height: 33px;
+            vertical-align:middle;
+          }
+          input{
+            display: inline-block;
+            margin-left: 18px;
+            width: 200px;
+            height: 33px;
+            line-height: 33px;
+            vertical-align:middle;
+            border: 0;
+            outline: none;
+          }
+        }
+      }
+    }
+    .add_zhishi {
+      height: 80px;
+      .add_zhishi_btn {
+        display: inline-block;
+        margin-left: 15px;
+        margin-top: 15px;
+        width: 30%;
+        height: 40px;
+        max-width: 200px;
+        color: #fff;
+        background: #2ed4db;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+    .toupiao{
+      margin: 0px 27px;
+      background: #fff;
+      box-shadow: 1px 0 2px rgba(0,0,0,0.1);
+      .toupiao_title{
+        color: #666;
+        border-bottom: 1px solid red;
+        padding-top: 19px;
+        padding-left: 15px;
+        height: 50px;
+      }
+
+    }
+    .anniu{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      .save_topic_btn{
+        display: inline-block;
+        margin-right: 20px;
+        width: 30%;
+        height: 40px;
+        max-width: 200px;
+        color: #2ed4db;
+        border: 1px solid #2ed4db;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .fabu_topic_btn{
+        display: inline-block;
+        margin-left: 20px;
+        width: 30%;
+        height: 40px;
+        max-width: 200px;
+        color: #fff;
+        background: #2ed4db;
+        border-radius: 4px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

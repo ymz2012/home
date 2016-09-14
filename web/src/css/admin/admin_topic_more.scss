@@ -1,0 +1,104 @@
+@import "../cdn/myreset.min.css";
+body, html {
+  background-color: #eff2f1;
+}
+
+body{
+  overflow: hidden;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+
+.yo_header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  min-width: 650px;
+  padding: 12px 5%;
+  margin: 0 auto;
+  height:70px;
+  background: #fff;
+  z-index: 999;
+  border-bottom: 1px solid #dde0df;
+  .logo_box {
+    display: block;
+    float:left;
+    img {
+      display: block;
+      width:120px;
+      height:46px;
+    }
+  }
+  .login_box{
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+    a{
+      color:#666;
+    }
+    a:hover{
+      color:#2ed4db;
+    }
+  }
+}
+.top{
+  padding-top: 70px;
+  width: 100%;
+  min-width: 650px;
+  background: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+  padding-left: 70px;
+  .title{
+    color:#999;
+    font-size: 20px;
+    line-height: 80px;
+  }
+}
+.content{
+  margin: 14px 25px;
+  background: #fff;
+  .topic_title{
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    padding-left: 22px;
+    border-bottom: 1px solid #dde0df;
+  }
+  p{
+    padding-left: 22px;
+    padding-top: 20px;
+    color:#999;
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
