@@ -1,2 +1,86 @@
 @import "../sassmixins/_mixins.scss";
 @import "../cdn/myreset.min.css";
+body {
+  background: #f1f1f1;
+}
+
+.content{
+  .topic{
+    background:url('../../image/coin_hym/goldcoin_bg.png') center;
+    width: 100%;
+    height: px2rem(210px);
+    text-align: center;
+    span {
+      display: block;
+      color: #ffffff;
+      font-size: px2rem(60px);
+      padding-top: px2rem(60px);
+    }
+  }
+  .title{
+    background: #ff8a18;
+    width: 100%;
+    height: px2rem(90px);
+    .tab{
+      height: px2rem(90px);
+      width: 100%;
+      position: fixed;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: justify;
+      .tab_line{
+        height: px2rem(40px);
+        width: px2rem(2px);
+        border-right: 1px solid #ffa752;
+      }
+      li {
+        width: px2rem(320px);
+        display: -webkit-box;
+        -webkit-box-align: center;
+        .tab_box {
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          margin-left: px2rem(65px);
+          p{
+            font-size: px2rem(18px);
+            color: #fff;
+            margin-left: px2rem(10px);
+          }
+        }
+      }
+    }
+  }
+  .mingxi{
+    background-color: #f1f1f1;
+    font-size: px2rem(28px);
+    height: px2rem(70px);
+    line-height: px2rem(70px);
+    width: 100%;
+    padding-left: px2rem(30px);
+  }
+  .coin_data{
+    background-color: #fff;
+    width: 100%;
+    table{
+      width: 100%;
+      thead {
+        color: #333;
+        font-size: px2rem(28px);
+        @include font-normal();
+      }
+      tr {
+        line-height: px2rem(90px);
+        border:1px solid #f1f1f1;
+        width: 100%;
+        text-align: center;
+      }
+      td {
+        border: 0px;
+        font-size: px2rem(26px);
+        color: #666;
+        @include font-normal();
+      }
+    }
+  }
+}
