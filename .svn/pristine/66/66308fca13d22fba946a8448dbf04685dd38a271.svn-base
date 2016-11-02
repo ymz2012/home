@@ -1,0 +1,1224 @@
+body{
+    background:#f0f0f0;
+}
+header{
+    width:1200px;
+    margin:0 auto;
+    padding-top:13px;
+}
+header .logo{
+    cursor:pointer;
+}
+
+
+.ercode{
+    width:100%;
+    position: absolute;
+    top:90px;
+}
+.ercode .ercodeIn{
+    width:1200px;
+    margin:0 auto;
+}
+.ercode img{
+    margin-left:950px;
+}
+
+
+section .mainTitle{
+    text-align: center;
+    width:1200px;
+    margin:0 auto 10px;
+}
+section .mainTitle .titleTop{
+    font-size: 26px;
+    color:#343434;
+    height:45px;
+    line-height: 45px;
+}
+section .mainTitle .titleBottom{
+    font-size: 16px;
+    color:#747474;
+    height:35px;
+    line-height: 35px;
+}
+
+section .mainContent{
+    width:100%;
+    height:464px;
+    min-width: 1200px;
+}
+section .mainContent .contentLeft{
+    height:100%;
+    width:50%;
+    float:left;
+    background:url("../../image/index/pc/web_bg_left.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+section .mainContent .contentRight{
+    height:100%;
+    width:50%;
+    float:left;
+    background:url("../../image/index/pc/web_bg_right.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+section .mainContent .contentLeft .contentLeftImg{
+    width:600px;
+    height:100%;
+    float: right;
+}
+section .mainContent .contentLeft .contentLeftImg .ani{
+    display: none;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1{
+    height:318px;
+    width:426px;
+    background:url("../../image/index/pc/ani/1/pregnat_bg.png") no-repeat;
+    margin-left: 100px;
+    margin-top:50px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_1{
+    opacity: 0;
+    width:79px;
+    height:107px;
+    position: relative;
+    left:200px;
+    top:-10px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_1_tag{
+    opacity:0;
+    width:64px;
+    height:84px;
+    position:relative;
+    left:280px;
+    top:-95px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_2{
+    opacity:0;
+    width:63px;
+    height:65px;
+    position:relative;
+    left:135px;
+    top:-58px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_2_tag{
+    opacity:0;
+    width:64px;
+    height:84px;
+    position:relative;
+    left:50px;
+    top:-140px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_3{
+    opacity:0;
+    width:63px;
+    height:65px;
+    position:relative;
+    left:220px;
+    top:-106px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_1 .ele_3_tag{
+    opacity:0;
+    width:64px;
+    height:84px;
+    position:relative;
+    left:337px;
+    top:-185px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_2{
+    height:289px;
+    width:316px;
+    margin-left: 180px;
+    margin-top:105px;
+    background:url("../../image/index/pc/ani/2/record_notebook_one.png") no-repeat;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_2 .runnings{
+    width:90px;
+    height:210px;
+    position:relative;
+    left:218px;
+    top:74px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_2 .ele_1{
+    width:90px;
+    height:210px;
+    background:url("../../image/index/pc/ani/2/2.png") no-repeat;
+    background-position: 0 0;
+    position:relative;
+    opacity: 0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_2 .ele_2{
+    opacity:0;
+    width:28px;
+    height:22px;
+    position:relative;
+    top:-96px;
+    left:181px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3{
+    height:300px;
+    width:300px;
+    margin-left: 200px;
+    margin-top:100px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1{
+    width:240px;
+    height:240px;
+    margin:auto;
+    position:relative;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1 .wrapper{
+    width:120px;
+    height:240px;
+    position:absolute;
+    top:0;
+    overflow: hidden;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1 .right{
+    right:0px;
+}
+.circleProgress{
+    width:200px;
+    height:200px;
+    border:20px solid #b6f9fc;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1 .right .rightCircle{
+    border-top:20px solid #ff8381;
+    border-right:20px solid #ff8381;
+    right:1px;
+    -webkit-transform: rotate(45deg);
+    transform:rotate(45deg);
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1 .left{
+    left:1px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_1 .left .leftCircle{
+    border-bottom:20px solid #ff8381;
+    border-left:20px solid #ff8381;
+    left:1px;
+    -webkit-transform: rotate(-20deg);
+    transform:rotate(-20deg);
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_2{
+    width:108px;
+    height:91px;
+    position:relative;
+    left:100px;
+    top:-160px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_3{
+    width:84px;
+    height:100px;
+    position:relative;
+    left:35px;
+    top:-360px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_4{
+    width:40px;
+    height:40px;
+    position: relative;
+    left:-17px;
+    top:-383px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_5{
+    width:122px;
+    height:122px;
+    position: relative;
+    left:205px;
+    top:-315px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_6{
+    width:114px;
+    height:114px;
+    position: relative;
+    left:256px;
+    top:-626px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_7{
+    height:100px;
+    width:84px;
+    position: relative;
+    left:37px;
+    top:-725px;
+    line-height: 100px;
+    text-align: center;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_7 .span1{
+    font-size: 28px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_3 .ele_7 .span2{
+    font-size: 16px;
+    margin-left: -3px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_4{
+    height:247px;
+    width:399px;
+    margin-left:109px;
+    margin-top:115px;
+    background:url("../../image/index/pc/ani/4/quickening_bg.png") no-repeat;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_4 .ele_1{
+    width:79px;
+    height:84px;
+    position: relative;
+    left:160px;
+    top:153px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_4 .ele_1 img{
+    position: relative;
+    display: inline-block;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_4 .ele_1 .rightFooter{
+    top:-26px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_4 .ele_2{
+    width:101px;
+    height:110px;
+    position:relative;
+    left: 298px;
+    top:44px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5{
+    height:279px;
+    width:388px;
+    margin-left:109px;
+    margin-top:115px;
+    background:url("../../image/index/pc/ani/5/grow_bg.png") no-repeat;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_1{
+    width:107px;
+    height:95px;
+    position:relative;
+    left:186px;
+    top:114px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_2{
+    width:91px;
+    height:70px;
+    position: relative;
+    left:180px;
+    top:106px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_2 .plate{
+    position: relative;
+    top:0;
+    left:5px;
+    z-index: 1;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_2 .verLine{
+    position: relative;
+    top:-2px;
+    left:43px;
+    z-index: 0;
+    width:4px;
+    height:14px;
+    background:#34404f;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_2 .verLines{
+    position: relative;
+    top:-2px;
+    left:0px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_5 .ele_3{
+    width:11px;
+    height:27px;
+    position: relative;
+    left:220px;
+    top:75px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_6{
+    height:314px;
+    width:410px;
+    margin-left: 175px;
+    margin-top:110px;
+    background:url("../../image/index/pc/ani/6/tool_bg.png") no-repeat;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_6 .ele_1{
+    width:120px;
+    position:relative;
+    left:113px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_6 .ele_1 .sc{
+    height:5px;
+    width:8px;
+    background-color:#dcdcdc;
+    border:2px solid #333f4f;
+    border-bottom: none;
+    position:relative;
+    left:54px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_6 .ele_1 .boxSel{
+    position:absolute;
+    height:70px;
+    width:70px;
+    top:199px;
+    left:22px;
+    z-index: 2;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7{
+    height:320px;
+    width:356px;
+    margin-left:200px;
+    margin-top:75px;
+    background:url("../../image/index/pc/ani/7/communication_bg.png") no-repeat;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_1{
+    width:38px;
+    height:35px;
+    position:relative;
+    left:274px;
+    top:-35px;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_2{
+    width:195px;
+    height:106px;
+    position:relative;
+    left:122px;
+    top:-7px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_2 img{
+    width:80%;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_3{
+    width:195px;
+    height:106px;
+    position: relative;
+    left:79px;
+    top:20px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_3 img{
+    width:80%;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_4{
+    width:41px;
+    height:11px;
+    position: relative;
+    left:295px;
+    top:-235px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_5{
+    width:41px;
+    height:11px;
+    position: relative;
+    left:21px;
+    top:14px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_6{
+    width:74px;
+    height:19px;
+    position: relative;
+    left:295px;
+    top:-213px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_7{
+    width:73px;
+    height:20px;
+    position: relative;
+    left:-13px;
+    top:-198px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_8{
+    width:73px;
+    height:20px;
+    position: relative;
+    left:295px;
+    top:-134px;
+    opacity:0;
+}
+section .mainContent .contentLeft .contentLeftImg .ani_7 .ele_9{
+    width:73px;
+    height:20px;
+    position: relative;
+    left:-15px;
+    top:-94px;
+    opacity:0;
+}
+
+
+section .mainContent .contentRight .contentRightImg{
+    width:600px;
+    height:100%;
+    float: left;
+}
+section .mainContent .contentRight .contentRightImg .iphone{
+    margin-left:80px;
+    margin-top:60px;
+}
+section .mainContent .contentRight .contentRightImg .topHide{
+    width:172px;
+    height:304px;
+    position:relative;
+    top:-364px;
+    left:104px;
+    overflow: hidden;
+}
+section .mainContent .contentRight .contentRightImg .rightTips{
+    height:300px;
+    width:300px;
+    position:relative;
+    top:-600px;
+    left:300px;
+}
+section .mainContent .contentRight .contentRightImg .rightTips img{
+    position: relative;
+    display: inline-block;
+}
+section .mainContent .contentRight .contentRightImg .right2 .tips{
+    opacity: 0;
+}
+section .mainContent .contentRight .contentRightImg .right3 .tips_1{
+    width:126px;
+    height:120px;
+    top:31px;
+    left:77px;
+    opacity: 0;
+}
+section .mainContent .contentRight .contentRightImg .right3 .tips_2{
+    width:116px;
+    height:100px;
+    top:110px;
+    left:-131px;
+}
+section .mainContent .contentRight .contentRightImg .right4 .board{
+    opacity: 0;
+    top:100px;
+}
+section .mainContent .contentRight .contentRightImg .right4 .arrow{
+    opacity: 0;
+    top:74px;
+}
+section .mainContent .contentRight .contentRightImg .right4 .barometer{
+    opacity: 0;
+    top:24px;
+    left:-63px;
+}
+section .mainContent .contentRight .contentRightImg .right6 .hands{
+    width:60px;
+    height:100px;
+    top:110px;
+}
+section .mainContent .contentRight .contentRightImg .right6 .tips{
+    width:130px;
+    height:130px;
+    top:50px;
+    left:-20px;
+    opacity: 0;
+}
+section .mainContent .contentRight .contentRightImg .right6 .papa{
+    width:34px;
+    height:28px;
+    top:25px;
+    left:-200px;
+    opacity: 0;
+}
+section .mainContent .contentRight .contentRightImg .right7 .mouth{
+    top:168px;
+}
+section .mainContent .contentRight .contentRightImg .right7 .qqbb{
+    top:115px;
+    left:-85px;
+}
+section .mainContent .contentRight .contentRightImg .right7 .bm{
+    top:-46px;
+    left:35px;
+    opacity: 0;
+}
+
+section .mainBottom {
+    width:750px;
+    height:95px;
+    background:#f7f7f7;
+    border-radius: 10px;
+    margin:0 auto;
+    box-shadow: 0px 6px 8px #e0e0e0;
+    position:relative;
+    top:-40px;
+}
+section .mainBottom .arrow{
+    width:35px;
+    height:60px;
+    cursor:pointer;
+    position: relative;
+    margin-top:17px;
+}
+section .mainBottom .arrow .arrowImg{
+    width:16px;
+    height:28px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-14px;
+    margin-left:-8px;
+}
+section .mainBottom .arrowLeft{
+    float:left;
+    border-right:1px solid #d9d9d9;
+}
+section .mainBottom .arrowLeft .arrowImg{
+    background:url("../../image/index/pc/arrow.png") no-repeat;
+    background-position: 0px 0px;
+}
+section .mainBottom .arrowRight{
+    border-left:1px solid #d9d9d9;
+    float: right;
+}
+section .mainBottom .arrowRight .arrowImg{
+    background:url("../../image/index/pc/arrow.png") no-repeat;
+    background-position: -18px -30px;
+}
+
+
+section .menus{
+    margin:0 auto;
+    width:670px;
+    height:140px;
+    position: absolute;
+    overflow: hidden;
+    top:-40px;
+    left:35px;
+}
+section .menus ul{
+    width:945px;
+    height:100px;
+    margin:0 auto;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+section ul li.tab{
+    width:134px;
+    height:60px;
+    cursor: pointer;
+    border-right:1px solid #d9d9d9;
+    float:left;
+    margin-top:17px;
+}
+section ul li:last-child{
+    border-right:none;
+}
+section ul li.tab .tabImg{
+    width:134px;
+    height:50px;
+    position: relative;
+}
+section ul li.tab .tabImg .img{
+    width:50px;
+    height:50px;
+    margin:0 auto;
+    background:url("../../image/index/pc/menu_icon.png") no-repeat;
+}
+section ul li.tab .tabImg .inoculation{
+    background-position: 0px -100px;
+}
+section ul li.tab .tabImg .record{
+    background-position: -75px 0px;
+}
+section ul li.tab .tabImg .prepare{
+    background-position: -160px 0px;
+}
+section ul li.tab .tabImg .fetal{
+    background-position: -235px 0px;
+}
+section ul li.tab .tabImg .parenting{
+    width:54px;
+    background-position: -320px 0px;
+}
+section ul li.tab .tabImg .tool{
+    background-position: -400px 0px;
+}
+section ul li.tab .tabImg .connunication{
+    background-position: -480px 0px;
+}
+
+section ul li.tab .tabImg .on{
+    width:80px;
+    height:90px;
+    position:absolute;
+    left:50%;
+    margin-left: -40px;
+    bottom:0px;
+    z-index: 200;
+}
+section ul li.tab .tabContent{
+    text-align: center;
+    margin-top:5px;
+    height:14px;
+    line-height: 14px;
+    font-size: 14px;
+    color:#857c7d;
+}
+
+
+footer .market{
+    width:100%;
+    padding-top:35px;
+    text-align: center;
+}
+footer .market .iosBtn{
+    width:220px;
+    height:76px;
+    margin-right:25px;
+    background:url("../../image/index/pc/download_ios.png") no-repeat center center;
+    display: inline-block;
+    cursor: pointer;
+}
+footer .market .androidBtn{
+    width:220px;
+    height:76px;
+    background:url("../../image/index/pc/download_android.png") no-repeat center center;
+    display: inline-block;
+    cursor: pointer;
+}
+footer .companyInfo{
+    text-align: center;
+    color:#a7a7a7;
+    font-size: 15px;
+    margin-top:20px;
+}
+footer .companyInfo div{
+    height:22px;
+}
+
+
+
+/*animate.css*/
+.fadeInRightMiddle {                                             /*ani_1(孕育)左边动画*/
+    -webkit-animation-name: fadeInRightMiddle;
+    animation-name: fadeInRightMiddle;
+}
+@-webkit-keyframes fadeInRightMiddle {
+    from{
+        opacity:0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInRightMiddle {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInLeftMiddle {                                        /*ani_1(孕育)左边动画*/
+    -webkit-animation-name: fadeInLeftMiddle;
+    animation-name: fadeInLeftMiddle;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+}
+@-webkit-keyframes fadeInLeftMiddle {
+    from{
+        opacity:0;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInLeftMiddle {
+    from{
+        opacity:0;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+    }
+    to{
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.runningRight{                    /*ani_2(记录)铅笔跑入动画*/
+    -webkit-animation-name: runningRight;
+    animation-name: runningRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite; /* 动画无限播放 */
+    animation-iteration-count: infinite; /* 动画无限播放 */
+    -webkit-animation-timing-function: step-start; /* 马上跳到动画每一结束桢的状态 */
+    animation-timing-function: step-start; /* 马上跳到动画每一结束桢的状态 */
+}
+@-webkit-keyframes runningRight {
+    0%{
+        opacity: 0;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+    }
+    5%{
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+    20%{
+        opacity: 1;
+        background-position: -90px 0px;
+    }
+    35%{
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+    60% {
+        opacity: 1;
+        background-position: -90px 0px;
+    }
+
+    75% {
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+    90% {
+        opacity: 1;
+        background-position: -90px 0px;
+    }
+    100% {
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+}
+@keyframes runningRight {
+
+    5% {
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+
+    20% {
+        background-position: -90px 0px;
+    }
+
+    35% {
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+
+    60% {
+        background-position: -90px 0px;
+    }
+
+    75% {
+        background-position: 0px 0px;
+    }
+    90% {
+        background-position: -90px 0px;
+    }
+    100% {
+        opacity: 1;
+        background-position: 0px 0px;
+    }
+}
+.runnings {                       /*ani_2(记录)铅笔跑入动画*/
+    /*-webkit-animation-name: runnings;*/
+    /*animation-name: runnings;*/
+    /*-webkit-animation-duration: 1.5s;*/
+    /*animation-duration: 1.5s;*/
+}
+@-webkit-keyframes runnings {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+@keyframes runnings {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes circleProgressLoad_right {   /*ani_3(备孕)红圈动画*/
+    0% {
+        -webkit-transform: rotate(-135deg);
+    }
+    50%, 100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@-moz-keyframes circleProgressLoad_right {
+    0% {
+        -moz-transform: rotate(-135deg);
+    }
+    50%, 100% {
+        -moz-transform: rotate(45deg);
+    }
+}
+
+@keyframes circleProgressLoad_right {
+    0% {
+        transform: rotate(-135deg);
+    }
+    50%, 100% {
+        transform: rotate(45deg);
+    }
+}
+
+
+
+@-webkit-keyframes circleProgressLoad_left {     /*ani_3(备孕)红圈动画*/
+    0%, 50% {
+        -webkit-transform: rotate(-135deg);
+    }
+    100% {
+        -webkit-transform: rotate(-20deg);
+    }
+}
+
+@-moz-keyframes circleProgressLoad_left {
+    0%, 50% {
+        -moz-transform: rotate(-135deg);
+    }
+    100% {
+        -moz-transform: rotate(-20deg);
+    }
+}
+
+@keyframes circleProgressLoad_left {
+    0%, 50% {
+        transform: rotate(-135deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+
+.rotatePointer{                                            /*ani_5(育儿)称指针旋转动画*/
+    -webkit-animation-name: rotatePointer;
+    animation-name: rotatePointer;
+    -webkit-animation-timing-function: cubic-bezier(.62, .08, .1, 1.27);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+}
+@-webkit-keyframes rotatePointer {
+    0%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    80%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+    100%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+@keyframes rotatePointer {
+    0%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    80%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+    }
+    100%{
+        -webkit-transform-origin:center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+.qt_decline{                                /*ani_5(育儿)称盘上下动画*/
+    -webkit-animation-name: qt_decline;
+    animation-name: qt_decline;
+    -webkit-animation-timing-function: cubic-bezier(.05, .68, .57, 1.58);
+    animation-timing-function: cubic-bezier(.05, .68, .57, 1.58)
+}
+@-webkit-keyframes qt_decline {
+    from{
+        transform:translateY(0);
+        -webkit-transform: translateY(0);
+    }
+    to{
+        transform:translateY(3px);
+        -webkit-transform: translateY(3px);
+    }
+}
+@keyframes qt_decline {
+    from{
+        transform:translateY(0);
+        -webkit-transform: translateY(0);
+    }
+    to{
+        transform:translateY(3px);
+        -webkit-transform: translateY(3px);
+    }
+}
+.again_decline{                             /*ani_5(育儿)称盘上下动画*/
+    -webkit-animation-name: again_decline;
+    animation-name: again_decline;
+    -webkit-animation-timing-function: cubic-bezier(.05, .68, .57, 1.58);
+    animation-timing-function: cubic-bezier(.05, .68, .57, 1.58)
+}
+@-webkit-keyframes again_decline {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(3px);
+        -webkit-transform: translateY(3px);
+    }
+}
+@keyframes again_decline {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(3px);
+        -webkit-transform: translateY(3px);
+    }
+}
+.bt_decline{                              /*ani_5(育儿)称底座动画*/
+    -webkit-animation-name: bt_decline;
+    animation-name: bt_decline;
+    -webkit-animation-timing-function: cubic-bezier(.62, .08, .1, 1.27);
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+@-webkit-keyframes bt_decline {
+    from{
+        top:-2px;
+    }
+    to{
+        top:1px;
+    }
+}
+@keyframes bt_decline {
+    from{
+        top:-2px;
+    }
+    to{
+        top:1px;
+    }
+}
+
+.decline{                                   /*ani_6(工具)吊车杆伸缩动画*/
+    -webkit-animation-name: decline;
+    animation-name: decline;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes decline {
+    from{
+        height:5px;
+    }
+    to{
+        height:98px;
+    }
+}
+@keyframes decline {
+    from{
+        height:5px;
+    }
+    to{
+        height:98px;
+    }
+}
+.rise{                                      /*ani_6(工具)吊车杆伸缩动画*/
+    -webkit-animation-name: rise;
+    animation-name: rise;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes rise {
+    from{
+        height:98px;
+    }
+    to{
+        height:5px;
+    }
+}
+@keyframes rise {
+    from{
+        height:98px;
+    }
+    to{
+        height:5px;
+    }
+}
+.q_rise{                                /*ani_6(工具)方块上升动画*/
+    -webkit-animation-name: q_rise;
+    animation-name: q_rise;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes q_rise {
+    from {
+        top: 199px;
+    }
+
+    to {
+        top: 98px;
+    }
+}
+@keyframes q_rise {
+    from {
+        top: 199px;
+    }
+
+    to {
+        top: 98px;
+    }
+}
+.shaking {                          /*ani_6(工具)右边手摇晃动画*/
+    -webkit-animation-name: shaking;
+    animation-name: shaking;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+@-webkit-keyframes shaking {
+    from {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+}
+@keyframes shaking {
+    0% {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+    100% {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+
+
+.fadeInRightMiddles {                                   /*ani_7(交流)左边文字动画*/
+    -webkit-animation-name: fadeInRightMiddles;
+    animation-name: fadeInRightMiddles;
+}
+@-webkit-keyframes fadeInRightMiddles {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(800px, 0, 0);
+        transform: translate3d(800px, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes fadeInRightMiddles {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(800px, 0, 0);
+        transform: translate3d(800px, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.fadeInLeftMiddles {                            /*ani_7(交流)左边文字动画*/
+    -webkit-animation-name: fadeInLeftMiddles;
+    animation-name: fadeInLeftMiddles
+}
+@-webkit-keyframes fadeInLeftMiddles {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-800px, 0, 0);
+        transform: translate3d(-800px, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes fadeInLeftMiddles {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-800px, 0, 0);
+        transform: translate3d(-800px, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+

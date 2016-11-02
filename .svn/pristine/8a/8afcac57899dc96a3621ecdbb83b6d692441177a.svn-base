@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://local.whale.haoyunma.com/src/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>好孕妈-后台登录</title>
+    <!-- build:css({.tmp,minsrc/src}) minsrc/src/css/index/index_ie80.min.css -->
+    <link rel="stylesheet" href="css/cdn/myreset.min.css" type="text/css"/>
+    <link href="css/cdn/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/admin/hym_admin.css">
+    <link rel="stylesheet" href="css/admin/admin_login.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div class="header">
+    <a href="#">
+        <img src="image/admin/logo.png"/>
+    </a>
+    <span>欢迎使用好孕妈内容管理系统</span>
+</div>
+
+<div class="section">
+    <div class="mainContent">
+        <div class="mainLeft">
+            <div class="mainLeftTips">
+                <div class="inoculation" style="display: block;"></div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="mainRightTips">
+                <div class="user_login">
+                    <div class="login_title">用户登录</div>
+                    <form class="form-horizontal">
+                        <div class="input_group">
+                            <lable for="name">用户名</lable>
+                            <div class="input_box"><input type="password" class="form-control" id="name" placeholder="昵称/手机号码" style="width:100%;"></div>
+                        </div>
+                        <div class="input_group">
+                            <lable for="password">登录密码</lable>
+                            <div class="input_box "><input type="password" id="password" class="form-control" placeholder="请输入密码"></div>
+                            <p class="find_password_btn" id="find_password">找回密码</p>
+                        </div>
+                        <div class="login_btn">
+                            <input type="submit" placeholder="立即登录" id="save">
+                        </div>
+                    </form>
+
+                </div>
+                <div class="find_password_box">
+                    <div class="login_title">找回密码</div>
+                    <form class="form-horizontal">
+                        <div class="input_group">
+                            <div ><input type="password" class="form-control" id="phone_num" placeholder="请输入注册或绑定的手机号" style="width:100%;"></div>
+                        </div>
+                        <div class="input_group">
+                            <div  style="display: inline-block;"><input type="password" id="code" class="form-control" placeholder="请输入验证码" style="width:170px;"></div>
+                            <a class="obtain_code" id="obtain_code">获取验证码</a>
+                        </div>
+                        <div class="input_group">
+                            <div><input type="password" id="new_password" class="form-control" placeholder="请设置新密码(6-15位字母或数字)" style="width:100%;"></div>
+                        </div>
+                        <div class="login_btn">
+                            <input type="submit" placeholder="提交" id="submit">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/index/index_ie80.min.js -->
+<script src="js/cdn/jquery-1.9.1.min.js"></script>
+<script src="js/cdn/bootstrap.min.js"></script>
+<script src="js/admin/yo_base.js"></script>
+<!-- endbuild -->
+<!-- build:js({.tmp,minsrc/src}) minsrc/src/js/index/index_ie81.min.js -->
+<script src="js/admin/admin_login.js"></script>
+<!-- endbuild -->
+</body>
+</html>
