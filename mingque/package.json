@@ -4,6 +4,7 @@
   "dependencies": {
     "gulp": "*",
     "fs":"*",
-    "gulp-replace":"*"
+    "gulp-replace":"*",
+    "gulp-file-include":"*"
   }
 }
