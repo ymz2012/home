@@ -1,0 +1,25 @@
+/* CSS Document */
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 12px; }
+
+body {
+  background-color: #F5F5F5; }
+
+.wrap {
+  width: 100%;
+  margin: 0 auto; }
+  .wrap .logo {
+    height: 80px;
+    background-color: #FFF; }
+    .wrap .logo .logo_left {
+      width: 375px;
+      float: left;
+      display: inline; }
+      .wrap .logo .logo_left img {
+        height: 80px; }
+    .wrap .logo .nav {
+      float: right; }
+
+/*# sourceMappingURL=index.css.map */
