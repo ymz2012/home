@@ -1,0 +1,88 @@
+@import url(../cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.container .content {
+  font-size: 16px;
+  font-family: "HY QIHEI50" !important;
+  text-align: center;
+  padding-top: 1.33333rem;
+  box-sizing: border-box; }
+  [data-dpr="2"] .container .content {
+    font-size: 32px; }
+    @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+      [data-dpr="2"] .container .content {
+        font-size: 64px; } }
+  [data-dpr="3"] .container .content {
+    font-size: 48px; }
+    @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+      [data-dpr="3"] .container .content {
+        font-size: 96px; } }
+  @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+    .container .content {
+      font-size: 32px; } }
+  .container .content p {
+    line-height: 0.85333rem; }
+.container .btn_out {
+  text-align: center;
+  height: 1.86667rem;
+  color: #fff;
+  font-size: 11px;
+  font-family: "HY QIHEI50" !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.26667rem; }
+  [data-dpr="2"] .container .btn_out {
+    font-size: 22px; }
+    @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+      [data-dpr="2"] .container .btn_out {
+        font-size: 44px; } }
+  [data-dpr="3"] .container .btn_out {
+    font-size: 33px; }
+    @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+      [data-dpr="3"] .container .btn_out {
+        font-size: 66px; } }
+  @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+    .container .btn_out {
+      font-size: 22px; } }
+  .container .btn_out .two {
+    height: 1.4rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    padding: 0 0.26667rem;
+    box-sizing: border-box; }
+    .container .btn_out .two img {
+      width: 2.66667rem;
+      height: 0.85333rem; }
+    .container .btn_out .two .btn {
+      width: 2.26667rem;
+      height: 0.66667rem;
+      text-align: center;
+      line-height: 0.66667rem;
+      font-size: 12px;
+      font-family: "HY QIHEI50" !important;
+      color: #ff8698;
+      border-radius: 0.4rem;
+      border: 1px solid #ff8698; }
+      [data-dpr="2"] .container .btn_out .two .btn {
+        font-size: 24px; }
+        @media all and (-webkit-device-pixel-ratio: 2) and (min-width: 1080px) {
+          [data-dpr="2"] .container .btn_out .two .btn {
+            font-size: 48px; } }
+      [data-dpr="3"] .container .btn_out .two .btn {
+        font-size: 36px; }
+        @media all and (-webkit-device-pixel-ratio: 3) and (min-width: 1620px) {
+          [data-dpr="3"] .container .btn_out .two .btn {
+            font-size: 72px; } }
+      @media all and (-webkit-device-pixel-ratio: 1) and (min-width: 540px) {
+        .container .btn_out .two .btn {
+          font-size: 24px; } }
+
+/*# sourceMappingURL=ask_doctor.css.map */

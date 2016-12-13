@@ -1,0 +1,52 @@
+@import "../sassmixins/_mixins.scss";
+@import "../cdn/myreset.min.css";
+
+.container{
+  .content{
+    @include font-dpr(16px);
+    @include font-normal;
+    text-align: center;
+    padding-top: px2rem(100px);
+    box-sizing: border-box;
+    p{
+      line-height: px2rem(64px);
+    }
+  }
+  .btn_out{
+    text-align: center;
+    height: px2rem(140px);
+    color: #fff;
+    @include font-dpr(11px);
+    @include font-normal;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    background:rgba(0,0,0,0.8);
+    padding-top: px2rem(20px);
+    .two{
+      height: px2rem(105px);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: justify;
+      padding: 0 px2rem(20px);
+      box-sizing: border-box;
+      img{
+        width: px2rem(200px);
+        height: px2rem(64px);
+      }
+      .btn{
+        width: px2rem(170px);
+        height: px2rem(50px);
+        text-align: center;
+        line-height: px2rem(50px);
+        @include font-dpr(12px);
+        @include font-normal;
+        color: #ff8698;
+        border-radius: px2rem(30px);
+        border: 1px solid #ff8698;
+      }
+    }
+  }
+}
