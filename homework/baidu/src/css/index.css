@@ -1,9 +1,28 @@
 @import url(./cdn/myreset.min.css);
 body {
-  background: #fff; }
+  background: #fff;
+  font: 12px arial; }
 
-.content img {
-  width: 270px;
-  height: 129px; }
+.wrapper header {
+  overflow: hidden; }
+  .wrapper header nav {
+    width: 400px;
+    float: right; }
+    .wrapper header nav a {
+      margin-left: 15px; }
+.wrapper .content {
+  text-align: center; }
+  .wrapper .content img {
+    display: inline-block;
+    width: 270px;
+    height: 129px; }
+  .wrapper .content input {
+    width: 450px;
+    height: 34px; }
+  .wrapper .content button {
+    width: 100px;
+    height: 39px; }
+.wrapper footer p {
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
