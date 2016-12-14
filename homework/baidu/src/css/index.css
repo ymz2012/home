@@ -13,6 +13,10 @@ body {
       float: right; }
       .wrapper header nav a {
         margin-left: 15px; }
+      .wrapper header nav .moreProduct {
+        background: #38f;
+        width: 60px;
+        height: 23px; }
   .wrapper .content {
     text-align: center; }
     .wrapper .content img {
