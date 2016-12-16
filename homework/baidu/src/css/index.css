@@ -9,10 +9,14 @@ body {
   .wrapper header {
     overflow: hidden; }
     .wrapper header nav {
-      width: 400px;
+      padding-top: 19px;
+      width: 100%;
       float: right; }
       .wrapper header nav a {
-        margin-left: 15px; }
+        margin-left: 20px;
+        text-decoration: underline;
+        font-weight: 700;
+        font-size: 13px; }
       .wrapper header nav .moreProduct {
         background: #38f;
         width: 60px;
