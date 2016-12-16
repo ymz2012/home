@@ -6,22 +6,40 @@ body {
 .wrapper {
   width: 100%;
   height: 100%; }
-  .wrapper header {
-    overflow: hidden; }
-    .wrapper header nav {
-      padding-top: 19px;
-      width: 100%;
-      float: right; }
-      .wrapper header nav a {
-        margin-left: 20px;
-        text-decoration: underline;
-        font-weight: 700;
-        font-size: 13px; }
-      .wrapper header nav .moreProduct {
-        background: #38f;
-        width: 60px;
-        height: 23px; }
+  .wrapper header nav {
+    display: block;
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px;
+    padding: 0 96px 0 0;
+    text-align: center; }
+    .wrapper header nav a {
+      margin-left: 20px;
+      text-decoration: underline;
+      font-weight: 700;
+      font-size: 13px; }
+    .wrapper header nav .moreProduct {
+      position: absolute;
+      right: 10px;
+      width: 60px;
+      height: 23px;
+      float: left;
+      background: #38f;
+      color: #fff;
+      line-height: 24px;
+      font-size: 13px;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 1px solid #38f;
+      margin-left: 19px;
+      margin-right: 2px;
+      text-decoration: none;
+      display: inline-block; }
   .wrapper .content {
+    padding-top: 80px;
     text-align: center; }
     .wrapper .content img {
       display: inline-block;
