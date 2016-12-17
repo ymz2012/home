@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    border-collapse:collapse;
+    text-align: center;
+}
+
+thead,tbody{
+    border: 1px solid #000;
+}
+.num{
+    width: 30px;
+}
