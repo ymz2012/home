@@ -14,55 +14,84 @@ body {
     right: 0;
     top: 0;
     margin: 19px 0 5px;
-    padding: 0 96px 0 0;
+    padding: 0 10px 0 0;
     text-align: center; }
     .wrapper header nav a {
       margin-left: 20px;
+      color: #000;
       text-decoration: underline;
       font-weight: 700;
       font-size: 13px; }
+    .wrapper header nav a:hover {
+      color: #00c; }
     .wrapper header nav .moreProduct {
-      position: absolute;
-      right: 10px;
-      width: 60px;
-      height: 23px;
-      float: left;
-      background: #38f;
       color: #fff;
-      line-height: 24px;
-      font-size: 13px;
-      text-align: center;
-      overflow: hidden;
-      border-bottom: 1px solid #38f;
-      margin-left: 19px;
-      margin-right: 2px;
-      text-decoration: none;
-      display: inline-block; }
+      background: #38f;
+      padding: 5px 10px;
+      font-weight: normal;
+      text-decoration: none; }
   .wrapper .content {
     padding-top: 80px;
     text-align: center; }
+    .wrapper .content .hover {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10; }
+      .wrapper .content .hover ul {
+        width: 93px;
+        background-color: #f9f9f9;
+        display: none; }
+        .wrapper .content .hover ul li {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: #333; }
+    .wrapper .content .search {
+      width: 640px;
+      height: 36px;
+      margin: 0 auto; }
+      .wrapper .content .search span {
+        width: 538px;
+        height: 34px;
+        border: 1px solid #b8b8b8;
+        display: inline-block;
+        overflow: hidden; }
+        .wrapper .content .search span input {
+          width: 100%;
+          height: 34px;
+          border: none; }
+      .wrapper .content .search button {
+        width: 100px;
+        height: 36px;
+        display: inline-block;
+        float: right;
+        background: #3385ff;
+        border: none;
+        color: #fff; }
     .wrapper .content img {
       display: inline-block;
       width: 270px;
       height: 129px; }
-    .wrapper .content input {
-      width: 450px;
-      height: 34px;
-      padding: 0; }
-    .wrapper .content button {
-      width: 100px;
-      height: 39px;
-      color: #fff;
-      background: #3385ff;
-      border: 1px solid #2d78f4;
-      padding: 0;
-      font-size: 15px; }
     .wrapper .content .qrCode {
       padding-top: 200px; }
       .wrapper .content .qrCode img {
         width: 60px;
         height: 60px; }
-  .wrapper footer p {
-    text-align: center; }
+  .wrapper footer {
+    text-align: center;
+    line-height: 26px; }
+    .wrapper footer .one a {
+      color: #999;
+      margin: 0 10px;
+      text-decoration: underline; }
+    .wrapper footer .one span {
+      color: #999;
+      margin: 0 10px; }
+    .wrapper footer .two {
+      color: #999; }
+      .wrapper footer .two a {
+        color: #999;
+        text-decoration: underline; }
 
 /*# sourceMappingURL=index.css.map */

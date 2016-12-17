@@ -16,56 +16,79 @@ body{
       right: 0;
       top: 0;
       margin: 19px 0 5px;
-      padding: 0 96px 0 0 ;
+      padding: 0 10px 0 0 ;
       text-align: center;
       a{
         margin-left: 20px;
+        color:#000;
         text-decoration: underline;
         font-weight: 700;
         font-size: 13px;
+
+      }
+      a:hover{
+        color: #00c;
       }
       .moreProduct{
-        position: absolute;
-        right: 10px;
-        width: 60px;
-        height: 23px;
-        float: left;
-        background: #38f;
-        color: #fff;
-        line-height: 24px;
-        font-size: 13px;
-        text-align: center;
-        overflow: hidden;
-        border-bottom: 1px solid #38f;
-        margin-left: 19px;
-        margin-right: 2px;
-        text-decoration: none;
-        display: inline-block;
-
+          color:#fff;
+          background:#38f;
+          padding:5px 10px;
+          font-weight: normal;
+          text-decoration: none;
       }
     }
   }
   .content{
     padding-top: 80px;
     text-align: center;
+    .hover{
+      position:fixed;
+      right:0;
+      top:0;
+      z-index:10;
+      ul{
+          width:93px;
+          background-color: #f9f9f9;
+          display:none;
+          li{
+             height:50px;
+             line-height:50px;
+             text-align:center;
+             color:#333;
+          }
+      }
+
+  }
+    .search{
+      width:640px;
+      height:36px;
+      margin:0 auto;
+        span{
+          width:538px;
+          height:34px;
+          border:1px solid #b8b8b8;
+          display:inline-block;
+          overflow:hidden;
+            input{
+              width:100%;
+              height:34px;
+              border:none;
+            }
+        }
+        button{
+          width:100px;
+          height:36px;
+          display:inline-block;
+          float: right;
+          background:#3385ff;
+          border:none;
+          color:#fff;
+        }
+    }
     img{
       display: inline-block;
       width: 270px;
       height: 129px;
-    }
-    input{
-      width: 450px;
-      height: 34px;
-      padding: 0;
-    }
-    button{
-      width: 100px;
-      height: 39px;
-      color: #fff;
-      background: #3385ff;
-      border: 1px solid #2d78f4;
-      padding: 0;
-      font-size: 15px;
     }
     .qrCode{
       padding-top: 200px;
@@ -76,8 +99,26 @@ body{
     }
   }
   footer{
-    p{
-      text-align: center;
+    text-align: center;
+    line-height: 26px;
+
+    .one{
+      a{
+        color:#999;
+        margin:0 10px;
+        text-decoration: underline;
+      }
+      span{
+        color:#999;
+        margin:0 10px;
+      }
+    }
+    .two{
+      color:#999;
+      a{
+        color:#999;
+        text-decoration: underline;
+      }
     }
   }
 }
