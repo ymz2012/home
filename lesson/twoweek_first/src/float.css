@@ -1,0 +1,23 @@
+
+div{
+    float: left;
+    height: 100px;
+}
+.div1{
+    background-color: red;
+}
+.div2{
+
+    background-color: blue;
+}
+.div3{
+    background-color: black;
+}
+.div4{
+    background-color: #00f000;
+}
+
+.container{
+    height: 300px;
+    border: 1px solid blue;
+}

@@ -1,0 +1,7 @@
+@import url(./cdn/myreset.min.css);
+* {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent; }
+
+/*# sourceMappingURL=index.css.map */

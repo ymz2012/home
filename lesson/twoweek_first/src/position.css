@@ -1,0 +1,14 @@
+div{
+    height: 100px;
+    width: 100px;
+}
+.rel{
+    background-color: orange;
+    display: inline-block;
+}
+.abs{
+    background-color: green;
+    display: inline-block;
+}
+
+

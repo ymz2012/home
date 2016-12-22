@@ -50,7 +50,19 @@ body {
     .wrapper .content .search {
       width: 640px;
       height: 36px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative; }
+      .wrapper .content .search span.img {
+        width: 18px;
+        height: 18px;
+        background: url("../image/camera_new_5606e8f.png") no-repeat;
+        position: absolute;
+        top: 10px;
+        right: 108px;
+        border: 0;
+        cursor: pointer; }
+      .wrapper .content .search span.img:hover {
+        background-position: 0 -20px; }
       .wrapper .content .search span {
         width: 538px;
         height: 34px;
