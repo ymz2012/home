@@ -1,2 +1,109 @@
 @import "./sassmixins/_mixins.scss";
 @import "./cdn/myreset.min.css";
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+.wrapper{
+  background: url('../image/h5_bg.png') no-repeat center center;
+  background-size: 100% 100%;
+  width: px2rem-s(640px);
+  height: px2rem-s(3648px);
+  .topLight{
+    width: 100%;
+    height: px2rem-s(105px);
+/*    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;*/
+    @keyframes myfirst{
+      0% {
+        -webkit-transform: rotateZ(0deg);
+      }
+      20% {
+        -webkit-transform: rotateZ(35deg);
+      }
+      40% {
+        -webkit-transform: rotateZ(0deg);
+      }
+      80% {
+        -webkit-transform: rotateZ(-55deg);
+      }
+      100% {
+        -webkit-transform: rotateZ(0deg);
+      }
+    }
+    @keyframes mysecond{
+      0% {
+        -webkit-transform: rotateZ(0deg);
+      }
+      20% {
+        -webkit-transform: rotateZ(-35deg);
+      }
+      40% {
+        -webkit-transform: rotateZ(0deg);
+      }
+      80% {
+        -webkit-transform: rotateZ(60deg);
+      }
+      100% {
+        -webkit-transform: rotateZ(0deg);
+      }
+    }
+    @keyframes fireLeft1{
+      0%{opacity:0}
+      50%{opacity:.8;}
+      100%{opacity:0;}
+    }
+    @-webkit-keyframes fireLeft1{
+      0%{opacity:0}
+      50%{opacity:.8;}
+      100%{opacity:0;}
+    }
+    @-moz-keyframes fireLeft1{
+      0%{opacity:0}
+      50%{opacity:.8;}
+      100%{opacity:0;}
+    }
+    .lightLeft{
+      display: inline-block;
+      float: left;
+      img{
+        animation: myfirst 4s infinite;
+        -moz-animation: myfirst 4s infinite;
+        -webkit-animation: myfirst 4s infinite;
+      }
+    }
+    .fireLeft{
+      display: inline-block;
+      padding-left: px2rem-s(400px);
+      img{
+        width: px2rem-s(69px);
+        height: px2rem-s(69px);
+        animation: 2s fireLeft1 0s infinite ;
+        -moz-animation: 2s fireLeft1 0s infinite;
+        -webkit-animation: 2s fireLeft1 0s infinite;
+      }
+    }
+    .lightRight{
+      display: inline-block;
+      float: right;
+      img{
+        animation: mysecond 4s infinite;
+        -moz-animation: mysecond 4s infinite;
+        -webkit-animation: mysecond 4s infinite;
+      }
+    }
+  }
+  .fireRight{
+    padding-top: px2rem-s(300px);
+    padding-left: px2rem-s(30px);
+    img{
+      width: px2rem-s(78px);
+      height: px2rem-s(77px);
+      animation: 2s fireLeft1 0s infinite ;
+      -moz-animation: 2s fireLeft1 0s infinite;
+      -webkit-animation: 2s fireLeft1 0s infinite;
+    }
+  }
+}

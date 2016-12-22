@@ -4,4 +4,95 @@
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent; }
 
+body, html {
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  background: url("../image/h5_bg.png") no-repeat center center;
+  background-size: 100% 100%;
+  width: 10rem;
+  height: 57rem; }
+  .wrapper .topLight {
+    width: 100%;
+    height: 1.64063rem;
+    /*    display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: justify;*/ }
+@keyframes myfirst {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+  20% {
+    -webkit-transform: rotateZ(35deg); }
+  40% {
+    -webkit-transform: rotateZ(0deg); }
+  80% {
+    -webkit-transform: rotateZ(-55deg); }
+  100% {
+    -webkit-transform: rotateZ(0deg); } }
+@keyframes mysecond {
+  0% {
+    -webkit-transform: rotateZ(0deg); }
+  20% {
+    -webkit-transform: rotateZ(-35deg); }
+  40% {
+    -webkit-transform: rotateZ(0deg); }
+  80% {
+    -webkit-transform: rotateZ(60deg); }
+  100% {
+    -webkit-transform: rotateZ(0deg); } }
+@keyframes fireLeft1 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: .8; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes fireLeft1 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: .8; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes fireLeft1 {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: .8; }
+  100% {
+    opacity: 0; } }
+    .wrapper .topLight .lightLeft {
+      display: inline-block;
+      float: left; }
+      .wrapper .topLight .lightLeft img {
+        animation: myfirst 4s infinite;
+        -moz-animation: myfirst 4s infinite;
+        -webkit-animation: myfirst 4s infinite; }
+    .wrapper .topLight .fireLeft {
+      display: inline-block;
+      padding-left: 6.25rem; }
+      .wrapper .topLight .fireLeft img {
+        width: 1.07813rem;
+        height: 1.07813rem;
+        animation: 2s fireLeft1 0s infinite;
+        -moz-animation: 2s fireLeft1 0s infinite;
+        -webkit-animation: 2s fireLeft1 0s infinite; }
+    .wrapper .topLight .lightRight {
+      display: inline-block;
+      float: right; }
+      .wrapper .topLight .lightRight img {
+        animation: mysecond 4s infinite;
+        -moz-animation: mysecond 4s infinite;
+        -webkit-animation: mysecond 4s infinite; }
+  .wrapper .fireRight {
+    padding-top: 4.6875rem;
+    padding-left: 0.46875rem; }
+    .wrapper .fireRight img {
+      width: 1.21875rem;
+      height: 1.20313rem;
+      animation: 2s fireLeft1 0s infinite;
+      -moz-animation: 2s fireLeft1 0s infinite;
+      -webkit-animation: 2s fireLeft1 0s infinite; }
+
 /*# sourceMappingURL=index.css.map */
