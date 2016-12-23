@@ -52,7 +52,7 @@ body, html {
       display: inline-block;
       float: left; }
       .wrapper .topLight .lightLeft img {
-        -webkit-animation: myfirst 4s infinite; }
+        -webkit-animation: myfirst 2s infinite; }
     .wrapper .topLight .fireLeft {
       display: inline-block;
       padding-left: 6.25rem; }
@@ -64,32 +64,54 @@ body, html {
       display: inline-block;
       float: right; }
       .wrapper .topLight .lightRight img {
-        -webkit-animation: mysecond 4s infinite; }
+        -webkit-animation: mysecond 2s infinite; }
   .wrapper .fireRight {
-    padding-top: 4.6875rem;
+    padding-top: 4.375rem;
     padding-left: 0.46875rem; }
     .wrapper .fireRight img {
       width: 1.21875rem;
       height: 1.20313rem;
       -webkit-animation: 2s fireLeft1 0s infinite; }
-    .wrapper .fireRight .content {
-      width: 100%;
-      height: 4.6875rem;
-      margin: 0 1.09375rem;
-      display: -webkit-box;
-      -webkit-box-align: center;
-      -webkit-box-pack: center; }
-      .wrapper .fireRight .content .gift {
-        width: 3.15625rem;
-        height: 1.46875rem;
-        display: inline-block; }
-      .wrapper .fireRight .content .phone {
-        width: 2.5rem;
-        height: 4.70313rem;
-        display: inline-block; }
-      .wrapper .fireRight .content .luckone {
-        width: 2.34375rem;
-        height: 2.53125rem;
-        display: inline-block; }
+  .wrapper .content {
+    width: 100%;
+    height: auto;
+    /*    margin: 0 px2rem-s(70px);*/
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 0;
+    /*    -webkit-column-count: 3;*/ }
+    .wrapper .content img {
+      font-size: 0; }
+    .wrapper .content .gift {
+      /*width: px2rem-s(202px);*/
+      width: auto;
+      display: inline-block; }
+    .wrapper .content .phone {
+      width: auto;
+      display: inline-block; }
+    .wrapper .content .luckone {
+      width: 2.34375rem;
+      height: 2.53125rem;
+      display: inline-block;
+      background: url("../image/h5_luckybaby_one.png") no-repeat center center;
+      background-size: 100% 100%; }
+    .wrapper .content .lucktwo {
+      width: 2.48438rem;
+      height: 2.60938rem;
+      display: inline-block;
+      background: url("../image/h5_luckybaby_two.png") no-repeat center center;
+      background-size: 100% 100%; }
+  .wrapper .first_button {
+    text-align: center;
+    width: auto; }
+    .wrapper .first_button img {
+      display: inline-block; }
+  .wrapper .second_button {
+    text-align: center;
+    width: auto;
+    padding-top: 0.3125rem; }
+    .wrapper .second_button img {
+      display: inline-block; }
 
 /*# sourceMappingURL=index.css.map */

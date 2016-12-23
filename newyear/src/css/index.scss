@@ -59,7 +59,7 @@ body,html{
       display: inline-block;
       float: left;
       img{
-        -webkit-animation: myfirst 4s infinite;
+        -webkit-animation: myfirst 2s infinite;
       }
     }
     .fireLeft{
@@ -75,40 +75,69 @@ body,html{
       display: inline-block;
       float: right;
       img{
-        -webkit-animation: mysecond 4s infinite;
+        -webkit-animation: mysecond 2s infinite;
       }
     }
   }
   .fireRight{
-    padding-top: px2rem-s(300px);
+    padding-top: px2rem-s(280px);
     padding-left: px2rem-s(30px);
     img{
       width: px2rem-s(78px);
       height: px2rem-s(77px);
       -webkit-animation: 2s fireLeft1 0s infinite;
     }
-    .content{
-      width: 100%;
-      height: px2rem-s(300px);
-      margin: 0 px2rem-s(70px);
-      display: -webkit-box;
-      -webkit-box-align: center;
-      -webkit-box-pack: center;
-      .gift{
-        width: px2rem-s(202px);
-        height: px2rem-s(94px);
-        display: inline-block;
-      }
-      .phone{
-        width: px2rem-s(160px);
-        height: px2rem-s(301px);
-        display: inline-block;
-      }
-      .luckone{
-        width: px2rem-s(150px);
-        height: px2rem-s(162px);
-        display: inline-block;
-      }
+
+  }
+  .content{
+    width: 100%;
+    height: auto;
+/*    margin: 0 px2rem-s(70px);*/
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 0;
+    img{
+      font-size: 0;
+    }
+/*    -webkit-column-count: 3;*/
+    .gift{
+      /*width: px2rem-s(202px);*/
+      width: auto;
+      display: inline-block;
+    }
+    .phone{
+      width: auto;
+      display: inline-block;
+    }
+    .luckone{
+      width: px2rem-s(150px);
+      height: px2rem-s(162px);
+      display: inline-block;
+      background: url('../image/h5_luckybaby_one.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+    .lucktwo{
+      width: px2rem-s(159px);
+      height: px2rem-s(167px);
+      display: inline-block;
+      background: url('../image/h5_luckybaby_two.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+  }
+  .first_button{
+    text-align: center;
+    width: auto;
+    img{
+      display: inline-block;
+    }
+  }
+  .second_button{
+    text-align: center;
+    width: auto;
+    padding-top: px2rem-s(20px);
+    img{
+      display: inline-block;
     }
   }
 }
