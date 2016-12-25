@@ -1,0 +1,14 @@
+@import url(./cdn/myreset.min.css);
+.col {
+  -webkit-column-count: 2;
+  -webkit-column-rule-style: dotted; }
+
+.center {
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center; }
+
+/*# sourceMappingURL=flex.css.map */
