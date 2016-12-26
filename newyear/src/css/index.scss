@@ -13,43 +13,58 @@ body,html{
   .topLight{
     width: 100%;
     height: px2rem-s(105px);
+    //左面灯笼动画
     @-webkit-keyframes myfirst{
       0% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:50% 0%;
       }
       25% {
         -webkit-transform: rotateZ(5deg);
+        -webkit-transform-origin:50% 0%;
       }
       50% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:50% 0%;
       }
       75% {
         -webkit-transform: rotateZ(-15deg);
+        -webkit-transform-origin:50% 0%;
       }
       100% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:50% 0%;
       }
     }
+    //右面灯笼动画
     @-webkit-keyframes mysecond{
       0% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:30% 0%;
       }
       25% {
         -webkit-transform: rotateZ(-5deg);
+        -webkit-transform-origin:30% 0%;
       }
       50% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:30% 0%;
       }
       75% {
         -webkit-transform: rotateZ(15deg);
+        -webkit-transform-origin:30% 0%;
       }
       100% {
         -webkit-transform: rotateZ(0deg);
+        -webkit-transform-origin:30% 0%;
       }
     }
+    //烟花渐隐渐现动画
     @-webkit-keyframes fireLeft1{
-      0%{opacity:0}
-      50%{opacity:.8;}
+      0%{opacity:0;}
+      25%{opacity:1;}
+      50%{opacity:0.8;}
+      75%{opacity:0.6;}
       100%{opacity:0;}
     }
     .lightLeft{
@@ -76,7 +91,7 @@ body,html{
       }
     }
   }
-  .fireRight{
+/*  .fireRight{
     padding-top: px2rem-s(280px);
     padding-left: px2rem-s(30px);
     img{
@@ -84,9 +99,9 @@ body,html{
       height: px2rem-s(77px);
       -webkit-animation: 2s fireLeft1 0s infinite;
     }
-
-  }
+  }*/
   .content{
+    padding-top: px2rem-s(350px);
     width: 100%;
     height: auto;
 /*    display: -webkit-box;
@@ -103,20 +118,7 @@ body,html{
         height: px2rem-s(94px);
       }
     }
-    @-webkit-keyframes shake {
-      from, to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-      }
-      10%, 30%, 50%, 70%, 90% {
-        -webkit-transform: translate3d(-10px, 0, 0);
-        transform: translate3d(-10px, 0, 0);
-      }
-      20%, 40%, 60%, 80% {
-        -webkit-transform: translate3d(10px, 0, 0);
-        transform: translate3d(10px, 0, 0);
-      }
-    }
+    //手机摇摆动画
     @-webkit-keyframes phonemove{
       0% {
         -webkit-transform: rotateZ(0deg);
@@ -139,7 +141,6 @@ body,html{
       display: inline-block;
       position: relative;
       left: px2rem-s(-55px);
-/*      -webkit-animation: phonemove 0.2s;*/
       img{
         width: px2rem-s(160px);
         height: px2rem-s(301px);
@@ -148,28 +149,30 @@ body,html{
     .phonemove{
       -webkit-animation: phonemove 0.2s;
     }
+    //两个小虫子位置以及切换
     .luckone{
-      width: px2rem-s(150px);
-      height: px2rem-s(162px);
+      width: px2rem-s(163px);
+      height: px2rem-s(172px);
       display: inline-block;
       background: url('../image/h5_luckybaby_one.png') no-repeat center center;
       background-size: 100% 100%;
       position: relative;
-      left:px2rem-s(-63px);
+      top:px2rem-s(10px);
+      left:px2rem-s(-65px);
     }
     .lucktwo{
-      width: px2rem-s(159px);
-      height: px2rem-s(167px);
+      width: px2rem-s(163px);
+      height: px2rem-s(172px);
       display: inline-block;
       background: url('../image/h5_luckybaby_two.png') no-repeat center center;
       background-size: 100% 100%;
       position: relative;
-      left:px2rem-s(-63px);
-
+      top:px2rem-s(5px);
+      left:px2rem-s(-65px);
     }
+    //星星的位置
     .star{
       opacity: 0;
-
       position: absolute;
       display: inline-block;
       width: px2rem-s(15px);
@@ -180,9 +183,9 @@ body,html{
         height: 19px;
       }
     }
+    //左面红包的位置
     .red_left{
       opacity: 0;
-
       width: px2rem-s(49px);
       display: inline-block;
       position: absolute;
@@ -193,6 +196,7 @@ body,html{
         height: px2rem-s(50px);
       }
     }
+    //右面红包的位置
     .red_right{
       opacity: 0;
       width: px2rem-s(65px);
@@ -204,57 +208,170 @@ body,html{
         height: px2rem-s(66px);
       }
     }
+    //左面彩带的位置
+    .colour_left{
+      opacity: 0;
+      width: px2rem-s(45px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(200px);
+      top: px2rem-s(600px);
+    }
+    //右面彩带的位置
+    .colour_right{
+      opacity: 0;
+      width: px2rem-s(37px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(410px);
+      top:px2rem-s(550px);
+    }
+    //左面金币的位置
+    .gold_left{
+      opacity: 0;
+      width: px2rem-s(37px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(220px);
+      top:px2rem-s(500px);
+    }
+    //左面烟花的位置
+    .fireRight{
+      opacity: 0;
+      width: px2rem-s(69px);
+      height: px2rem-s(69px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(25px);
+      top:px2rem-s(450px);
+      -webkit-animation: 2s fireLeft1 0s infinite;
+    }
+    //右面金币位置
+    .gold_down{
+      opacity: 0;
+      width: px2rem-s(31px);
+      height: px2rem-s(32px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(410px);
+      top:px2rem-s(600px);
+    }
+    //右上方金币位置
+    .gold_top{
+      opacity: 0;
+      width: px2rem-s(28px);
+      height: px2rem-s(37px);
+      display: inline-block;
+      position: absolute;
+      left:px2rem-s(410px);
+      top:px2rem-s(520px);
+    }
     .starmove{
       -webkit-animation: red_left 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
     }
     .red_leftmove{
       -webkit-animation: red_left 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
     }
     .red_rightmove{
       -webkit-animation: red_right 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
     }
-    @-webkit-keyframes red_left{
+    .colour_leftmove{
+      -webkit-animation: colour_left 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .colour_rightmove{
+      -webkit-animation: colour_right 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .gold_leftmove{
+      -webkit-animation: gold_left 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .gold_downmove{
+      -webkit-animation: gold_down 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .gold_topmove{
+      -webkit-animation: gold_top 1s ease 0s 1;
+      -webkit-animation-fill-mode: forwards;
+    }
+    //右面彩带动画
+    @-webkit-keyframes colour_right{
       0%{opacity:0;
-        -webkit-transform:translate(px2rem-s(-20px),px2rem-s(-5px));
-      }
-      25%{opacity:.5;
-        -webkit-transform:translate(px2rem-s(-40px),px2rem-s(-10px));
-      }
-      50%{
-        opacity:.75;
-        -webkit-transform:translate(px2rem-s(-60px),px2rem-s(-15px));
-      }
-      75%{
-        opacity:1;
-        -webkit-transform:translate(px2rem-s(-80px),px2rem-s(-20px));
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
       }
       100%{
         opacity:1;
-        -webkit-transform:translate(px2rem-s(-100px),px2rem-s(-25px));
+        -webkit-transform:translate(px2rem-s(120px),px2rem-s(-40px));
       }
     }
+    //左面彩带动画
+    @-webkit-keyframes colour_left{
+      0%{opacity:0;
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
+      }
+      100%{
+        opacity:1;
+        -webkit-transform:translate(px2rem-s(-90px),px2rem-s(-60px));
+      }
+    }
+    //右面红包动画
     @-webkit-keyframes red_right{
       0%{opacity:0;
-        -webkit-transform:translate(px2rem-s(20px),px2rem-s(-5px));
-      }
-      25%{opacity:.5;
-        -webkit-transform:translate(px2rem-s(40px),px2rem-s(-10px));
-      }
-      50%{
-        opacity:.75;
-        -webkit-transform:translate(px2rem-s(60px),px2rem-s(-15px));
-      }
-      75%{
-        opacity:1;
-        -webkit-transform:translate(px2rem-s(80px),px2rem-s(-20px));
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
       }
       100%{
         opacity:1;
-        -webkit-transform:translate(px2rem-s(100px),px2rem-s(-25px));
+        -webkit-transform:translate(px2rem-s(170px),px2rem-s(-160px));
+      }
+    }
+    //左面红包动画
+    @-webkit-keyframes red_left{
+      0%{opacity:0;
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
+      }
+      100%{
+        opacity:1;
+        -webkit-transform:translate(px2rem-s(-20px),px2rem-s(-20px));
+      }
+    }
+    //左面金币动画
+    @-webkit-keyframes gold_left{
+      0%{opacity:0;
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
+      }
+      100%{
+        opacity:1;
+        -webkit-transform:translate(px2rem-s(-220px),px2rem-s(-110px));
+
+      }
+    }
+    //右面金币动画
+    @-webkit-keyframes gold_down{
+      0%{opacity:0;
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
+      }
+      100%{
+        opacity:1;
+        -webkit-transform:translate(px2rem-s(20px),px2rem-s(-50px));
+
+      }
+    }
+    //右上方金币动画
+    @-webkit-keyframes gold_top{
+      0%{opacity:0;
+        -webkit-transform:translate(px2rem-s(0px),px2rem-s(0px));
+      }
+      100%{
+        opacity:1;
+        -webkit-transform:translate(px2rem-s(110px),px2rem-s(-100px));
       }
     }
   }
-
+  //两个按钮
   .tbutton{
     img{
       display: inline-block;
@@ -272,6 +389,17 @@ body,html{
       height: px2rem-s(93px);
       margin: 0 auto;
       padding-top: px2rem-s(20px);
+    }
+  }
+  //下滑的标志
+  .dropdown{
+    position: fixed;
+    bottom:px2rem-s(20px);
+
+    right: px2rem-s(20px);
+    img{
+      width: px2rem-s(78px);
+      height: px2rem-s(78px);
     }
   }
 

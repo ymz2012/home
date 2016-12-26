@@ -16,5 +16,10 @@
         $('#red_right').addClass("red_rightmove");
         $('#red_left').addClass("red_leftmove");
         $('#star').addClass("starmove");
+        $('#colour_left').addClass("colour_leftmove");
+        $('#colour_right').addClass("colour_rightmove");
+        $('#gold_left').addClass("gold_leftmove");
+        $('#gold_down').addClass("gold_downmove");
+        $('#gold_top').addClass("gold_topmove");
     },2000);
 })()
