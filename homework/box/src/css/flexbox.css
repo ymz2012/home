@@ -1,0 +1,51 @@
+@import url(./cdn/myreset.min.css);
+.con {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  width: 600px;
+  background-color: green;
+  height: 600px; }
+  .con .first {
+    -webkit-order: 2;
+    height: 100px;
+    -webkit-flex: 1;
+    background-color: orange; }
+  .con #second {
+    height: 100px;
+    -webkit-order: 3;
+    -webkit-flex: 1;
+    background-color: aquamarine; }
+  .con #three {
+    -webkit-order: 1;
+    height: 200px;
+    -webkit-flex: 1;
+    background-color: #0a246a; }
+
+.Split {
+  width: 600px;
+  height: 20px;
+  background-color: black; }
+
+.con1 {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  width: 600px;
+  background-color: green;
+  height: 600px; }
+  .con1 .four {
+    -webkit-order: 2;
+    height: 100px;
+    -webkit-flex: 1;
+    background-color: orange; }
+  .con1 #five {
+    height: 100px;
+    -webkit-order: 3;
+    -webkit-flex: 1;
+    background-color: aquamarine; }
+  .con1 #six {
+    -webkit-order: 1;
+    height: 200px;
+    -webkit-flex: 1;
+    background-color: #0a246a; }
+
+/*# sourceMappingURL=flexbox.css.map */
