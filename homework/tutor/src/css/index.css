@@ -52,10 +52,15 @@ body {
       background: url("../image/beijin1.gif"); }
     .wrapper .content table {
       width: 857px;
-      border: 0;
       border-spacing: 1px;
-      font-size: medium;
-      display: table; }
+      font-size: 12px;
+      display: table;
+      /*border-collapse:collapse;*/
+      border: 1px solid #f1f1f1; }
+      .wrapper .content table tr {
+        display: table-row; }
+      .wrapper .content table .spanred {
+        color: #FF0000; }
       .wrapper .content table .tdbasic {
         background-color: #EEEEEE;
         border-bottom: 1px solid #f1f1f1;
