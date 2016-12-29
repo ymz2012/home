@@ -37,8 +37,12 @@ body{
             line-height: 13px;
             color: #000;
           }
+          a:hover{
+            text-decoration: underline;
+          }
         border-bottom: 1px solid #f1f1f1;
       }
+
     }
   }
   header{

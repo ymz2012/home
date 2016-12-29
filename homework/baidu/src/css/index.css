@@ -21,6 +21,7 @@ body {
       height: 100%; }
       .wrapper .hover ul li {
         /*height:50px;*/
+        padding-top: 10px;
         margin: 0 auto;
         line-height: 50px;
         width: 60px;
@@ -34,6 +35,8 @@ body {
         .wrapper .hover ul li a {
           line-height: 13px;
           color: #000; }
+        .wrapper .hover ul li a:hover {
+          text-decoration: underline; }
   .wrapper header nav {
     display: block;
     z-index: 2;
