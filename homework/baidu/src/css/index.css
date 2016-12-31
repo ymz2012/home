@@ -6,6 +6,37 @@ body {
 .wrapper {
   width: 100%;
   height: 100%; }
+  .wrapper .hover {
+    position: fixed;
+    width: 93px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+    font-size: 13px; }
+    .wrapper .hover ul {
+      width: 93px;
+      background-color: #f9f9f9;
+      height: 100%; }
+      .wrapper .hover ul li {
+        /*height:50px;*/
+        padding-top: 10px;
+        margin: 0 auto;
+        line-height: 50px;
+        width: 60px;
+        text-align: center;
+        color: #333;
+        border-bottom: 1px solid #f1f1f1; }
+        .wrapper .hover ul li img {
+          margin: 0 auto;
+          width: 40px;
+          height: auto; }
+        .wrapper .hover ul li a {
+          line-height: 13px;
+          color: #000; }
+        .wrapper .hover ul li a:hover {
+          text-decoration: underline; }
   .wrapper header nav {
     display: block;
     z-index: 2;
@@ -32,26 +63,30 @@ body {
       text-decoration: none; }
   .wrapper .content {
     padding-top: 80px;
-    text-align: center; }
-    .wrapper .content .hover {
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: 10; }
-      .wrapper .content .hover ul {
-        width: 93px;
-        background-color: #f9f9f9;
-        display: none; }
-        .wrapper .content .hover ul li {
-          height: 50px;
-          line-height: 50px;
-          text-align: center;
-          color: #333; }
+    text-align: center;
+    height: 100%; }
     .wrapper .content .search {
       width: 640px;
       height: 36px;
       margin: 0 auto;
       position: relative; }
+      .wrapper .content .search span.imgvoice {
+        width: 24px;
+        height: 34px;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAYAAACAa1QyAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAXlJREFUKBW9kr1Kw1AUx5OYVWiRGqqLiPgIios4qg+QobhI7QdYH6CKk4IPUCRNQhFRHPIAnRykIIqre7cMsUMHp0Jt/J2ShiYWxx44/M/53/N17z2qkhLbtgtQl+g62kWvKpXKExiLFlsYzWbzCLgOw7A2HA6XVFU9Ez/i41A9tjAIutA0rVAqld4j/tl13cJoNLrHf5zEJjpBbvq+/zE5FIz8jWkuYXOfMEFETppPd5qV84ebX5Iu82azWd00zR+Zg+fmEdWZd/M8b6Hf7w9kvKDX661Eg3cdx9mK7DFQdBtDPlkhYRUI5J86uq4fgA4d6nR6sCzrOAiCN8MwduDvhAdF9tFX/lJrYNRbrdZiuVz2SDqHs/P5/EBQfOHlXOIkXsVQGMnicI2OZrFY/BZuWiSBtfLo6FPgZLxGmUymxrwNDj65ww3YzuVycleDQof4Ml6bONlFZdxpUpXF3MU+peIeuIx+McELeFutVjvg/5Jeneno+W3ELz3Rmg23qA6NAAAAAElFTkSuQmCC") no-repeat center;
+        display: block;
+        cursor: pointer;
+        border: 0;
+        position: absolute;
+        bottom: 1px;
+        right: 140px; }
+      .wrapper .content .search .rowline {
+        width: 1px;
+        background-color: lightsteelblue;
+        height: 18px;
+        position: absolute;
+        right: 135px;
+        top: 9px; }
       .wrapper .content .search span.img {
         width: 18px;
         height: 18px;
