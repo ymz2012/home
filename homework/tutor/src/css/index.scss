@@ -11,6 +11,13 @@ body{
   margin-top: 10px;
   margin-bottom: 20px;
   color:#000;
+  .spanred{
+    color: #FF0000;
+  }
+  .spanblue{
+    color:#0000ff;
+    width: 100%;
+  }
   .top{
     width: 710px;
     margin: 0 auto;
@@ -38,9 +45,10 @@ body{
   }
   .content{
     width: 857px;
-    height: 2818px;
+    height: 2930px;
     background-color: #fff;
     margin: 0 auto;
+    border-bottom: 1px solid #ccc;
     .titleinfo{
       font-size: 18px;
       font-weight: bold;
@@ -57,31 +65,45 @@ body{
       text-align: center;
       background: url('../image/beijin1.gif');
     }
-    table{
-      width: 857px;
-      border-spacing: 1px;
-      font-size: 12px;
-      display: table;
-      /*border-collapse:collapse;*/
-      border: 1px solid #f1f1f1;
-      tr{
-        display: table-row;
-      }
-      .spanred{
-        color: #FF0000;
-      }
-      .tdbasic{
-        background-color: #EEEEEE;
-        border-bottom: 1px solid #f1f1f1;
-        border-top: 1px solid #f1f1f1;
-      }
-      .p13{
+    .tdbasic {
+      background-color: #EEEEEE;
+      border-bottom: 1px solid #f1f1f1;
+      border-top: 1px solid #f1f1f1;
+      .p13 {
         padding: 0 4px;
         font-size: 13px;
         line-height: 26px;
         color: #003399;
         font-weight: bold;
       }
+    }
+    table{
+      width: 857px;
+      border-spacing: 1px;
+      font-size: 12px;
+      display: table;
+      line-height: 150%;
+      tbody{
+        tr {
+          display: table-row;
+          td{
+            border: 1px solid #CCCCCC;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+  .bottom{
+    width: 710px;
+    height: 46px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0 0 30px 30px;
+    p{
+      font-size: 12px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }

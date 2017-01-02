@@ -10,6 +10,11 @@ body {
   margin-top: 10px;
   margin-bottom: 20px;
   color: #000; }
+  .wrapper .spanred {
+    color: #FF0000; }
+  .wrapper .spanblue {
+    color: #0000ff;
+    width: 100%; }
   .wrapper .top {
     width: 710px;
     margin: 0 auto;
@@ -33,9 +38,10 @@ body {
         padding-left: 10px; }
   .wrapper .content {
     width: 857px;
-    height: 2818px;
+    height: 2930px;
     background-color: #fff;
-    margin: 0 auto; }
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc; }
     .wrapper .content .titleinfo {
       font-size: 18px;
       font-weight: bold;
@@ -50,26 +56,36 @@ body {
       line-height: 150%;
       text-align: center;
       background: url("../image/beijin1.gif"); }
-    .wrapper .content table {
-      width: 857px;
-      border-spacing: 1px;
-      font-size: 12px;
-      display: table;
-      /*border-collapse:collapse;*/
-      border: 1px solid #f1f1f1; }
-      .wrapper .content table tr {
-        display: table-row; }
-      .wrapper .content table .spanred {
-        color: #FF0000; }
-      .wrapper .content table .tdbasic {
-        background-color: #EEEEEE;
-        border-bottom: 1px solid #f1f1f1;
-        border-top: 1px solid #f1f1f1; }
-      .wrapper .content table .p13 {
+    .wrapper .content .tdbasic {
+      background-color: #EEEEEE;
+      border-bottom: 1px solid #f1f1f1;
+      border-top: 1px solid #f1f1f1; }
+      .wrapper .content .tdbasic .p13 {
         padding: 0 4px;
         font-size: 13px;
         line-height: 26px;
         color: #003399;
         font-weight: bold; }
+    .wrapper .content table {
+      width: 857px;
+      border-spacing: 1px;
+      font-size: 12px;
+      display: table;
+      line-height: 150%; }
+      .wrapper .content table tbody tr {
+        display: table-row; }
+        .wrapper .content table tbody tr td {
+          border: 1px solid #CCCCCC;
+          padding: 3px 0; }
+  .wrapper .bottom {
+    width: 710px;
+    height: 46px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0 0 30px 30px; }
+    .wrapper .bottom p {
+      font-size: 12px;
+      margin: 0 auto;
+      text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
