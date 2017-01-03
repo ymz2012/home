@@ -44,8 +44,8 @@ body{
     }
   }
   .content{
-    width: 857px;
-    height: 2930px;
+    width: 710px;
+    height: 2630px;
     background-color: #fff;
     margin: 0 auto;
     border-bottom: 1px solid #ccc;
@@ -55,20 +55,25 @@ body{
       line-height: 54px;
       color: #333;
       text-align: center;
-      border-bottom: 1px solid #f1f1f1;
+
     }
     .titlecontent{
+      width: 637px;
+      margin: 0 auto;
       height: 58px;
       font-size: 12px;
       color: #333;
       line-height: 150%;
       text-align: center;
       background: url('../image/beijin1.gif');
+      border-top: 1px solid #f1f1f1;
     }
     .tdbasic {
       background-color: #EEEEEE;
       border-bottom: 1px solid #f1f1f1;
       border-top: 1px solid #f1f1f1;
+      width: 637px;
+      margin: 0 auto;
       .p13 {
         padding: 0 4px;
         font-size: 13px;
@@ -78,7 +83,7 @@ body{
       }
     }
     table{
-      width: 857px;
+      width: 637px;
       border-spacing: 1px;
       font-size: 12px;
       display: table;
