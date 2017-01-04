@@ -3,9 +3,16 @@ body {
   background: #fff;
   font: 12px arial; }
 
-.wrapper {
+html, body {
   width: 100%;
   height: 100%; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 600px;
+  min-width: 810px; }
   .wrapper .hover {
     position: fixed;
     width: 93px;
@@ -63,8 +70,7 @@ body {
       text-decoration: none; }
   .wrapper .content {
     padding-top: 80px;
-    text-align: center;
-    height: 100%; }
+    text-align: center; }
     .wrapper .content .search {
       width: 640px;
       height: 36px;
@@ -107,7 +113,10 @@ body {
         .wrapper .content .search span input {
           width: 100%;
           height: 34px;
-          border: none; }
+          border: none;
+          outline: 0; }
+      .wrapper .content .search span:hover {
+        border-color: #38f; }
       .wrapper .content .search button {
         width: 100px;
         height: 36px;
@@ -121,13 +130,18 @@ body {
       width: 270px;
       height: 129px; }
     .wrapper .content .qrCode {
-      padding-top: 200px; }
+      padding-top: 230px; }
       .wrapper .content .qrCode img {
         width: 60px;
         height: 60px; }
   .wrapper footer {
     text-align: center;
-    line-height: 26px; }
+    line-height: 26px;
+    position: absolute;
+    width: 468px;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -234px; }
     .wrapper footer .one a {
       color: #999;
       margin: 0 10px;
