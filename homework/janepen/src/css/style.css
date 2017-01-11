@@ -1,20 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
   background-color: #474747;
 }
-#mouse{
+.mouse{
     position: absolute;
     top: 40px;
     left: 280px;
 }
 
-#mouse_head {
+.mouse_head {
     width: 200px;
     height: 200px;
     background-color: #8F9595;
     border-radius: 100px;
 }
 
-#mouse_ear_left {
+.mouse_ear_left {
     display: inline-block;
     position: relative;
     top: -230px;
@@ -26,7 +30,7 @@ body{
     border-radius: 50%;
 }
 
-#mouse_ear_right {
+.mouse_ear_right {
     display: inline-block;
     position: relative;
     top: -230px;
@@ -46,6 +50,14 @@ body{
         -webkit-transform:rotate3d(0,0,1,360deg);
     }
 }
+@keyframes mouse_eye_left_outer_ani{
+    0%{
+        -webkit-transform:rotate3d(0,0,1,0deg);
+    }
+    100%{
+        -webkit-transform:rotate3d(0,0,1,360deg);
+    }
+}
 /*右眼睛动画*/
 @-webkit-keyframes mouse_eye_right_outer_ani{
     0%{
@@ -55,8 +67,16 @@ body{
         -webkit-transform:rotate3d(0,0,1,0deg);
     }
 }
+@keyframes mouse_eye_right_outer_ani{
+    0%{
+        -webkit-transform:rotate3d(0,0,1,360deg);
+    }
+    100%{
+        -webkit-transform:rotate3d(0,0,1,0deg);
+    }
+}
 
-#mouse_eye_left_outer {
+.mouse_eye_left_outer {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -66,9 +86,10 @@ body{
     -webkit-border-radius: 50px;
     border-radius: 50px;
     -webkit-animation: mouse_eye_left_outer_ani 2s linear infinite;
+    animation: mouse_eye_left_outer_ani 2s linear infinite;
 }
 
-#mouse_eye_right_outer {
+.mouse_eye_right_outer {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -78,10 +99,11 @@ body{
     -webkit-border-radius: 50px;
     border-radius: 50px;
     -webkit-animation: mouse_eye_right_outer_ani 2s linear infinite;
+    animation: mouse_eye_right_outer_ani 2s linear infinite;
 }
 
 
-#mouse_eye_left_inner {
+.mouse_eye_left_inner {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -92,7 +114,7 @@ body{
     border-radius: 50px;
 }
 
-#mouse_eye_right_inner {
+.mouse_eye_right_inner {
     width: 15px;
     height: 15px;
     position: absolute;
@@ -103,7 +125,7 @@ body{
     border-radius: 50px;
 }
 
-#mouse_nose {
+.mouse_nose {
     width: 0;
     height: 0;
     position: absolute;
@@ -115,7 +137,7 @@ body{
     z-index: 1;
 }
 
-#mouse_whisker_left_1 {
+.mouse_whisker_left_1 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -126,7 +148,7 @@ body{
     -webkit-transform: rotate(10deg);
 }
 
-#mouse_whisker_left_2 {
+.mouse_whisker_left_2 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -136,7 +158,7 @@ body{
     left: 28px;
 }
 
-#mouse_whisker_left_3 {
+.mouse_whisker_left_3 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -147,7 +169,7 @@ body{
     -webkit-transform: rotate(-10deg);
 }
 
-#mouse_whisker_right_1 {
+.mouse_whisker_right_1 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -158,7 +180,7 @@ body{
     -webkit-transform: rotate(-10deg);
 }
 
-#mouse_whisker_right_2 {
+.mouse_whisker_right_2 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -168,7 +190,7 @@ body{
     left: 90px;
 }
 
-#mouse_whisker_right_3 {
+.mouse_whisker_right_3 {
     width: 80px;
     height: 1.5px;
     border-radius: 2px;
@@ -180,6 +202,18 @@ body{
 }
 /*左面牙齿动画*/
 @-webkit-keyframes tooth_left{
+    0%{
+        -webkit-transform: rotate(10deg);
+    }
+
+    50%{
+        -webkit-transform: rotate(50deg);
+    }
+    100%{
+        -webkit-transform: rotate(10deg);
+    }
+}
+@keyframes tooth_left{
     0%{
         -webkit-transform: rotate(10deg);
     }
@@ -204,7 +238,19 @@ body{
         -webkit-transform: rotate(-10deg);
     }
 }
-#mouse_tooth_left {
+@keyframes tooth_right{
+    0%{
+        -webkit-transform: rotate(-10deg);
+    }
+
+    50%{
+        -webkit-transform: rotate(-50deg);
+    }
+    100%{
+        -webkit-transform: rotate(-10deg);
+    }
+}
+.mouse_tooth_left {
     width: 15px;
     height: 22px;
     background-color: white;
@@ -213,9 +259,11 @@ body{
     left: 84px;
     -webkit-transform: rotate(10deg);
     -webkit-animation: tooth_left 2s infinite;
+    transform: rotate(10deg);
+    animation: tooth_left 2s infinite;
 }
 
-#mouse_tooth_right {
+.mouse_tooth_right {
     width: 15px;
     height: 22px;
     background-color: white;
@@ -224,6 +272,8 @@ body{
     left: 102px;
     -webkit-transform: rotate(-10deg);
     -webkit-animation: tooth_right 2s infinite;
+    transform: rotate(-10deg);
+    animation: tooth_right 2s infinite;
 }
 
 
