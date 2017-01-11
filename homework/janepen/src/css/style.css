@@ -37,6 +37,24 @@ body{
     background: #E5A95F;
     border-radius: 50%;
 }
+/*左眼睛动画*/
+@-webkit-keyframes mouse_eye_left_outer_ani{
+    0%{
+        -webkit-transform:rotate3d(0,0,1,0deg);
+    }
+    100%{
+        -webkit-transform:rotate3d(0,0,1,360deg);
+    }
+}
+/*右眼睛动画*/
+@-webkit-keyframes mouse_eye_right_outer_ani{
+    0%{
+        -webkit-transform:rotate3d(0,0,1,360deg);
+    }
+    100%{
+        -webkit-transform:rotate3d(0,0,1,0deg);
+    }
+}
 
 #mouse_eye_left_outer {
     width: 40px;
@@ -47,6 +65,7 @@ body{
     background: white;
     -webkit-border-radius: 50px;
     border-radius: 50px;
+    -webkit-animation: mouse_eye_left_outer_ani 2s linear infinite;
 }
 
 #mouse_eye_right_outer {
@@ -58,66 +77,30 @@ body{
     background: white;
     -webkit-border-radius: 50px;
     border-radius: 50px;
+    -webkit-animation: mouse_eye_right_outer_ani 2s linear infinite;
 }
 
-/*左眼睛动画*/
-@-webkit-keyframes eye_left_inner{
-    0%{
-        -webkit-transform:translate(0px,0px);
-    }
-    25%{
-        -webkit-transform:translate(-5px,10px);
-    }
-    50%{
-        -webkit-transform:translate(-14px,-11px);
-    }
-    75%{
-        -webkit-transform:translate(11px,-11px);
-    }
-    100%{
-        -webkit-transform:translate(8px,12px);
-    }
-}
-/*右眼睛动画*/
-@-webkit-keyframes eye_right_inner{
-    0%{
-        -webkit-transform:translate(0px,0px);
-    }
-    25%{
-        -webkit-transform:translate(-9px,-11px);
-    }
-    50%{
-        -webkit-transform:translate(-10px,12px);
-    }
-    75%{
-        -webkit-transform:translate(10px,11px);
-    }
-    100%{
-        -webkit-transform:translate(9px,-12px);
-    }
-}
+
 #mouse_eye_left_inner {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 75px;
-    left: 63px;
+    top: 25px;
+    left: 12px;
     background: black;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    -webkit-animation: eye_left_inner 3s infinite;
 }
 
 #mouse_eye_right_inner {
     width: 15px;
     height: 15px;
     position: absolute;
-    top: 75px;
-    left: 122px;
+    top: 25px;
+    left: 11px;
     background: black;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    -webkit-animation: eye_right_inner 3s infinite;
 }
 
 #mouse_nose {
