@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="wrapper">
+  <view class="header">
+    <view class="can_eat_search">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class="search_bg">
+          </view>
+          <input name="input" class="search_icon" placeholder="" />
+      </form>
+    </view>
+  </view>
+</view>
