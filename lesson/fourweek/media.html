@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>响应式布局</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            float: left;
+            width: 20%;
+            height: 500px;
+            background-color: aquamarine;
+        }
+        .middle{
+            float: left;
+            width: 55%;
+            height: 800px;
+            background-color: coral;
+            margin: 0 5px;
+        }
+        .right{
+            float: left;
+            width: 20%;
+            height: 500px;
+            background-color: yellowgreen;
+        }
+        .container{
+            margin: 5px;
+
+        }
+        @media only screen and (min-width: 1024px) {
+            .container{
+                width: 1000px;
+                overflow: hidden;
+                margin: auto;
+            }
+        }
+        @media only screen and (min-width: 400px) and (max-width: 1024px) {
+            .right{
+                width: 0;
+            }
+            .left{
+                width: 30%;
+
+            }
+            .middle{
+                width: 65%;
+            }
+        }
+        @media only screen and (max-width: 400px) {
+            .left,.middle,.right{
+                width: 98%;
+                height: 180px;
+            }
+            .middle{
+                margin: 5px 0   ;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        我是左侧
+    </div>
+    <div class="middle">
+        我是中间
+    </div>
+    <div class="right">
+    </div>
+</div>
+
+</body>
+</html>

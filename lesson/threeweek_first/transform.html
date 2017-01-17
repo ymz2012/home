@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css动画</title>
+    <style type="text/css">
+        .outer{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: 5px solid red;
+            transform-origin: left top;
+            transform: rotate(0deg);
+        }
+        .inner{
+            height: 100%;
+            background-color: gray;
+            transform: translate(20px,26px) scale(1.2) skew(-5deg,-5deg);
+        }
+        .mytransition{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin-top: 100px;
+            transition-property:all;
+            transition-duration:.5s;
+            transition-timing-function:ease-in;
+            transition-delay:.1s;
+        }
+        .mytransition:hover{
+            width: 250px;
+            height: 250px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner">测试</div>
+</div>
+<div class="mytransition"></div>
+</body>
+</html>

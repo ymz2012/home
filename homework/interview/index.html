@@ -17,67 +17,213 @@
         <p>内核：Trident，Gecko，Presto，Webkit。</p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        2.每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>声明位于文档中的最前面的位置，处于标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。
+        （重点：告诉浏览器按照何种规范解析页面）</p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        3.div+css的布局较table布局有什么优点？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>改版的时候更方便 只要改css文件。页面加载速度更快、结构化清晰、页面显示简洁。表现与结构相分离。易于优化（seo）搜索引擎更友好，排名更容易靠前。</p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        4.清除浮动有哪些方式？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>
+            （1）父级div定义height。<br>
+            （2）结尾处加空div标签clear:both。<br>
+            （3）父级div定义伪类:after和zoom。<br>
+            （4）父级div定义overflow:hidden。<br>
+            （5）父级div定义overflow:auto。<br>
+            （6）父级div也浮动，需要定义宽度。<br>
+            （7）父级div定义display:table。<br>
+            （8）结尾处加br标签clear:both<br>
+        </p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        5.页面导入样式时，使用link和@import有什么区别？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>
+        （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;<br>
+        （2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br>
+        （3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;<br>
+        </p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        6.简述一下你对Html语义化的理解
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>
+            （1）用正确的标签做正确的事情。<br>
+            （2）html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>
+            （3）即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;<br>
+            （4）搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;<br>
+            （5）使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+            关于html和css的总结到这里。有错误的地方还清大家指出来。大家在面试的时候遇到什么问题可以给我留言我们一起解决整理下来！
+        </p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        7. CSS3有哪些新特性
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>
+            （1）CSS3实现圆角（border-radius），阴影（box-shadow）<br>
+            （2）对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）<br>
+            （3）旋转,缩放,定位,倾斜ransform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg)<br>
+            （4）增加了更多的CSS选择器  多背景 rgbabr <br>
+            （5）在CSS3中唯一引入的伪元素是 ::selection.<br>
+            （6）媒体查询，多栏布局 <br>
+            （7）border-image
+        </p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        8.什么是响应式设计？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>它是关于网页制作的过程中让不同的设备有不同的尺寸和不同的功能。响应式设计是让所有的人能在这些设备上让网站运行正常</p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        9.css有个content属性吗？有什么作用？
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>知道。css的content属性专门应用在 before/after 伪元素上，用来插入生成内容。最常见的应用是利用伪类清除浮动。</p>
     </div>
     <div class="question">
-        1. 常用那几种浏览器测试？有哪些内核(Layout Engine)?
+        10.写出几种IE6 BUG的解决方法
     </div>
     <div class="answer">
-        <p>浏览器：IE，Chrome，FireFox，Safari，Opera。</p>
-        <p>内核：Trident，Gecko，Presto，Webkit。</p>
+        <p>
+            （1）双边距BUG float引起的 使用display<br>
+            （2）3像素问题 使用float引起的 使用dislpay:inline -3px<br>
+            （3）超链接hover 点击后失效 使用正确的书写顺序 link visited hover active<br>
+            （4）Ie z-index问题 给父级添加position:relative<br>
+            （5）Png 透明 使用js代Min-height 最小高度 !Important 解决<br>
+            （6）select 在ie6下遮盖 使用iframe嵌套 <br>
+        </p>
+    </div>
+    <div class="question">
+        11.display:none与visibility:hidden的区别是什么？
+    </div>
+    <div class="answer">
+        <p>
+            display : 隐藏对应的元素但不挤占该元素原来的空间。<br>
+            visibility: 隐藏对应的元素并且挤占该元素原来的空间。
+        </p>
+    </div>
+    <div class="question">
+        12.如何垂直居中一个img
+    </div>
+    <div class="answer">
+        <p>
+            {
+                 display:table-cell;
+                 text-align:center;
+                 vertical-align:middle;
+             }
+        </p>
+    </div>
+    <div class="question">
+        13.css弹性盒模型
+    </div>
+    <div class="answer">
+        <p>
+            css3新增的颜色和属性，css3的多列布局感觉可以实现了类似的样式，进行弹性盒子的垂直居中和水平居中
+            display -webkit-box <br>
+            -webkit-box-pack center 水平<br>
+            -webkit-box-align center  垂直<br>
+            display -webkit-flex<br>
+            -webkit-flex 1 平均分整个盒子的宽度
+        </p>
+    </div>
+    <div class="question">
+        14.css盒模型
+    </div>
+    <div class="answer">
+        <p>
+            css盒子模型 从外到里
+            margin border padding content
+            over-flow:设置超出了应该滚动等等
+            box-shadow 阴影
+        </p>
+    </div>
+    <div class="question">
+        15.如何水平居中一个元素
+    </div>
+    <div class="answer">
+        <p>
+            如果需要居中的元素为常规流中inline元素，为父元素设置text-align: center;即可实现 <br>
+            如果需要居中的元素为常规流中block元素，1）为元素设置宽度，2）设置左右margin为auto。3）IE6下需在父元素上设置text-align: center;,再给子元素恢复需要的值 <br>
+            如果需要居中的元素为浮动元素，1）为元素设置宽度，2）position: relative;，3）浮动方向偏移量（left或者right）设置为50%，4）浮动方向上的margin设置为元素宽度一半乘以-1 <br>
+            如果需要居中的元素为绝对定位元素，1）为元素设置宽度，2）偏移量设置为50%，3）偏移方向外边距设置为元素宽度一半乘以-1
+        </p>
+    </div>
+    <div class="question">
+        16.绝对定位居中
+    </div>
+    <div class="answer">
+        <p>
+            .Absolute-Center {
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            }
+            需要声明元素的高度
+        </p>
+    </div>
+    <div class="question">
+        17.如何确定一个元素的包含块(containing block)
+    </div>
+    <div class="answer">
+        <p>
+            1.根元素的包含块叫做初始包含块，在连续媒体中他的尺寸与viewport相同并且anchored at the canvas origin；对于paged media，它的尺寸等于page area。初始包含块的direction属性与根元素相同。<br>
+            2.position为relative或者static的元素，它的包含块由最近的块级（display为block,list-item, table）祖先元素的内容框组成 <br>
+            3.如果元素position为fixed。对于连续媒体，它的包含块为viewport；对于paged media，包含块为page area <br>
+            4.如果元素position为absolute，它的包含块由祖先元素中最近一个position为relative,absolute或者fixed的元素产生，规则如下： <br>
+            5.如果祖先元素为行内元素，the containing block is the bounding box around the padding boxes of the first and the last inline boxes generated for that element.
+                其他情况下包含块由祖先节点的padding edge组成
+                如果找不到定位的祖先元素，包含块为初始包含块
+        </p>
+    </div>
+    <div class="question">
+        18.css的偏移
+    </div>
+    <div class="answer">
+        <p>
+            1.float
+            让原来的元素可以脱离正常的文档流，实现左右排列，不设置宽度和最小宽度。
+            假如一行排满了 会把最后一个挤下来 <br>
+            2.position <br>
+            relative
+            即使偏移 ，位置还在。实质就是靠近最近的元素进行偏移，不分定位,不脱离文档流。<br>
+            absolute
+            偏移了位置就没了。靠最近的元素是relative/absolute定位的进行偏移，脱离了文档流 <br>
+            fixed
+            固定在一个位置 IE6严重不支持
+        </p>
+    </div>
+    <div class="question">
+        19.简述一下src与href的区别
+    </div>
+    <div class="answer">
+        <p>
+            href 是指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，用于超链接。
+            src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部
+        </p>
+    </div>
+    <div class="question">
+        20.box-sizing常用的属性有哪些？分别有什么作用？
+    </div>
+    <div class="answer">
+        <p>
+            box-sizing: content-box|border-box|inherit; <br>
+            content-box:宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框(元素默认效果)。
+            border-box:元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度
+        </p>
     </div>
 </div>
 </body>
