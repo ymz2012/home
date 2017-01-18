@@ -47,7 +47,6 @@ html, body {
         .wrapper .hover ul li a:hover {
           text-decoration: underline; }
   .wrapper header nav {
-    display: block;
     z-index: 2;
     color: #fff;
     position: absolute;
