@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>js正则表达式对象</title>
 </head>
 <body>
+<script type="text/javascript">
+    //修饰符 i 不区分大小写的匹配  g 执行用于全文搜索而不是找到第一个就停止查找
+    //对象方法 test()搜索字符串中的指定值,根据返回结果并返回真或假   exec()检索字符串中的指定值.返回值是被找到的值,如果没有发现匹配则返回null
 
+    //4-20位 字母 数字 下划线组成
+    var regex = /^[A-Za-z0-9_](4,20)$/;  //    \w == [A-Za-z0-9_]  \d == [0-9]
+
+</script>
 </body>
 </html>

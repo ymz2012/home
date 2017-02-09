@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>JavaScript对象学习</title>
 </head>
 <body>
+<script type="text/javascript">
+    //1.直接创建对象
+    var person = new Object();
+    person.name = "宝宝";
+    person.age = "3岁";
+    //var person2 = {name:"宝宝",age:3}; //与var person = new object();
+    //alert("姓名:"+person.name+"年龄:"+person.age);
 
+
+    //2.使用对象构造器的方式:函数的方式
+    function person3(name,age,height){
+        this._name = name;
+        this._age = age;
+        this._height = height;
+        this.sleeping = sleep;
+        function sleep(){
+            alert('Zheng在睡觉....');
+        }
+    }
+    var myBrother = new person3("张三",22,180);
+    //alert("姓名:"+myBrother._name+",年龄:"+myBrother._age+",身高:"+myBrother._height)
+    myBrother.sleeping();
+
+
+    //3.用for in 遍历对象的属性
+    for(var temp in myBrother){
+        document.write(myBrother[temp]);
+    }
+</script>
 </body>
 </html>

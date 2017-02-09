@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>js日期对象</title>
 </head>
 <body>
+<script type="text/javascript">
+/*    var today = new Date(); //获取当前日期
+ console.log(today);
 
+
+ var date1 = new Date("2020-11-12"); //通过字符串指定日期
+ console.log(date1);
+
+ var date2 = new Date(2018,12,01); //指定日期字符串 月份:0-11
+ console.log(date2);*/
+
+    var date3 = new Date();
+    date3.setFullYear(2040); //设置年份
+    date3.setMonth(2); //3月份
+    date3.setDate(5); //日期 0-31
+    date3.setHours(10); //小时
+    console.log(date3);
+
+    var today = new Date();
+    console.log(today.getFullYear());
+
+    var date4 = today.toLocaleDateString(); //获取当前机器的日期
+</script>
 </body>
 </html>

@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Array数组对象</title>
 </head>
 <body>
+<script type="text/javascript">
+    //length() 属性
+    //toString()方法 把数组转变成字符串
+    //indexOf() 搜索数组中的元素 并返回他们的位置
+    //concat() 数组合并
+    //join() 把数组的所有元素放入一个字符串
 
+
+    //map()方法 通过制定函数处理数组的每个元素  并返回处理后的数组
+    //forEach()方法 遍历
+    //reverse()方法 反转
+    //sort() 排序
+
+/*    var arr2 = ["BWM","Audi","benchi"];
+    var tmpMapArr = arr2.map(function(item,index,arry){
+        return item+"1";
+    });
+    console.log(tmpMapArr);*/
+
+    var arr2 = ["BWM","Audi","benchi"];
+    arr2.forEach(function(item,index,arry){
+        console.log(item);
+    });
+</script>
 </body>
 </html>
