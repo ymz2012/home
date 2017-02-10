@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档对象模型</title>
+    <style type="text/css">
+/*        header,article,footer{
+            font-size: 2em;
+            height: 200px;
+            text-align: center;
+        }*/
+    </style>
+</head>
+<body>
+<!--<div id="div1">hello</div>
+<div id="div2">hello</div>
+<div id="div3">hello</div>
+<p class="container" id="container">你好</p>
+<p class="container">你好</p>
+<p class="container">你好</p>-->
+<!--<button onclick="document.body.style.backgroundColor='green'">点击切换皮肤绿色</button>
+<button onclick="document.body.style.backgroundColor='yellow'">点击切换皮肤黄色</button>
+<header>导航栏</header>
+<article>正文</article>
+<footer>尾部</footer>-->
+
+<!--
+<table border="1" width="800px">
+    <tbody>
+        <tr>
+            <td>1,1</td>
+            <td>1,2</td>
+        </tr>
+        <tr>
+            <td>2,1</td>
+            <td>2,2</td>
+        </tr>
+    </tbody>
+</table>-->
+<script type="text/javascript">
+    //document.write 会覆盖文档中的内容
+    //document.getElementById().innerHTML 包括标签 //outerHTML
+    //document.getElementById().innerText 只是内容  outerText
+
+
+    //获取HTML元素属性 document.getElementById(id).attribute;  //id,className 等等
+    //document.getElementById(id).getAttribute(name);
+
+    //改变HTML元素属性
+    //document.getElementById(id).attribute = new value;
+    //document.getElementById(id).setAttribute(name,value);
+
+    //移除HTML元素属性
+    //document.getElementById(id).removeAttribute(name);
+
+    //alert(document.getElementById('container').className);
+    //alert(document.getElementById('container').style.backgroundColor);
+
+
+
+    //改变HTML样式
+    //document.getElementById(id).style.prototype = new style;
+    //document.getElementById(id).style.className = class name;
+    //document.getElementById('myDiv').style.color = "green";
+
+
+    //创建新的HTML元素createElement() createTextNode() cloneNode 插入新的HTML元素appendChild(newItem) insertBefore(newItem,existingItem)  删除HTML元素removeChild()
+/*        //1.创建表哥
+        var table = document.createElement("table");
+        table.border =1;
+        table.width = "800px";
+        //创建body
+        var tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+        //创建第一行
+        var tr1 = document.createElement("tr");
+        tbody.appendChild(tr1);
+        //创建列
+        var td1 = document.createElement("td");
+        td1.appendChild(document.createTextNode("1,1"))
+        tr1.appendChild(td1);
+        var td2 = document.createElement("td");
+        td2.appendChild(document.createTextNode("1,2"))
+        tr1.appendChild(td2);
+        //创建第二行
+        var tr2 = document.createElement("tr");
+        tbody.appendChild(tr2);
+        //创建列
+        var td3 = document.createElement("td");
+        td3.appendChild(document.createTextNode("2,1"))
+        tr2.appendChild(td3);
+        var td4 = document.createElement("td");
+        td4.appendChild(document.createTextNode("2,2"))
+        tr2.appendChild(td4);
+        document.body.appendChild(table);*/
+
+    var table = document.createElement("table");
+    table.border =1;
+    table.width = "800px";
+    //创建body
+    var tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+    //创建第一行
+    tbody.insertRow(0);
+    tbody.rows[0].innsertCell(0);
+    tbody.rows[0].cells[0].appendChild(document.createTextNode("1,1"));
+</script>
+</body>
+</html>
