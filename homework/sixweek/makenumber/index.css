@@ -35,5 +35,19 @@ h1 {
         padding: 0 5px; }
     .calculator_base .calculator_base_container #base_table_main td {
       height: 53px; }
+      .calculator_base .calculator_base_container #base_table_main td .baseBtnCommonCss {
+        width: 94px;
+        height: 44px;
+        background: url("./image/d1btn.gif") no-repeat 0 -44px;
+        font-size: 14px; }
+      .calculator_base .calculator_base_container #base_table_main td .baseBtnCss2 {
+        background: url("./image/d2btn.gif") no-repeat 0 -44px;
+        font-size: 20px; }
+      .calculator_base .calculator_base_container #base_table_main td .baseBtnCss3 {
+        background: url("./image/d3btn.gif") no-repeat 0 -44px;
+        font-size: 16px; }
+      .calculator_base .calculator_base_container #base_table_main td .baseBtnCss4 {
+        background: url("./image/d4btn.gif") no-repeat 0 -44px;
+        font-size: 16px; }
 
 /*# sourceMappingURL=index.css.map */

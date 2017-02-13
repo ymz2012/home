@@ -42,7 +42,22 @@ h1{
       td{
         height: 53px;
         .baseBtnCommonCss{
-
+          width: 94px;
+          height: 44px;
+          background: url('./image/d1btn.gif') no-repeat 0 -44px;
+          font-size: 14px;
+        }
+        .baseBtnCss2{
+          background: url('./image/d2btn.gif') no-repeat 0 -44px;
+          font-size: 20px;
+        }
+        .baseBtnCss3{
+          background: url('./image/d3btn.gif') no-repeat 0 -44px;
+          font-size: 16px;
+        }
+        .baseBtnCss4{
+          background: url('./image/d4btn.gif') no-repeat 0 -44px;
+          font-size: 16px;
         }
       }
     }
