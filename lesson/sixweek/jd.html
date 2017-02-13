@@ -2,9 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jd注册页面</title>
+    <style type="text/css">
+        .main{
+            width: 800px;
+            padding: 20px 100px;
+            border: 1px solid #f2f2f2;
+            margin: 0 auto;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            font-size: 14px;
+            padding: 3px 5px;
+        }
+        input[type="checkbox"]{
+            width: 15px;
+            height: 15px;
+            font-size: 14px;
+            padding: 3px 5px;
+        }
+        label{
+             width: 150px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        div{
+            padding: 5px;
+        }
+        .submit{
+            width: 472px;
+            height: 32px;
+            font-size: 14px;
+            padding: 3px 10px;
+        }
+        span{
+            color: red;
+        }
+    </style>
 </head>
 <body>
+<div class="main">
+    <form action="" id="myForm">
+        <h1>京东企业注册</h1>
+        <div>
+            <label for="username">*用户名:</label>
+            <input type="text" name="username" id="username">
+            <span id="userTips"></span>
+        </div>
+
+        <div>
+            <label for="password">*请设置密码:</label>
+            <input type="password" name="password" id="password">
+            <span id="pwd1Tips"></span>
+        </div>
+        <div>
+            <label for="password2">*请确认密码:</label>
+            <input type="password" name="password2" id="password2">
+            <span id="pwd2Tips"></span>
+        </div>
+        <div>
+            <label for="company">*公司名称:</label>
+            <input type="text" name="company" id="company">
+            <span id="companyTips"></span>
+        </div>
+        <div>
+            <label for="address">*公司所在地:</label>
+            <select name="address" id="address">
+                <option value="">请选择</option>
+                <option value="BJ">北京</option>
+            </select>
+            <select name="district" id="district">
+                <option value="">请选择</option>
+                <option value="CP">昌平</option>
+                <option value="HD">海淀</option>
+                <option value="CY">朝阳</option>
+            </select>
+            <span id="addressTips"></span>
+        </div>
+        <div>
+            <label for="usage">*购买类型/用途:</label>
+            <input type="checkbox" name="usage">IT设备
+            <input type="checkbox" name="usage">数码通讯
+            <input type="checkbox" name="usage">办公用品耗材
+            <input type="checkbox" name="usage">大家电
+            <span id="usageTips"></span>
+        </div>
+        <div>
+            <label for="phone">*推荐人手机:</label>
+            <input type="text" name="phone" id="phone">
+            <span id="phoneTips"></span>
+        </div>
+        <div>
+            <button type="button" class="submit" onclick="register()">立即注册</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function register(){
+        var username = document.getElementById('username').value;
+        if(/^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{4,20}$/.test(username)){
+            document.getElementById('userTips').innerHTML="用户名合法";
+        }else{
+            document.getElementById('userTips').innerHTML="请输入4-20位数字或者汉字或者字母下划线";
+        }
+
+        var password = document.getElementById('password').value;
+        if(/^[A-Za-z0-9\\w_-]{4,20}$/.test(password)){
+            document.getElementById('pwd1Tips').innerHTML="用户名合法";
+        }else{
+            document.getElementById('pwd1Tips').innerHTML="请输入4-20位数字或者汉字或者字母";
+        }
+        var password2 = document.getElementById('password2').value;
+    }
+
+</script>
 
 </body>
 </html>
