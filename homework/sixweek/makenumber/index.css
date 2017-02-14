@@ -33,6 +33,8 @@ h1 {
         text-align: right;
         font-size: 40px;
         padding: 0 5px; }
+      .calculator_base .calculator_base_container .calculator_table .displayCss::-webkit-input-placeholder {
+        color: #000; }
     .calculator_base .calculator_base_container #base_table_main td {
       height: 53px; }
       .calculator_base .calculator_base_container #base_table_main td .baseBtnCommonCss {
@@ -49,5 +51,7 @@ h1 {
       .calculator_base .calculator_base_container #base_table_main td .baseBtnCss4 {
         background: url("./image/d4btn.gif") no-repeat 0 -44px;
         font-size: 16px; }
+      .calculator_base .calculator_base_container #base_table_main td .baseBtnCss5 {
+        visibility: hidden; }
 
 /*# sourceMappingURL=index.css.map */
