@@ -74,7 +74,6 @@
         sumArr.push(valuess);
         console.log(sumArr);
     }
-
     console.log(valuess);
     //绑定点击数字和小数点按钮事件
     for(var i =  0;i < nBtn.length;i++){
@@ -115,7 +114,6 @@
             }
             tBtn.value = w;
             console.log(w);
-
         }
         sumArr.splice(0,sumArr.length);
         console.log(aaa);
