@@ -589,9 +589,7 @@ body{
               clear: both;
               .wf-line {
                 margin-left: 30px;
-                
-                padding-bottom: 4px;
-                padding-top: 4px;
+                margin-right: 30px;
                 .width-lg .widget-famoussite .wf-inner, .width-lg .widget-famoussite .wf-tuijian {
                   margin-left: 30px;
                 }
@@ -600,6 +598,7 @@ body{
                 }
               }
               .wf-inner {
+                margin-left: 30px;
                 padding-bottom: 4px;
                 padding-top: 4px;
                 span {

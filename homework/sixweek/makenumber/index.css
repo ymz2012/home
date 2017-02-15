@@ -8,6 +8,7 @@ h1 {
 .calculator_base {
   position: relative;
   margin: 0 auto;
+  margin-top: 30px;
   width: 437px; }
   .calculator_base input {
     color: #fff;
@@ -36,7 +37,7 @@ h1 {
       .calculator_base .calculator_base_container .calculator_table .displayCss::-webkit-input-placeholder {
         color: #000; }
     .calculator_base .calculator_base_container #base_table_main td {
-      height: 53px; }
+      height: 50px; }
       .calculator_base .calculator_base_container #base_table_main td .baseBtnCommonCss {
         width: 94px;
         height: 44px;

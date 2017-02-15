@@ -5,6 +5,7 @@
     var aBtn = document.getElementsByClassName('baseBtnCommonCss'); //所有按钮
     var cBtn = document.getElementById('clearLook'); //清屏按钮
     var bBtn = document.getElementById('backLook'); //退格按钮
+
     var tBtn = document.getElementById('resultIpt'); //输入框
     var nBtn = document.getElementsByClassName('baseBtnCss6');//点击可以在输入框显示的按钮
     var xBtn = document.getElementsByClassName('baseBtnCss7');//点击要计算的按钮
@@ -94,9 +95,30 @@
         if (new_symbol == '+/-') {
             tBtn.value = -(old_value * 1);
             old_value = tBtn.value;
-
-        } else {
+        }else if(new_symbol == 'x^2'){
+            tBtn.value = parseFloat((new_value * 1*new_value * 1).toFixed(8));
+            old_value = tBtn.value;
+        }else if(new_symbol == 'sin'){
+            tBtn.value = parseFloat((Math.sin(old_value * 1)).toFixed(8));
+            old_value = tBtn.value;
+        }else if(new_symbol == 'cos'){
+            tBtn.value = parseFloat((Math.cos(old_value * 1)).toFixed(8));
+            old_value = tBtn.value;
+        }else if(new_symbol == 'sqrt'){
+            tBtn.value = parseFloat((Math.sqrt(old_value * 1)).toFixed(8));
+            old_value = tBtn.value;
+            flag = true;
+        }else {
             switch (old_symbol) {
+                case '%':
+                    if(new_value==0){
+                        alert('除数不能为0');
+                        tBtn.value = 'NaN';
+                    }else{
+                        tBtn.value = parseFloat((old_value * 1%new_value * 1).toFixed(8));
+                        old_value = tBtn.value;
+                    }
+                    break;
                 case '+':
                     tBtn.value = parseFloat((old_value * 1+new_value * 1).toFixed(8));
                     old_value = tBtn.value;
@@ -108,15 +130,19 @@
                     break;
 
                 case 'x':
-                    tBtn.value = parseFloat((old_value * 1*new_value * 1).toFixed(8));
+                    tBtn.value = parseFloat((old_value * 1 * new_value * 1).toFixed(8));
                     old_value = tBtn.value;
                     break;
 
                 case '÷':
-                    tBtn.value = parseFloat((old_value * 1/new_value * 1).toFixed(8));
-                    old_value = tBtn.value;
+                    if(new_value==0){
+                        alert('除数不能为0');
+                        tBtn.value = 'NaN';
+                    }else{
+                        tBtn.value = parseFloat((old_value * 1/new_value * 1).toFixed(8));
+                        old_value = tBtn.value;
+                    }
                     break;
-
                 case '+/-':
                     tBtn.value = -(old_value * 1);
                     old_value = tBtn.value;
@@ -161,20 +187,15 @@
     //点击符号
     function clickSymbol() {
         setBtnStyle(this);//点击动画
-
         new_symbol = this.value;
         if (new_symbol == '+/-') {
-
-
             var abs = -new_value;//去相反值
             new_value = abs;
             tBtn.value = abs;
-
-            new_value = abs;
             if_operation_style(new_symbol);
         } else {
             if (flag == false) {
-
+                console.log(flag);
                 flag = true;
                 if (old_value == undefined) {
                     old_value = new_value;
@@ -188,16 +209,20 @@
                         case "x" :
                             new_value = 1;
                             break;
-                        case "+" :
+                        case "÷" :
                             new_value = 1;
                             break;
                     }
                 }
                 if_operation_style(new_symbol);
             } else {
-
                 //new_value = tBtn.value;
+                if(new_symbol == 'x^2' || new_symbol == 'sin' || new_symbol == 'cos' || new_symbol =='sqrt'){
+                    new_value = tBtn.value;
+                    if_operation_style(new_symbol);
+                }
                 old_symbol = new_symbol;
+
             }
         }
         console.log("++++++++++++++++++++");

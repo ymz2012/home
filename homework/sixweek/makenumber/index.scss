@@ -7,8 +7,10 @@ h1{
 }
 
 .calculator_base{
+
   position: relative;
   margin: 0 auto;
+  margin-top: 30px;
   width: 437px;
   input{
     color: #fff;
@@ -44,7 +46,7 @@ h1{
     }
     #base_table_main{
       td{
-        height: 53px;
+        height: 50px;
         .baseBtnCommonCss{
           width: 94px;
           height: 44px;
