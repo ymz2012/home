@@ -93,8 +93,15 @@
     //判断计算
     function if_operation_style(new_symbol) {// +  -   *   /
         if (new_symbol == '+/-') {
-            tBtn.value = -(old_value * 1);
-            old_value = tBtn.value;
+            console.log(!!old_symbol);
+            if(!!old_symbol){
+                tBtn.value = -(old_value * 1);
+                old_value = tBtn.value;
+            }else{
+                tBtn.value = -(new_value * 1);
+                old_value = new_value;
+            }
+
         }else if(new_symbol == 'x^2'){
             tBtn.value = parseFloat((new_value * 1*new_value * 1).toFixed(8));
             old_value = tBtn.value;
@@ -107,7 +114,6 @@
         }else if(new_symbol == 'sqrt'){
             tBtn.value = parseFloat((Math.sqrt(old_value * 1)).toFixed(8));
             old_value = tBtn.value;
-            flag = true;
         }else {
             switch (old_symbol) {
                 case '%':
@@ -188,6 +194,7 @@
     function clickSymbol() {
         setBtnStyle(this);//点击动画
         new_symbol = this.value;
+        console.log(this.value);
         if (new_symbol == '+/-') {
             var abs = -new_value;//去相反值
             new_value = abs;
