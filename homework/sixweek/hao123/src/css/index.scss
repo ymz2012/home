@@ -1,0 +1,638 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p, th, td {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  border: 0 none;
+  color: #333;
+}
+body{
+  font: 14px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",\5b8b\4f53;
+  background-color: #f7f7f8;
+}
+
+.layout-container-inner {
+  .g-ib {
+    display: inline-block;
+  }
+  .g-wd {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .w1000px {
+    width: 1000px;
+  }
+  .hao123-tools-wrap {
+    height: 61px;
+    width: 100%;
+    position: relative;
+    z-index: 120;
+    .g-wd {
+      width: 1190px;
+      margin: 0 auto;
+    }
+    .hao123-tools {
+      height: 60px;
+      font-size: 12px;
+      line-height: 22px;
+      clear: both;
+      position: relative;
+      z-index: 996;
+      font-family: 'Tahoma';
+      .sethome {
+        width: 25px;
+        position: absolute;
+        top: 0;
+        line-height: 1.4;
+        margin-top: 13px;
+        margin-right: 22px;
+        padding: 2px 5px;
+        display: block;
+        float: left;
+        color: #fff;
+        z-index: 30;
+        text-align: center;
+        background: #07ac72;
+        border-radius: 2px;
+      }
+      .hao123-logo {
+        float: left;
+        width: 168px;
+        height: 60px;
+        z-index: 20;
+        margin-right: 24px;
+        vertical-align: top;
+        display: inline-block;
+      }
+      .hao123-col {
+        float: left;
+        height: 60px;
+        vertical-align: top;
+        .colweather {
+          float: left;
+          height: 60px;
+          line-height: 60px;
+          margin-left: 13px;
+          cursor: pointer;
+          .colweahter-city {
+            padding-left: 9px;
+            height: 60px;
+            line-height: 60px;
+            padding-right: 10px;
+            color: #999;
+            display: inline-block;
+            .weahtercity-arrow {
+              width: 9px;
+              height: 6px;
+              background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') no-repeat -52px -97px;
+              margin-left: 4px;
+              vertical-align: middle;
+            }
+          }
+          .width-lg .colweahter-info .width-lg .colweahter-link {
+            color: #999;
+            line-height: 60px;
+            height: 60px;
+            position: relative;
+            .weahterinfo-icon {
+              line-height: 60px;
+              vertical-align: middle;
+              width: 26px;
+              height: 60px;
+              background-position: 0 14px;
+              background-repeat: no-repeat;
+            }
+            .weahterinfo-txt {
+              margin-left: 4px;
+            }
+            .weahterinfo-temperature {
+              font-family: 'arial';
+              margin-left: 8px;
+            }
+          }
+          .colweahter-link {
+            vertical-align: top;
+            padding: 0 8px 0 3px;
+            .weahterlink-icon {
+              vertical-align: top;
+              cursor: pointer;
+              overflow: hidden;
+              margin-top: 25px;
+              width: 11px;
+              height: 11px;
+              background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') no-repeat -342px -251px;
+            }
+          }
+        }
+        .colcalendar {
+          position: relative;
+          text-align: center;
+          float: left;
+          margin-left: 2px;
+          width: 170px;
+          height: 60px;
+          .colcalendar-info {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            color: #999;
+            cursor: pointer;
+            overflow: hidden;
+            .cal-link {
+              color: #999;
+              .calendarinfo-month {
+                font-family: 'arial';
+              }
+              .calendarinfo-day {
+                padding-left: 10px;
+              }
+            }
+            .calendarinfo-nongli {
+              padding-left: 10px;
+              vertical-align: top;
+              .holiday-slider {
+                height: 60px;
+                width: 67px;
+                overflow: hidden;
+                position: relative;
+                line-height: 60px;
+                vertical-align: top;
+                .holidays {
+                  height: 60px;
+                  position: absolute;
+                  .holiday {
+                    height: 60px;
+                    width: 67px;
+                    float: left;
+                    .holiday-link {
+                      color: #999;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .hao123-links {
+        float: right;
+        height: 60px;
+        padding: 0 129px 0 0;
+        .loginlink {
+          height: 100%;
+          position: relative;
+          vertical-align: top;
+          .loginlink-mask {
+            opacity: 1;
+            background: #f7f7f7;
+            filter: none;
+            display: none;
+            z-index: 10;
+            height: 60px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .login {
+            position: relative;
+            padding: 0;
+            line-height: 60px;
+            padding-left: 33px;
+            padding-right: 9px;
+            color: #999;
+            background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') no-repeat -30px -110px;
+            z-index: 11;
+          }
+        }
+        .header-pan {
+          display: inline-block;
+          height: 60px;
+          overflow: hidden;
+          vertical-align: top;
+          position: relative;
+          .pan {
+            padding: 0 8px 0 6px;
+            line-height: 60px;
+            color: #999;
+            cursor: pointer;
+          }
+        }
+        .mail {
+          height: 60px;
+          display: inline-block;
+          .link {
+            height: 60px;
+            line-height: 60px;
+            padding: 0 0 0 8px;
+            text-align: left;
+            .text {
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+        .header-browser, .header-phone, .header-desktop {
+          display: inline-block;
+          height: 60px;
+          overflow: hidden;
+          vertical-align: top;
+          position: relative;
+          .browser {
+            padding: 0 5px 0 5px;
+            line-height: 60px;
+            color: #999;
+            cursor: pointer;
+
+          }
+          .link {
+            display: block;
+            width: 36px;
+            height: 60px;
+          }
+        }
+      }
+
+    }
+    .headerbottombr {
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-bottom: 1px solid #ccc;
+      opacity: .2;
+    }
+  }
+  .hao123-search-panel-box {
+    height: 82px;
+    .g-wd {
+      width: 1190px;
+      margin: 0 auto;
+    }
+    .hao123-search-panel {
+      position: relative;
+      z-index: 110;
+      .hao123-search {
+        padding: 27px 0 0 166px;
+        position: relative;
+        .search {
+          width: 800px;
+          display: inline-block;
+          zoom: 1;
+          position: relative;
+          .logo {
+            width: 120px;
+            height: 40px;
+            position: relative;
+            .link {
+              position: absolute;
+              left: 0;
+              z-index: 100;
+              .color {
+                background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') -10px -212px no-repeat;
+              }
+              span {
+                width: 120px;
+                height: 40px;
+                display: block;
+              }
+            }
+            a {
+              color: #333;
+              text-decoration: none;
+              outline: 0;
+            }
+          }
+          .left {
+            float: left;
+            margin: 4px 30px 0 -26px;
+          }
+          .tabs-toggle {
+            cursor: pointer;
+            position: absolute;
+            top: 1px;
+            left: 125px;
+            z-index: 1;
+            padding: 0 10px;
+            width: 38px;
+            height: 44px;
+            font: normal 12px/45px simsun;
+            text-decoration: none;
+            color: #999;
+            background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') -319px 0;
+            .arrow {
+              overflow: hidden;
+              position: absolute;
+              top: 19px;
+              left: 38px;
+              width: 9px;
+              height: 6px;
+              text-indent: -999px;
+              background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') -52px -97px;
+            }
+          }
+          .input-wrapper {
+            margin-right: 0;
+            position: relative;
+            .input-shadow {
+              width: 538px;
+              height: 44px;
+              border: 1px solid #666;
+              border-right: 0;
+              background: #fff;
+              input {
+                width: 448px;
+                height: 18px;
+                padding: 10px 0;
+                border: 0;
+                margin: 3px 30px 0 60px;
+                font: 16px arial;
+                vertical-align: middle;
+                outline: none;
+              }
+              input::-webkit-input-placeholder {
+                font-size: 12px;
+              }
+            }
+          }
+          .button-wrapper {
+            vertical-align: top;
+            font-size: 0px;
+            .button {
+              width: 120px;
+              height: 46px;
+              background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') no-repeat -211px -180px;
+              border: 0;
+              font-size: 14px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hotsearchCon {
+    width: 1000px;
+    margin: -9px auto -7px;
+    .hotsearch-box {
+      margin: 6px 0 26px 195px;
+      position: relative;
+      width: 658px;
+      height: 20px;
+      z-index: 103;
+      .hotsearchtop {
+        width: 658px;
+        position: relative;
+        height: 20px;
+        .boxhot {
+          width: 658px;
+          height: 20px;
+          overflow: hidden;
+          list-style: none;
+          a {
+            font-size: 12px;
+            line-height: 20px;
+            text-decoration: none;
+            outline: 0;
+            border: 0 none;
+          }
+          li {
+            display: inline-block;
+          }
+          .title {
+            margin-right: 6px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #999;
+            .hotsearch-link {
+              color: #090;
+              padding-left: 15px;
+              padding-bottom: 1px;
+              background: url('https://gss1.bdstatic.com/5eN1dDebRNRTm2_p8IuM_a/v5/B4/uF/o3/lc/nj/index_widthlg.png') -159px -260px no-repeat;
+            }
+          }
+          .text {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+  }
+  .hao123-bodyct {
+    position: relative;
+    ul {
+      list-style: none;
+    }
+    .menus {
+      width: 1190px;
+      height: 38px;
+      background-color: #fcfcfc;
+      margin: 0 auto;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+      .menus {
+        width: 1190px;
+        height: 38px;
+        border-top: 2px solid #099e6a;
+        border-bottom: 1px solid #eaeaea;
+        background-color: #fcfcfc;
+        margin: 0 auto;
+        font-size: 14px;
+        position: relative;
+        z-index: 2;
+
+        .menu {
+          height: 38px;
+          line-height: 38px;
+          width: 108px;
+          float: left;
+          text-align: center;
+          cursor: pointer;
+          overflow: hidden;
+          .link {
+            border-right: 0;
+            text-align: center;
+            color: #333;
+            position: relative;
+            font-family: Microsoft Yahei;
+            font-size: 16px;
+            display: block;
+            height: 100%;
+          }
+          .active {
+            background-color: #0aa770;
+            cursor: pointer;
+            color: #fff;
+          }
+        }
+        .first {
+          width: 81px;
+          .link {
+            border-left: 0;
+          }
+        }
+      }
+    }
+    .govsite-top {
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: -10px;
+      overflow: hidden;
+      .govsite-inner {
+        width: 1188px;
+        height: 36px;
+        border: solid 1px #84d7ba;
+        line-height: 36px;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #666;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        .title {
+          vertical-align: top;
+          width: 80px;
+          height: 36px;
+          text-align: center;
+          color: #0aa770;
+        }
+        .title-line {
+          vertical-align: top;
+          height: 20px;
+          width: 1px;
+          background-color: #eaeaea;
+          position: relative;
+          top: 9px;
+          margin-right: 36px;
+        }
+        .govsite-item {
+          height: 36px;
+          line-height: 36px;
+          vertical-align: top;
+          margin-right: 36px;
+        }
+      }
+    }
+    .w1000px {
+      width: 1190px;
+      .s-br21, .g-br21, .s-br21h:hover, .g-br21h:hover {
+        border: 1px solid #84d7ba;
+      }
+      .s-bg5, .g-bg5, .s-bg5h:hover, .g-bg5h:hover {
+        background-color: #fcfcfc;
+      }
+      .layout-content-ct {
+        width: 900px;
+        float: right;
+        .layout-famoussite {
+          width: 898px;
+          z-index: 100;
+          border-width: 1px;
+          position: relative;
+          ul {
+            list-style: none;
+          }
+          #box-site{
+            .widget-site{
+              .js_site{
+                .site-bd {
+                  width: 868px;
+                  padding-left: 23px;
+                  padding-top: 3px;
+                  position: relative;
+                  .site-item-normal {
+                    width: 130px;
+                    padding-top: 6px;
+                    padding-bottom: 4px;
+                    margin-right: 2px;
+                    padding-left: 9px;
+                    a {
+                      outline: 0;
+                      text-decoration: none;
+                      background-image: url('https://gss3.bdstatic.com/5bVXsj_p_tVS5dKfpU_Y_D3/urlicon/6000.png');
+                      background-position: 2px 44%;
+                      background-position: 2px 40% \9
+                    ;
+                      background-repeat: no-repeat;
+                      padding-left: 25px;
+                      display: inline-block;
+                    }
+                    .sitesublink {
+                      background: 0;
+                      padding-left: 0;
+                      padding-right: 5px;
+                      position: relative;
+                      z-index: 88;
+                      display: inline-block;
+                    }
+                  }
+                  .site-item {
+                    color: #000;
+                    font-size: 14px;
+                    height: 20px;
+                    line-height: 20px;
+                    vertical-align: top;
+
+                  }
+                }
+              }
+              .site-hd0 {
+                padding-bottom: 3px;
+              }
+            }
+          }
+          .box-famoussite {
+            .widget-famoussite {
+              clear: both;
+              .wf-line {
+                margin-left: 30px;
+                
+                padding-bottom: 4px;
+                padding-top: 4px;
+                .width-lg .widget-famoussite .wf-inner, .width-lg .widget-famoussite .wf-tuijian {
+                  margin-left: 30px;
+                }
+                .wf-line0 {
+                  top: 0;
+                }
+              }
+              .wf-inner {
+                padding-bottom: 4px;
+                padding-top: 4px;
+                span {
+                  width: 143px;
+                  vertical-align: top;
+                  position: relative;
+                  display: inline-block;
+                  height: 30px;
+                  line-height: 30px;
+                  a {
+                    padding: 1px 4px;
+                    zoom: 1
+                  }
+                  .imgicon {
+                    padding-left: 29px;
+                    background-position: 4px center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                  }
+                  .g_red, .tc-orange {
+                    color: #f50;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .layout-content {
+        clear: both;
+        margin: 0 auto;
+      }
+    }
+  }
+}
