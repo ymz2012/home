@@ -94,13 +94,13 @@
     function if_operation_style(new_symbol) {// +  -   *   /
         if (new_symbol == '+/-') {
             console.log(!!old_symbol);
-            if(!!old_symbol){
+
+            if(old_value != undefined){//表示第一次取反
                 tBtn.value = -(old_value * 1);
                 old_value = tBtn.value;
-            }else{
-                tBtn.value = -(new_value * 1);
-                old_value = new_value;
             }
+
+
 
         }else if(new_symbol == 'x^2'){
             tBtn.value = parseFloat((new_value * 1*new_value * 1).toFixed(8));
@@ -112,8 +112,14 @@
             tBtn.value = parseFloat((Math.cos(old_value * 1)).toFixed(8));
             old_value = tBtn.value;
         }else if(new_symbol == 'sqrt'){
-            tBtn.value = parseFloat((Math.sqrt(old_value * 1)).toFixed(8));
-            old_value = tBtn.value;
+            if(old_value < 0){
+                tBtn.value = 'NaN';
+                alert('负数不能开方');
+            }else{
+                tBtn.value = parseFloat((Math.sqrt(old_value * 1)).toFixed(8));
+                old_value = tBtn.value;
+            }
+
         }else {
             switch (old_symbol) {
                 case '%':
@@ -143,7 +149,8 @@
                 case '÷':
                     if(new_value==0){
                         alert('除数不能为0');
-                        tBtn.value = 'NaN';
+                        /*tBtn.value = 'NaN';*/
+                        tBtn.value = old_value;
                     }else{
                         tBtn.value = parseFloat((old_value * 1/new_value * 1).toFixed(8));
                         old_value = tBtn.value;
@@ -164,7 +171,9 @@
     //点击数字
     function clickNumber() {
         setBtnStyle(this);//点击动画
-
+        if(tBtn.value == 'NaN'){
+            tBtn.value = 0;
+        }
         if (flag == true) {
             old_value = tBtn.value;
 
@@ -192,6 +201,12 @@
 
     //点击符号
     function clickSymbol() {
+        //判断单独一个小数点
+            if(tBtn.value == '.'){
+                alert('要运算的数字不能单独是一个点');
+                tBtn.value = '';
+                return false;
+            }
         setBtnStyle(this);//点击动画
         new_symbol = this.value;
         console.log(this.value);
