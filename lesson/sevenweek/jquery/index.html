@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jQuery</title>
 </head>
 <body>
+<div class="test">
 
+</div>
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    //ready  html骨架已经完成
+    //onload 整个页面已经加载完毕
+    //$() ==>返回的是一个数组
+    //$(document).ready(function(){});
+    //var mydiv = $('.pp') //变成原生的对象 mydiv[0]
+    //$(function(){})  ready写法
+
+
+    //动态添加的dom元素在click绑定事件的时候 需要进行事件的委托('.test').on('click','#myp',function(){})
+
+
+    //绑定事件  bind 类似于addEventListener    $(.p).bind('click',clickhander1);   可以直接使用on方法 把bind换成on即可
+    //定义一个自定义事件
+/*    $(document).ready(function(){
+        $('#ClickMeBtn').click(function(){
+            var e = jQuery.Event("MyEvent");
+            $("#ClickMeBtn").trigger(e);
+        });
+        $('#ClickMeBtn').bind("MyEvent",function(event){
+            console.log(event);
+        })
+    });*/
+
+
+    //删除元素  remove()全部删除   empty()删除里面的子元素
+    //隐藏元素 hide()  hide里面可以写个实参,是隐藏所用的时间  show()显示  toggle()显示或者隐藏  都可以执行回调函数
+    //淡入淡出效果 fadeIn() fadeOut() fadeToggle() fadeTo()
+
+    //jQuery 遍历和过滤
+</script>
 </body>
 </html>
