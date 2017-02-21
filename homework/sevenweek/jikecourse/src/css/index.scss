@@ -565,8 +565,197 @@ a, a:hover, a:link, a:visited {
           }
         }
       }
+      #aside{
+        width: 210px;
+        .aside-allCategory{
+          margin: 0;
+          border: 1px solid #35b558;
+          background-color: #fff;
+          .hd{
+            height: 45px;
+            padding: 0 32px;
+            border-bottom: 1px solid #eee;
+            line-height: 45px;
+            cursor: default;
+            h2{
+              position: relative;
+              font-size: 14px;
+              font-weight: 400;
+              a{
+                color: #35b558;
+                border: 0 none;
+                text-decoration: none;
+                .icon-course-curr{
+                  display: block;
+                  width: 15px;
+                  height: 15px;
+                  background: url(http://s1.jikexueyuan.com/common/images/icon-course-curr_0743c98.png) no-repeat 0 0 / 15px 15px;
+                  position: absolute;
+                  margin-left: -20px;
+                  margin-top: 14px;
+                }
+              }
+            }
+          }
+          .bd{
+            .aside-cList{
+              position: relative;
+              width: 208px;
+              li:hover{
+                div{
+                  border: 1px solid #ddd;
+
+                  background-image: none;
+                  height: 38px;
+                  width: 210px;
+                  margin-top: -1px;
+                  margin-left: -1px;
+                  padding-left: 24px;
+/*                  -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+                  box-shadow: 1px 2px 4px rgba(0,0,0,.1);*/
+                  .list-show{
+                    display: block;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    border: 0;
+                  }
+                }
+
+              }
+              li{
+                padding: 0;
+                border-bottom: 0;
+                div{
+                  cursor: pointer;
+                  width: 208px;
+                  height: 37px;
+                  border-bottom: 1px solid #f5f5f5;
+                  background: url(http://s1.jikexueyuan.com/common/images/icon-more_cd68622.png) 186px center no-repeat;
+                  background-size: 6px 10px;
+                  padding-left: 32px;
+                  a{
+                    font-size: 12px;
+                    color: #666;
+                    line-height: 36px;
+                    border: 0 none;
+                    text-decoration: none;
+                  }
+                  .list-show{
+                    display: none;
+/*                    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+                    -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+                    box-shadow: 1px 2px 4px rgba(0,0,0,.1);*/
+                    overflow: hidden;
+                    min-height: 417px;
+                    min-width: 401px;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    position: absolute;
+                    left: 209px;
+                    top: -46px;
+                    z-index: 1101;
+                    list-style: none;
+                    margin-left: -1px;
+                    padding-bottom: 30px;
+                    float: left;
+                    width: 591px;
+                    padding-left: 0;
+
+                    div{
+                      padding-left: 0;
+                    }
+                    dl{
+                      margin: 0 15px;
+                      overflow: hidden;
+                      dt{
+                        border: 0;
+                        display: block;
+                        border-bottom: 1px solid #f5f5f5;
+                        height: 37px;
+                        line-height: 45px;
+                        a{
+                          color: #333;
+                          font-size: 13px;
+                          font-weight: 500;
+                          line-height: 36px;
+                          border: 0 none;
+                          text-decoration: none;
+                        }
+                      }
+                      dd{
+                        list-style: none;
+                        margin-left: -8px;
+                        padding: 3px 0;
+                        a{
+                          height: 14px;
+                          line-height: 14px;
+                          margin-bottom: 10px;
+                          margin-top: 5px;
+                          padding: 0 7px;
+                          color: #666;
+                          display: inline-block;
+                          font-size: 12px;
+                          border-left: 1px solid #e0e0e0;
+                          float: left;
+                          white-space: nowrap;
+                          font-weight: 400;
+                          text-decoration: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .hdlist{
+          width: 100%;
+          background-color: #fff;
+          li{
+            height: 45px;
+            a{
+              display: block;
+              height: 45px;
+              width: 100%;
+              line-height: 45px;
+              color: #333;
+              font-size: 14px;
+              padding-left: 10px;
+              border-bottom: 1px solid #eee;
+              text-decoration: none;
+              i{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin-right: 8px;
+                vertical-align: text-bottom;
+              }
+              .icon-zylj{
+                background: url('http://s1.jikexueyuan.com/common/images/icon-zylj_6ee6dac.png') no-repeat left center;
+                background-size: 15px 14px;
+              }
+              .icon-zstx{
+                background: url('http://s1.jikexueyuan.com/common/images/icon-zstx_a1ae096.png') no-repeat left center;
+                background-size: 15px 12.5px;
+              }
+              .icon-xlkc{
+                background: url('http://s1.jikexueyuan.com/common/images/icon-xlkc_2e47588.png') no-repeat left center;
+                background-size: 14px 14px;
+              }
+              .icon-kcbq{
+                background: url('http://s1.jikexueyuan.com/common/images/icon-kcbq_65534c2.png') no-repeat left center;
+                background-size: 15px 13px;
+              }
+            }
+          }
+        }
+      }
       .f_r{
         float: right;
+      }
+      .f_l{
+        float: left;
       }
     }
   }
