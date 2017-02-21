@@ -4,34 +4,31 @@
 
 
 $(document).ready(function(){
-    $(window).on("load",function(){
-        imgLocation();
-        //定义一个滚动
-        var dataImg = {"data":[{"src":"1.jpg"},{"src":"2.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"5.jpg"},{"src":"6.jpg"},{"src":"7.jpg"},{"src":"8.jpg"},{"src":"9.jpg"},{"src":"10.jpg"}]};
-        $(window).on("scroll",function () {
-            if(scrollside()){
-                $.each(dataImg.data,function(index,value){
-                    var box = $("<div>").addClass("box").appendTo($("#container"));
-                    var content = $("<div>").addClass("content").appendTo(box);
-                    //console.log("../image/"+$(value).attr("src"));
-                    $("<img>").attr("src","./image/"+$(value).attr("src")).appendTo(content);
-                });
-                imgLocation();
-            }
-        });
-
-        $(window).on("resize",function () {
-            winResize();
-        });
+    imgLocation();
+    //定义一个滚动
+    var dataImg = {"data":[{"src":"1.jpg"},{"src":"2.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"5.jpg"},{"src":"6.jpg"},{"src":"7.jpg"},{"src":"8.jpg"},{"src":"9.jpg"},{"src":"10.jpg"}]};
+    $(window).on("scroll",function () {
+        if(scrollside()){
+            $.each(dataImg.data,function(index,value){
+                var box = $("<div>").addClass("box").appendTo($("#container"));
+                var content = $("<div>").addClass("content").appendTo(box);
+                //console.log("../image/"+$(value).attr("src"));
+                $("<img>").attr("src","./image/"+$(value).attr("src")).appendTo(content);
+            });
+            imgLocation();
+        }
     });
+
+/*        $(window).on("resize",function () {
+        });*/
 });
 
-function winResize() {
+/*function winResize() {
     var box = $(".box");
     var boxWidth = box.eq(0).width();  //获得图片宽度
     var num = Math.floor($(window).width()/boxWidth);  //获得第一排图片数量
     var boxArr = []; //一排中所有盒子的高度    //定义一个数组将第一排图片的宽度放进去
-}
+}*/
 /*
 鼠标滚动自动加载方法
 */
@@ -60,6 +57,7 @@ function scrollside(){
             boxArr[minboxIndex]+=box.eq(index).height(); //重新计算最小高度,因为下一排在第一排最小高度下面摆放了一张之后高度增加了
         }
     })
+    return true;
 }
 
 
