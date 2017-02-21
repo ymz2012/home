@@ -21,4 +21,15 @@ $(document).ready(function () {
     document.getElementsByClassName("hover")[0].onmouseleave = function(){
         this.style.display = "none";
     }
+
+    //点击切换tab
+    $("#tabUl li").each(function(index){
+        var linode = $(this);
+        $(this).click(function(){
+            $(".tabList li.listyle").removeClass("listyle");
+            linode.addClass("listyle");
+            $('.show').removeClass("show").addClass("hide");
+            $(".tabContent").eq(index).removeClass("hide").addClass("show");
+        })
+    })
 })
