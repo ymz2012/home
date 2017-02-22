@@ -80,6 +80,9 @@ header{
             display: block;
             opacity: 1;
           }
+          a{
+            color: rgb(53, 181, 88);
+          }
         }
         li{
           position: relative;
@@ -89,6 +92,9 @@ header{
           cursor: pointer;
           height: 60px;
           float: left;
+          a{
+            color: #000;
+          }
           i{
             margin-left: 5px;
             display: inline-block;
@@ -117,6 +123,7 @@ header{
             font-size: 12px;
             color: #666;
             width: 280px;
+
             h3{
               margin: 10px 0;
               padding: 0 15px;
@@ -235,10 +242,17 @@ header{
         cursor: pointer;
       }
       .app-icon:hover{
+        background: url('http://e.jikexueyuan.com/headerandfooter/images/app-icon2.png') 0 0 no-repeat;
+        background-size: 17px;
+        background-position: 0;
         .submenu{
           display: block;
           opacity: 1;
         }
+      }
+      .search-icon:hover {
+        background: url("http://e.jikexueyuan.com/headerandfooter/images/search-icon2.png") 0 center no-repeat;
+        background-size: 17px 17px;
       }
       .search-icon{
         background: url('../image/search-icon.png') 0 center no-repeat;
@@ -251,7 +265,7 @@ header{
           padding: 0;
           right: -100px;
           position: absolute;
-
+          z-index: 1000;
           top: 59px;
           display: none;
           opacity: 0;
@@ -336,6 +350,112 @@ header{
               text-align: center;
             }
           }
+        }
+      }
+    }
+    //滑动搜索框效果
+    .scale {
+      transform-origin: right center;
+      -moz-transform-origin: right center;
+      display: block!important;
+      transform: scale(1, 1) !important;
+      opacity: 1!important;
+      animation: scalerun 0.8s ease normal;
+      //-moz-animation: scalerun 2s line normal;
+      -webkit-animation: scalerun 0.8s ease normal;
+    }
+    @keyframes scalerun {
+      0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+    @-moz-keyframes scalerun
+      /* Firefox */
+
+    {
+      0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    @-webkit-keyframes scalerun
+      /* Safari and Chrome */
+
+    {
+      0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+    .searchbox{
+      display: none;
+      transform: scale(0.1, 1);
+      -moz-transform: scale(0.1, 1);
+      opacity: 0;
+      height: 59px;
+      line-height: 59px;
+      width: 850px;
+      background: #fff;
+      position: absolute;
+      z-index: 11000;
+      top: 0;
+      right: 0;
+      .close-icon{
+        width: 15px;
+        height: 15px;
+        margin-top: 22px;
+        cursor: pointer;
+        background: url('http://e.jikexueyuan.com/headerandfooter/images/close-icon.png') 0 0 no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1200;
+      }
+      .search-icon{
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/search-icon.png) 0 0 no-repeat;
+        background-size: 17px 17px;
+        background-position: 0, 0;
+        height: 17px;
+        width: 17px;
+        display: inline-block;
+      }
+      input{
+        width: 400px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 10px;
+        font-size: 12px;
+        vertical-align: top;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+      }
+      .tagbox{
+        width: 300px;
+        text-align: right;
+        display: inline;
+        margin-right: 50px;
+        float: right;
+        a{
+          font-size: 12px;
+          color: #808080;
+          background: #f5f5f5;
+          padding: 3px 5px;
+          margin-left: 10px;
         }
       }
     }
@@ -465,6 +585,48 @@ a, a:hover, a:link, a:visited {
                       }
                     }
                   }
+                  .previewMode{
+                    float: right;
+                    ul{
+                      li{
+                        position: relative;
+                        float: left;
+                        width: 36px;
+                        height: 38px;
+                        border-left: 1px solid #f5f5f5;
+                        line-height: 36px;
+                        text-align: center;
+                        cursor: pointer;
+                        .icon{
+                          position: relative;
+                          top: -1px;
+                          display: inline-block;
+                          width: 14px;
+                          height: 14px;
+                          vertical-align: middle;
+                        }
+                        .curr{
+                          background: #fff;
+                        }
+
+                      }
+                      .kuai-icon{
+                        .icon{
+                          width: 14px;
+                          background: url('http://s1.jikexueyuan.com/course/images/icon-kuai_3c1a8cf.png') no-repeat 0 0;
+                          background-size: 14px;
+                        }
+                      }
+                      .list-icon{
+                        .icon{
+                          width: 19px;
+                          background: url('http://s1.jikexueyuan.com/course/images/icon-list_6d9f87f.png') no-repeat center;
+                          background-size: 16px 12px;
+
+                        }
+                      }
+                    }
+                  }
                 }
               }
               .lesson-list{
@@ -474,6 +636,31 @@ a, a:hover, a:link, a:visited {
                   list-style: none;
                   li:nth-child(3n+3){
                     margin-right: 0;
+                  }
+                  li:hover{
+                    .lesson-infor{
+                      background: #fff !important;
+                      height: 175px !important;
+                      p{
+                        height: 52px !important;
+                        opacity: 1 !important;
+                        display: block !important;
+                      }
+                      .timeandicon{
+                        .learn-number{
+                          display: block!important;
+                        }
+                        .zhongji{
+                          display: block!important;
+                        }
+                        .lessonicon-box{
+                          bottom:-2px!important;
+                        }
+                      }
+                    }
+                    .lessonplay{
+                      opacity: 1!important;
+                    }
                   }
                   li{
                     height: 225px;
@@ -485,22 +672,35 @@ a, a:hover, a:link, a:visited {
                       width: 100%;
                       height: 135px;
                       position: relative;
-                      .lesson-shoucang{
-                        position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        width: 16px;
-                        height: 16px;
-                        background: url(http://s1.jikexueyuan.com/common/images/shoucang-1_76dc56f.png);
-                        background-size: 16px 16px;
-                        z-index: 101;
-                        cursor: pointer;
-                      }
                       a{
                         img{
                           width: 100%;
                           height: 135px;
                           vertical-align: middle;
+                        }
+                        .lessonplay{
+                          background: rgba(0,0,0,.4);
+                          width: 100%;
+                          height: 100%;
+                          z-index: 100;
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          opacity: 0;
+                          .playericon{
+                            position: absolute;
+                            z-index: 120;
+                            width: 50px;
+                            height: 50px;
+                            display: block;
+                            left: 50%;
+                            margin-left: -25px;
+                            top: 50%;
+                            margin-top: -25px;
+                            background: url('http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png') 0 0 no-repeat;
+                            cursor: pointer;
+                            background-size: 50px 50px;
+                          }
                         }
                       }
                     }
@@ -537,10 +737,62 @@ a, a:hover, a:link, a:visited {
                         font-size: 12px;
                         color: gray;
                         position: relative;
+                        .cf:after {
+                          content: '';
+                          display: block;
+                          clear: both;
+                          height: 0;
+                          overflow: hidden;
+                          visibility: hidden;
+                        }
                         dl{
                           width: 120px;
                           float: left;
                           white-space: nowrap;
+                          dd{
+                            font-size: 12px;
+                            float: left;
+                            display: inline-block;
+                            margin-right: 15px;
+                            .time-icon{
+                              background: url('http://s1.jikexueyuan.com/course/images/icon_7f8b929.png') 0 -72px no-repeat;
+                              width: 14px;
+                              height: 14px;
+                              display: block;
+                              float: left;
+                              margin-right: 8px;
+                            }
+                            .xinhao-icon2{
+                              background: url('http://s1.jikexueyuan.com/common/images/one-ji_1731712.png') 0 0 no-repeat;
+                              background-size: 14px 14px;
+                              width: 14px;
+                              height: 14px;
+                              display: block;
+                              float: left;
+                              margin-right: 8px;
+                            }
+                            .xinhao-icon{
+                              background: url('http://s1.jikexueyuan.com/common/images/one-ji_1731712.png') 0 0 no-repeat;
+                              background-size: 14px 14px;
+                              width: 14px;
+                              height: 14px;
+                              display: block;
+                              float: left;
+                              margin-right: 8px;
+                            }
+                            .xinhao-icon3{
+                              background: url('http://s1.jikexueyuan.com/common/images/three-ji_b588ab1.png') 0 0 no-repeat;
+                              background-size: 14px 14px;
+                              width: 14px;
+                              height: 14px;
+                              display: block;
+                              float: left;
+                              margin-right: 8px;
+                            }
+                          }
+                          .mar-b8 {
+                            margin-bottom: 8px;
+                          }
                         }
                         .learn-number{
                           float: right;
@@ -549,11 +801,187 @@ a, a:hover, a:link, a:visited {
                           position: absolute;
                           right: 0;
                           text-align: right;
+                          bottom: 4px;
                           a{
                             display: inline-block;
                             width: 16px;
                             height: 16px;
                             margin-left: 3px;
+                            img{
+                              display: block;
+                              width: 16px;
+                              height: 16px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .lesson-list2{
+                ul{
+                  li{
+                    height: 100px;
+                    padding: 0;
+                    background-color: #fff;
+                    margin-top: 13px;
+                    .lessonimg-box:hover{
+                      .lessonplay{
+                        opacity: 1!important;
+                      }
+                    }
+                    .lessonimg-box{
+                      width: 185px;
+                      height: 100px;
+                      float: left;
+                      margin-right: 15px;
+                      position: relative;
+                      a{
+                        img{
+                          width: 185px;
+                          height: 100px;
+                          vertical-align: middle;
+                        }
+                        .lessonplay{
+                          background: rgba(0,0,0,.4);
+                          width: 100%;
+                          height: 100%;
+                          z-index: 100;
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          opacity: 0;
+                          .playericon{
+                            position: absolute;
+                            z-index: 120;
+                            width: 50px;
+                            height: 50px;
+                            display: block;
+                            left: 50%;
+                            margin-left: -25px;
+                            top: 50%;
+                            margin-top: -25px;
+                            background: url('http://s1.jikexueyuan.com/course/images/player_icon_5c67475.png') no-repeat;
+                            background-size: 50px 50px;
+                            cursor: pointer;
+                          }
+                        }
+                      }
+                    }
+                    .lesson-infor{
+                      position: relative;
+                      height: 100px;
+                      width: 566px;
+                      float: left;
+                        .lesson-info-h2{
+                          font-size: 14px;
+                          color: #333;
+                          margin-top: 5px;
+                          margin-bottom: 5px;
+                          overflow: hidden;
+                          a{
+                            color: #000;
+                            border: 0 none;
+                            text-decoration: none;
+                        }
+                      }
+                      p{
+                        color: gray;
+                        font-size: 12px;
+                        opacity: 1!important;
+                        line-height: 18px;
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        display: block !important;
+                        height: 36px !important;
+                      }
+                      .timeandicon{
+                        font-size: 12px;
+                        color: gray;
+                        position: relative;
+                        .cf{
+                          .learn-number{
+                            display: block !important;
+                          }
+                          dl{
+                            .zhongji{
+                              display: block!important;
+                            }
+                            dd{
+                              font-size: 12px;
+                              float: left;
+                              display: inline-block;
+                              margin-right: 15px;
+
+                              .time-icon{
+                                background: url('http://s1.jikexueyuan.com/course/images/icon_7f8b929.png') 0 -72px no-repeat;
+                                width: 14px;
+                                height: 14px;
+                                display: block;
+                                float: left;
+                                margin-right: 8px;
+                              }
+                              .xinhao-icon2{
+                                background: url('http://s1.jikexueyuan.com/common/images/one-ji_1731712.png') 0 0 no-repeat;
+                                background-size: 14px 14px;
+                                width: 14px;
+                                height: 14px;
+                                display: block;
+                                float: left;
+                                margin-right: 8px;
+                              }
+                              .xinhao-icon{
+                                background: url('http://s1.jikexueyuan.com/common/images/one-ji_1731712.png') 0 0 no-repeat;
+                                background-size: 14px 14px;
+                                width: 14px;
+                                height: 14px;
+                                display: block;
+                                float: left;
+                                margin-right: 8px;
+                              }
+                              .xinhao-icon3{
+                                background: url('http://s1.jikexueyuan.com/common/images/three-ji_b588ab1.png') 0 0 no-repeat;
+                                background-size: 14px 14px;
+                                width: 14px;
+                                height: 14px;
+                                display: block;
+                                float: left;
+                                margin-right: 8px;
+                              }
+                            }
+                            .mar-b8{
+                              margin-bottom: 8px;
+                            }
+                          }
+                          .learn-number{
+                            float: right;
+                          }
+                          .lessonicon-box{
+                            position: absolute;
+                            right: 0;
+                            text-align: right;
+                            top: -75px;
+                              a{
+                                display: inline-block;
+                                width: 16px;
+                                height: 16px;
+                                margin-left: 3px;
+                                background-size: 16px 16px;
+                                -webkit-background-size: 16px 16px;
+                                img{
+                                  vertical-align: middle;
+                                }
+                              }
+                            }
+                          }
+                          .cf:after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                            height: 0;
+                            overflow: hidden;
+                            visibility: hidden;
                           }
                         }
                       }
@@ -601,30 +1029,40 @@ a, a:hover, a:link, a:visited {
             .aside-cList{
               position: relative;
               width: 208px;
-              li:hover{
-                div{
-                  border: 1px solid #ddd;
-
-                  background-image: none;
+              li{
+                padding: 0;
+                border-bottom: 0;
+                div:hover{
+                  border-left: 1px solid #ddd;
+                  border-top: 1px solid #ddd;
+                  border-bottom: 1px solid #ddd;
                   height: 38px;
                   width: 210px;
                   margin-top: -1px;
                   margin-left: -1px;
                   padding-left: 24px;
-/*                  -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.1);
-                  box-shadow: 1px 2px 4px rgba(0,0,0,.1);*/
-                  .list-show{
+                  -webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+                  box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+                  .makebig{
                     display: block;
-                    -webkit-box-shadow: none;
-                    box-shadow: none;
-                    border: 0;
+                    width: 188px;
+                    background: #fff;
+                    position: absolute;
+                    z-index: 1102;
+                    border-right: 3px solid #fff;
+                    color: #35b558;
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: 36px;
+                  }
+                  .list-show {
+                    display: block;
+                    div{
+                      -webkit-box-shadow: none;
+                      box-shadow: none;
+                    }
                   }
                 }
-
-              }
-              li{
-                padding: 0;
-                border-bottom: 0;
                 div{
                   cursor: pointer;
                   width: 208px;
@@ -640,11 +1078,14 @@ a, a:hover, a:link, a:visited {
                     border: 0 none;
                     text-decoration: none;
                   }
+                  a.active {
+                    color: #35b558
+                  }
                   .list-show{
                     display: none;
-/*                    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
+                    -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
                     -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.1);
-                    box-shadow: 1px 2px 4px rgba(0,0,0,.1);*/
+                    box-shadow: 1px 2px 4px rgba(0,0,0,.1);
                     overflow: hidden;
                     min-height: 417px;
                     min-width: 401px;
@@ -660,7 +1101,9 @@ a, a:hover, a:link, a:visited {
                     float: left;
                     width: 591px;
                     padding-left: 0;
-
+                    a:hover {
+                      color: #35b558
+                    }
                     div{
                       padding-left: 0;
                     }
@@ -714,6 +1157,11 @@ a, a:hover, a:link, a:visited {
           background-color: #fff;
           li{
             height: 45px;
+            a:hover {
+              color: #35b558;
+              background: #fafafa url(http://s1.jikexueyuan.com/common/images/img-seeall_b965178.png) no-repeat 160px center;
+              background-size: 40px 10px
+            }
             a{
               display: block;
               height: 45px;
@@ -734,6 +1182,7 @@ a, a:hover, a:link, a:visited {
               .icon-zylj{
                 background: url('http://s1.jikexueyuan.com/common/images/icon-zylj_6ee6dac.png') no-repeat left center;
                 background-size: 15px 14px;
+                vertical-align: middle;
               }
               .icon-zstx{
                 background: url('http://s1.jikexueyuan.com/common/images/icon-zstx_a1ae096.png') no-repeat left center;
@@ -759,7 +1208,6 @@ a, a:hover, a:link, a:visited {
       }
     }
   }
-}
 /*尾部*/
 footer{
   min-width: 1000px;
@@ -767,7 +1215,7 @@ footer{
   border-top: 1px solid #e4e4e4;
   margin: 0 auto;
   background: #fff;
-  margin-top: 50px!important;
+  margin-top: 80px!important;
   box-sizing: border-box;
   float: left;
   .jkinfor-block{
