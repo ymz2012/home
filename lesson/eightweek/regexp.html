@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    // var regex = /xyz/i;
+    //面向对象   一切事物皆是对象   对象具有封装和继承特性   信息隐藏(类信息的隐藏包括属性和方法)
+    // 使用函数构造器来构造对象
+/*
+//面向对象的一种书写格式
+    function People(name){
+        this._name = name;
+    }
+
+    People.prototype.say = function(){
+        alert("pro-hello"+this._name);
+    }
+
+    function Student(name){
+        this._name = name;
+    }
+    Student.prototype = new People();
+    var superSsay = Student.prototype.say;
+    Student.prototype.say = function(){
+        superSsay.call(this);
+        alert('stu-hello'+this._name)
+    }
+    var s = new Student();
+    s.say();*/
+
+    //object.create 原型链上引入副本 不改变父类的元素
+//第二种面向对象的书写格式
+
+    function Person(name){
+        var _this = {};
+        _this._name =name;
+        _this.sayHello = function(){
+            alert("PHello"+_this._name);
+        }
+        return _this;
+    }
+
+    function Teacher(name){
+        var _this = Person(name);
+        var superSay = _this.sayHello;
+        _this.sayHello = function(){
+            superSay.call(_this);
+            alert("Thello"+_this._name);
+        }
+        return _this;
+    }
+    var t = Teacher('123');
+    t.sayHello();
+
+
+    //父类  子类继承父类  子类里面可以重写父类的方法
+    //封装  把嘴 脸 皮肤封装成一个人类
+    //继承  不同的人类去继承实现基本的人类
+    //多态  不同的人类吃饭 皮肤颜色等都不一样
+</script>
+</body>
+</html>
