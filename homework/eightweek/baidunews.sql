@@ -30,7 +30,7 @@ CREATE TABLE `news` (
   `newstime` datetime DEFAULT NULL,
   `newssrc` char(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (1,'精选','测试数据库中的第一条数据','src/image/img4.jpeg','2017-03-01 00:00:00','极客学院');
+INSERT INTO `news` VALUES (1,'精选','测试数据库中的第一条数据','src/image/img4.jpeg','2017-03-01 00:00:00','极客学院'),(2,'百家','嘿嘿嘿','src/image/img1.jpeg','2017-03-10 00:00:00','sina'),(3,'精选','123','1234','2017-03-03 00:00:00','123'),(4,'精选','12345','12345','2017-03-09 00:00:00','src'),(5,'精选','12345567888999999','12345','2017-03-09 00:00:00','src');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-01 18:44:40
+-- Dump completed on 2017-03-02 19:16:57

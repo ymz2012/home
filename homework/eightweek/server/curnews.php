@@ -2,21 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: ymz
- * Date: 17/3/1
- * Time: 上午11:56
+ * Date: 17/3/2
+ * Time: 下午6:37
  */
 header("Content-type:application/json;charset=utf-8");
-$link = mysqli_connect('127.0.0.1','root','123456','baidunews',3306);
+require_once('db.php');
+
+
 if($link){
-    //执行成功的过程
-    $sql = 'SELECT * FROM news';
 
+    $newsid = $_POST['newsid'];
     mysqli_query($link,"SET NAMES uft8");
-
+    $sql = "SELECT FROM `news` WHERE `id` = {$newsid}";
     $result = mysqli_query($link,$sql);
-
     $senddata = array();
-    /*unset($senddata);*/
     while ($row = mysqli_fetch_assoc($result)){
         array_push($senddata,array(
             'id'=>$row['id'],
@@ -28,8 +27,10 @@ if($link){
         ));
         echo json_encode($senddata);
     }
-}else{
-    echo json_encode(array('success'=>'none'));
+
+
 }
-mysqli_close($link);
+mysqli_close();
+
+
 ?>
