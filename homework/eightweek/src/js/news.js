@@ -7,7 +7,6 @@ $(document).ready(function(){
     $('nav a').click(function(e){
         e.preventDefault();
         var type = $(this).text();
-        type=encodeURI(type);
         refreshNews(type);
     })
 });
