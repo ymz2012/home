@@ -18,7 +18,7 @@ if($link){
     $newssrc = $_POST['newssrc'];
 
     $sql = "INSERT INTO `news` (`newstitle`,`newstype`,`newsimg`,`newstime`,`newssrc`) VALUES ('{$newstitle}','{$newstype}','{$newsimg}','{$newstime}','{$newssrc}')";
-    mysqli_query($link,"SET NAMES uft8");
+    mysqli_query($link,"SET NAMES utf8");
     $result = mysqli_query($link,$sql);
     echo json_encode(array('success'=>'ok'));
 }

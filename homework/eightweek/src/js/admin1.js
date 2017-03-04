@@ -60,8 +60,9 @@ $(document).ready(function(){
     //删除新闻的功能
     var deleteId =null;
     $newsTable.on('click','.btn-danger',function(e){
+
         $('#deleteModal').modal('show');
-        deleteId = $(this).parent().prevAll().eq(3).html();
+        deleteId = $(this).parent().prevAll().eq(5).html();
     });
 
     $('#deleteModal #confirmDelete').click(function(e){
@@ -74,7 +75,6 @@ $(document).ready(function(){
                     console.log('删除成功');
                     $('#deleteModal').modal('hide');
                     refreshNews();
-
                 }
             })
         }
@@ -83,31 +83,34 @@ $(document).ready(function(){
     var updateId =null;
     $newsTable.on('click','.btn-primary',function(e){
         $('#updateModal').modal('show');
-        updateId = $(this).parent().prevAll().eq(3).html();
+        updateId = $(this).parent().prevAll().eq(5).html();
+        console.log(updateId);
         $.ajax({
             url:'./server/curnews.php',
             type:'get',
             datatype:'json',
             data:{newsid:updateId},
             success:function(data){
+                console.log(data);
                 $('#unewstitle').val(data[0].newstitle);
                 $('#unewstype').val(data[0].newstype);
                 $('#unewsimg').val(data[0].newsimg);
                 $('#unewssrc').val(data[0].newssrc);
                 var utime = data[0].newstime.split(' ')[0];
-                $('unewstime').val(utime);
-
+                $('#unewstime').val(utime);
             }
         })
     });
 
     $('#updateModal #confirmUpdate').click(function(e){
+       /* updateId = $(this).parent().prevAll().eq(5).html();
+        console.log(updateId);*/
         $.ajax({
             url:'./server/update.php',
             type:'post',
             data:{
                 newstitle:$('#unewstitle').val(),
-                newstype:$('#uewstype').val(),
+                newstype:$('#unewstype').val(),
                 newsimg:$('#unewsimg').val(),
                 newstime:$('#unewstime').val(),
                 newssrc:$('#unewssrc').val(),

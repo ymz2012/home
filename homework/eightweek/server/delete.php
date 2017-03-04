@@ -12,7 +12,7 @@ require_once('db.php');
 if($link){
     //插入新闻
     $newsid = $_POST['newsid'];
-    mysqli_query($link,"SET NAMES uft8");
+    mysqli_query($link,"SET NAMES utf8");
     $sql = "DELETE FROM `news` WHERE `news`.`id`={$newsid}";
     mysqli_query($link,$sql);
 
