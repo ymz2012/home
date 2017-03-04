@@ -22,4 +22,5 @@ if($link){
     $result = mysqli_query($link,$sql);
     echo json_encode(array('success'=>'ok'));
 }
+mysqli_close();
 ?>
