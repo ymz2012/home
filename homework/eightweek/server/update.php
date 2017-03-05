@@ -5,7 +5,6 @@
  * Date: 17/3/2
  * Time: 下午7:03
  */
-header("Content-type:application/json;charset=utf-8");
 require_once('db.php');
 
 if($link){
@@ -23,5 +22,5 @@ if($link){
     echo json_encode(array('success'=>$sql));
 }
 
-mysqli_close();
+mysqli_close($link);
 ?>

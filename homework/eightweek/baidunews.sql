@@ -29,8 +29,9 @@ CREATE TABLE `news` (
   `newsimg` varchar(200) DEFAULT NULL,
   `newstime` datetime DEFAULT NULL,
   `newssrc` char(100) DEFAULT NULL,
+  `status` int(11) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +40,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (1,'精选','测试数据库中的第一条数','src/image/img4.jpeg','2017-03-01 00:00:00','极客学院'),(2,'百家','嘿嘿嘿','src/image/img1.jpeg','2017-03-10 00:00:00','sina'),(9,'精选','321','src/image/img2.jpg','2017-03-23 00:00:00','src');
+INSERT INTO `news` VALUES (1,'精选','测试数据库中的第一条数','src/image/img4.jpeg','2017-03-01 00:00:00','极客学院',1),(2,'百家','嘿嘿嘿','src/image/img1.jpeg','2017-03-10 00:00:00','sina',1),(9,'精选','321','src/image/img2.jpg','2017-03-23 00:00:00','src',2),(16,'娱乐','嘿嘿嘿我是娱乐新闻','src/image/img4.jpeg','2017-03-05 00:00:00','娱乐',1),(17,'社会','嘿嘿嘿我是社会新闻','src/image/img2.jpg','2017-03-02 00:00:00','src',1);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-05  2:30:47
+-- Dump completed on 2017-03-05 19:38:13

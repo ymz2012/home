@@ -6,7 +6,7 @@
  * Time: 下午3:57
  */
 
-header("Content-type:application/json;charset=utf-8");
+
 require_once('db.php');
 
 if($link){
@@ -22,5 +22,5 @@ if($link){
     $result = mysqli_query($link,$sql);
     echo json_encode(array('success'=>'ok'));
 }
-mysqli_close();
+mysqli_close($link);
 ?>

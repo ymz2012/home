@@ -5,13 +5,12 @@
  * Date: 17/3/1
  * Time: 上午11:56
  */
-header("Content-type:application/json;charset=utf-8");
-$link = mysqli_connect('127.0.0.1','root','123456','baidunews',3306);
+require_once('db.php');
 if($link){
     //执行成功的过程
-    if($_GET['newstype']){
+    if(@$_GET['newstype']){
         $newstype = $_GET['newstype'];
-        $sql = "SELECT * FROM news WHERE `newstype` = '{$newstype}'";
+        $sql = "SELECT * FROM news WHERE `newstype` = '{$newstype}' and status = '1'";
         mysqli_query($link,"SET NAMES utf8");
         $result = mysqli_query($link,$sql);
         $senddata = array();
@@ -28,7 +27,7 @@ if($link){
         }
         echo json_encode($senddata);
     }else{
-        $sql = "SELECT * FROM news";
+        $sql = "SELECT * FROM news WHERE status = '1'";
         mysqli_query($link,"SET NAMES utf8");
         $result = mysqli_query($link,$sql);
         $senddata = array();

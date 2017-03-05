@@ -51,9 +51,11 @@ $(document).ready(function(){
                 success:function(data){
                     console.log(data);
                     refreshNews();
+                    window.location.reload();
                 }
 
             });
+
         }
     });
 

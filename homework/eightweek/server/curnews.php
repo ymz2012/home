@@ -5,9 +5,8 @@
  * Date: 17/3/2
  * Time: 下午6:37
  */
-header("Content-type:application/json;charset=utf-8");
 require_once('db.php');
-$link = mysqli_connect('127.0.0.1','root','123456','baidunews',3306);
+
 
 if($link){
     $newsid = $_GET['newsid'];
@@ -28,7 +27,7 @@ if($link){
     }
     echo json_encode($senddata);
 }
-mysqli_close();
+mysqli_close($link);
 
 
 ?>
