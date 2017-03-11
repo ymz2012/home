@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "*",
+    "gulp-include-html": "*",
+    "gulp-util": "*",
+    "gulp-concat":"*",
+    "gulp-autoprefixer":"*",
+    "gulp-useref": "^2.0.0",
+    "gulp-just-replace":"*",
+    "gulp-minify-css": "*",
+    "gulp-uglify": "*",
+    "gulp-imagemin": "*",
+    "gulp-filter":"*",
+    "gulp-sequence":"*",
+    "gulp-rev":"*",
+    "gulp-csso":"*"
+  }
+}

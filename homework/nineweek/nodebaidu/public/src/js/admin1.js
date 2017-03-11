@@ -145,7 +145,7 @@ $(document).ready(function(){
                     var $tdimg = $('<td>').html(item.newsimg);
                     var $tdsrc = $('<td>').html(item.newssrc);
                     //去除后台带的T和Z
-                    var $tdtime = $('<td>').html(item.newstime.replace(/T/g,' ').replace(/\.[\d]{3}Z/,''));
+                    var $tdtime = $('<td>').html(moment(item.newstime).format("YYYY-MM-DD HH:mm"));
                     var $tdctrl = $('<td>');
                     var $btnupdate = $('<button>').addClass('btn btn-primary btn-xs').html('编辑');
                     var $btndelete = $('<button>').addClass('btn btn-danger btn-xs').html('删除');

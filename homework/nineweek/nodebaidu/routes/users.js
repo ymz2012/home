@@ -15,7 +15,7 @@ var connection = mysql.createPool({
 
 
 router.get('/getnews', function(req, res, next) {
-    connection.query('SELECT * FROM `news` WHERE `status` = 1',function (error, rows) {
+    connection.query('SELECT * FROM `news` WHERE `status` = 1 order by id desc',function (error, rows) {
         res.json(rows);
     });
 });

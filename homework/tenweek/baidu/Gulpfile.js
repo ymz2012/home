@@ -68,6 +68,5 @@ gulp.task("build",function () {
 gulp.task('www',function (cb) {
     gulpSequence('min', 'build', cb);
 });
-/*gulp.task('www', ['min', 'build']);*/
 
 

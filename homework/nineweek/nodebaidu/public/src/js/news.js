@@ -30,7 +30,7 @@ function refreshNews(type){
                 var $h1 = $('<h1></h1>').html(item.newstitle).appendTo($newscontent);
                 var $p = $('<p></p>').appendTo($newscontent);
                 //去除后台带的T和Z
-                var $newsTime = $('<span></span>').addClass('newstime').html(item.newstime.replace(/T/g,' ').replace(/\.[\d]{3}Z/,'')).appendTo($p);
+                var $newsTime = $('<span></span>').addClass('newstime').html(moment(item.newstime).format("YYYY-MM-DD HH:mm")).appendTo($p);
                 var $newsSrc = $('<span></span>').addClass('newssrc').html(item.newssrc).appendTo($p);
             });
         }
