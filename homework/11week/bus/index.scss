@@ -115,7 +115,34 @@ $colorWhite : #fff;
     .tishi{
       text-align: center;
       padding-top: 10px;
-
+    }
+    .longline{
+      width: 510px;
+      height: 14px;
+/*      background: red;*/
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+      .agline{
+        width: 460px;
+        height: 5px;
+        background: $colorRed;
+        position: absolute;
+        left: 2px;
+        top: 10px;
+      }
+      .square{
+        position: absolute;
+        left: 460px;
+        top: 11px;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid $colorRed;
+        border-right: 20px solid transparent;
+        transform: rotateZ(-15deg);
+        margin-top: -15px;
+        margin-bottom: -15px;
+      }
     }
   }
 }

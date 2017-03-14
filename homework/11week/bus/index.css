@@ -95,5 +95,30 @@ html, body {
     .container .bottom .tishi {
       text-align: center;
       padding-top: 10px; }
+    .container .bottom .longline {
+      width: 510px;
+      height: 14px;
+      /*      background: red;*/
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative; }
+      .container .bottom .longline .agline {
+        width: 460px;
+        height: 5px;
+        background: red;
+        position: absolute;
+        left: 2px;
+        top: 10px; }
+      .container .bottom .longline .square {
+        position: absolute;
+        left: 460px;
+        top: 11px;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid red;
+        border-right: 20px solid transparent;
+        transform: rotateZ(-15deg);
+        margin-top: -15px;
+        margin-bottom: -15px; }
 
 /*# sourceMappingURL=index.css.map */
