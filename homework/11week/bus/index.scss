@@ -1,0 +1,121 @@
+html,body{
+  background: #fff;
+}
+
+$colorRed : red;
+$colorGreen : green;
+$colorWhite : #fff;
+.container{
+  width: 600px;
+  height: 500px;
+  .top{
+    width: 100%;
+    height: 120px;
+    padding-top: 20px;
+    .topleft{
+      height: 100%;
+      width: 170px;
+      float: left;
+      display: inline-block;
+      .title{
+        width: 100%;
+        height: 90px;
+        background: $colorRed;
+        color: $colorWhite;
+        line-height: 90px;
+        font-weight: bold;
+        font-size: 70px;
+        padding-left: 45px;
+        box-sizing: border-box;
+      }
+      .time{
+        width: 100%;
+        height: 30px;
+        text-align: right;
+        line-height: 30px;
+      }
+    }
+    .topright{
+      height: 100%;
+      float: right;
+      width: 430px;
+      text-align: center;
+      .p1{
+        font-size: 34px;
+        line-height: 46px;
+        color: $colorGreen;
+      }
+      .p2{
+        font-size: 14px;
+        color: $colorGreen;
+      }
+     /* background: green;*/
+      .zhanleft{
+        display: inline-block;
+      }
+      .line{
+        width: 20px;
+        display: inline-block;
+        height: 60px;
+        position: relative;
+        .aline{
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          top: 20px;
+          background: $colorGreen;
+        }
+      }
+      .zhanright{
+        display: inline-block;
+      }
+      .zhan{
+        font-size: 34px;
+        color: $colorRed;
+        line-height: 60px;
+      }
+    }
+  }
+  .content{
+    height: 140px;
+    background: $colorGreen;
+    color: $colorWhite;
+    width: 100%;
+    position: relative;
+    ul{
+      height: 140px;
+      width: 100%;
+      padding: 20px 13px;
+      box-sizing: border-box;
+      li{
+        width: 21px;
+        text-align: center;
+        line-height: 16px;
+        display: inline-block;
+      }
+    }
+    .jiantou{
+      font-size: 0;
+      line-height: 0;
+      border-width: 10px;
+      border-color: $colorWhite;
+      border-top-width: 0;
+      border-style: dashed;
+      border-bottom-style: solid;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      position: absolute;
+      bottom: 10px;
+      left: 339px;
+    }
+  }
+  .bottom{
+    height: 80px;
+    width: 100%;
+    .tishi{
+      text-align: center;
+      padding-top: 10px;
+
+    }
+  }
+}
