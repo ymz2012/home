@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端高级开发面试题总结</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>前端高级开发面试题总结</h1>
+    <div class="question">
+        1、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?
+    </div>
+    <div class="answer">
+        <p>（1）声明位于文档中的最前面，处于标签之前。告知浏览器的解析器，用什么文档类型规范来解析这个文档。</p>
+        <p>（2）严格模式的排版和 JS 运作模式是  以该浏览器支持的最高标准运行。</p>
+        <p>（3）在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</p>
+        <p>（4）DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</p>
+    </div>
+    <div class="question">
+        2、行内元素有哪些？块级元素有哪些？
+    </div>
+    <div class="answer">
+        <p>（1）CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，  比如div默认display属性值为“block”，成为“块级”元素；  span默认display属性值为“inline”，是“行内”元素。</p>
+        <p>（2）行内元素有：a b span img input select strong（强调的语气）  块级元素有：div ulol li dl dtdd h1 h2 h3 h4…p</p>
+    </div>
+    <div class="question">
+        3、link 和@import 的区别是？
+    </div>
+    <div class="answer">
+        <p>（1）link属于XHTML标签，而@import是CSS提供的</p>
+        <p>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载</p>
+        <p>（3）import只在IE5以上才能识别，而link是XHTML标签，无兼容问题</p>
+        <p>（4）link方式的样式的权重高于@import的权重</p>
+    </div>
+    <div class="question">
+        4、浏览器的内核分别是什么?
+    </div>
+    <div class="answer">
+        <p>
+            IE浏览器的内核Trident、Mozilla的Gecko、Chrome的Blink（WebKit的分支）、Opera内核原为Presto，现为Blink；
+        </p>
+    </div>
+    <div class="question">
+        5、HTML5有哪些新特性？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？
+    </div>
+    <div class="answer">
+        <p>
+            HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。      绘画 canvas    用于媒介回放的 video 和 audio 元素   本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；  sessionStorage 的数据在浏览器关闭后自动删除  语意化更好的内容元素，比如 article、footer、header、nav、section   表单控件，calendar、date、time、email、url、search    新的技术webworker, websockt, Geolocation
+        </p>
+    </div>
+    <div class="question">
+        6、对语义化如何理解？
+    </div>
+    <div class="answer">
+        <p>
+            HTML语义化就是让页面的内容结构化，便于对浏览器、搜索引擎解析；在没有样式CCS情况下也以一种文档格式显示，并且是容易阅读的。搜索引擎的爬虫依赖于标记来确定上下文和各个关键字的权重，利于 SEO。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+        </p>
+    </div>
+    <div class="question">
+        7、HTML5的离线储存有几种方式？
+    </div>
+    <div class="answer">
+        <p>
+            localStorage长期存储数据，浏览器关闭后数据不丢失；sessionStorage  数据在浏览器关闭后自动删除
+        </p>
+    </div>
+    <div class="question">
+        8、iframe有那些缺点？
+    </div>
+    <div class="answer">
+        <p>iframe会阻塞主页面的Onload事件；iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript动态给iframe添加src属性值，这样可以可以绕开以上两个问题。</p>
+    </div>
+    <div class="question">
+        9、请描述一下 cookies，sessionStorage和localStorage的区别？
+    </div>
+    <div class="answer">
+        <p>cookie在浏览器和服务器间来回传递。sessionStorage和localStorage不会sessionStorage和localStorage的存储空间更大；sessionStorage和 localStorage有更多丰富易用的接口；sessionStorage和localStorage各自独立的存储空间</p>
+    </div>
+    <div class="question">
+        10.写出几种IE6 BUG的解决方法
+    </div>
+    <div class="answer">
+        <p>
+            （1）双边距BUG float引起的 使用display<br>
+            （2）3像素问题 使用float引起的 使用dislpay:inline -3px<br>
+            （3）超链接hover 点击后失效 使用正确的书写顺序 link visited hover active<br>
+            （4）Ie z-index问题 给父级添加position:relative<br>
+            （5）Png 透明 使用js代Min-height 最小高度 !Important 解决<br>
+            （6）select 在ie6下遮盖 使用iframe嵌套 <br>
+        </p>
+    </div>
+    <div class="question">
+        11.CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？
+    </div>
+    <div class="answer">
+        <p>
+            1.id选择器（ # myid）        2.类选择器（.myclassname）          3.标签选择器（div, h1, p）    4.相邻选择器（h1 + p）          5.子选择器（ul< li）          6.后代选择器（li a）          7.通配符选择器（ * ）        8.属性选择器（a[rel = "external"]）          9.伪类选择器（a: hover, li: nth - child）      可继承的样式： font-size font-family color, UL LI DL DD DT;      不可继承的样式：border padding margin width height       优先级就近原则，同权重情况下样式定义最近者为准;       载入样式以最后载入的定位为准;       优先级为:   !important >  id > class > tag     important 比内联优先级高
+        </p>
+    </div>
+    <div class="question">
+        12.如何垂直居中一个img
+    </div>
+    <div class="answer">
+        <p>
+            {
+                 display:table-cell;
+                 text-align:center;
+                 vertical-align:middle;
+             }
+        </p>
+    </div>
+    <div class="question">
+        13.css弹性盒模型
+    </div>
+    <div class="answer">
+        <p>
+            css3新增的颜色和属性，css3的多列布局感觉可以实现了类似的样式，进行弹性盒子的垂直居中和水平居中
+            display -webkit-box <br>
+            -webkit-box-pack center 水平<br>
+            -webkit-box-align center  垂直<br>
+            display -webkit-flex<br>
+            -webkit-flex 1 平均分整个盒子的宽度
+        </p>
+    </div>
+    <div class="question">
+        14、CSS3有哪些新特性？
+    </div>
+    <div class="answer">
+        <p>
+            CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），  对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）  transform:rotate(9deg) scale(0.85,0.90)  translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜  增加了更多的CSS选择器  多背景rgba
+        </p>
+    </div>
+    <div class="question">
+        15.如何水平居中一个元素
+    </div>
+    <div class="answer">
+        <p>
+            如果需要居中的元素为常规流中inline元素，为父元素设置text-align: center;即可实现 <br>
+            如果需要居中的元素为常规流中block元素，1）为元素设置宽度，2）设置左右margin为auto。3）IE6下需在父元素上设置text-align: center;,再给子元素恢复需要的值 <br>
+            如果需要居中的元素为浮动元素，1）为元素设置宽度，2）position: relative;，3）浮动方向偏移量（left或者right）设置为50%，4）浮动方向上的margin设置为元素宽度一半乘以-1 <br>
+            如果需要居中的元素为绝对定位元素，1）为元素设置宽度，2）偏移量设置为50%，3）偏移方向外边距设置为元素宽度一半乘以-1
+        </p>
+    </div>
+    <div class="question">
+        16.绝对定位居中
+    </div>
+    <div class="answer">
+        <p>
+            .Absolute-Center {
+            margin: auto;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            }
+            需要声明元素的高度
+        </p>
+    </div>
+    <div class="question">
+        17.你如何对网站的文件和资源进行优化?期待的解决方案包括：
+    </div>
+    <div class="answer">
+        <p>
+            文件合并    文件最小化/文件压缩   使用CDN托管
+            缓存的使用
+        </p>
+    </div>
+    <div class="question">
+        18.css的偏移
+    </div>
+    <div class="answer">
+        <p>
+            1.float
+            让原来的元素可以脱离正常的文档流，实现左右排列，不设置宽度和最小宽度。
+            假如一行排满了 会把最后一个挤下来 <br>
+            2.position <br>
+            relative
+            即使偏移 ，位置还在。实质就是靠近最近的元素进行偏移，不分定位,不脱离文档流。<br>
+            absolute
+            偏移了位置就没了。靠最近的元素是relative/absolute定位的进行偏移，脱离了文档流 <br>
+            fixed
+            固定在一个位置 IE6严重不支持
+        </p>
+    </div>
+    <div class="question">
+        19.例举3种强制类型转换和2种隐式类型转换?
+    </div>
+    <div class="answer">
+        <p>
+            强制（parseInt,parseFloat,number）    隐式（== – ===）
+        </p>
+    </div>
+    <div class="question">
+        20.split() join() 的区别
+    </div>
+    <div class="answer">
+        <p>
+            前者是切割成数组的形式，后者是将数组转换成字符串
+        </p>
+    </div>
+    <div class="question">
+        21.数组方法pop() push() unshift() shift()
+    </div>
+    <div class="answer">
+        <p>
+            Push()尾部添加 pop()尾部删除    Unshift()头部添加 shift()头部删除
+        </p>
+    </div>
+    <div class="question">
+        22.call和apply的区别
+    </div>
+    <div class="answer">
+        <p>
+            Object.call(this,obj1,obj2,obj3)       Object.apply(this,arguments)
+        </p>
+    </div>
+    <div class="question">
+        23.ajax请求时，如何解释json数据
+    </div>
+    <div class="answer">
+        <p>
+            使用eval parse 鉴于安全性考虑使用parse更靠谱
+        </p>
+    </div>
+    <div class="question">
+        24.解释jsonp的原理，以及为什么不是真正的ajax
+    </div>
+    <div class="answer">
+        <p>
+            动态创建script标签，回调函数       Ajax是页面无刷新请求数据操作
+        </p>
+    </div>
+    <div class="question">
+        25.javascript的本地对象，内置对象和宿主对象
+    </div>
+    <div class="answer">
+        <p>
+            本地对象为array objregexp等可以new实例化      内置对象为gload Math 等不可以实例化的       宿主为浏览器自带的document,window等
+        </p>
+    </div>
+    <div class="question">
+        26.编写一个数组去重的方法
+    </div>
+    <div class="answer">
+        <p>
+            function oSort(arr)
+            {    var result ={};
+            varnewArr=[];    for(vari=0;i< arr.length;i++)
+            {    if(!result[arr])   {    newArr.push(arr)   result[arr]=1   }   }    return newArr   }
+        </p>
+    </div>
+    <div class="question">
+        27.this 关键字的指向
+    </div>
+    <div class="answer">
+        <p>
+            obj.foo() == obj        //方法调用模式,this指向obj<br>
+            foo() == window;         //函数调用模式,this指向window<br>
+            new obj.foo() == obj    //构造器调用模式, this指向新建立对象<br>
+            foo.call(obj) == obj;//APPLY调用模式,this指向obj<br>
+        </p>
+    </div>
+    <div class="question">
+        28.异步ajax的优缺点都有什么？
+    </div>
+    <div class="answer">
+        <p>
+            优点：<br>
+            相对于同步ajax：不会造成UI卡死，用户体验好。<br>
+            相对于刷新页面，省流量 <br>
+            缺点: <br>
+            后退按钮无效；多个请求同时触发时，由于回调时间不确定，会造成混乱，避免这种混乱需要复杂的判断机制。搜索引擎不友好
+
+        </p>
+    </div>
+    <div class="question">
+        29.eval是做什么的？
+    </div>
+    <div class="answer">
+        <p>
+            它的功能是把对应的字符串解析成JS代码并运行；应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+        </p>
+    </div>
+    <div class="question">
+        30.在Javascript中什么是伪数组？如何将伪数组转化为标准数组？
+    </div>
+    <div class="answer">
+        <p>
+            伪数组（类数组）：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组。可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。
+        </p>
+        <p>
+            functionlog(){ <br>
+            varargs = Array.prototype.slice.call(arguments);    //为了使用unshift数组方法，将argument转化为真正的数组 <br>
+            args.unshift('(app)'); <br>
+            console.log.apply(console,args); };
+        </p>
+    </div>
+</div>
+</body>
+</html>

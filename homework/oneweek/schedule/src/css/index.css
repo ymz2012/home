@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    border-collapse:collapse;
+    text-align: center;
+    width: 700px;
+    height: 300px;
+}
+
+thead,tbody{
+    border: 1px solid #000;
+}
+.num{
+    width: 30px;
+}
+
+td,th{
+    width: 50px;
+    height: 20px;
+}
