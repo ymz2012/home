@@ -10,12 +10,14 @@ $(document).ready(function(){
     //添加新闻
 
     //获取token
-    var token = "";
+    var token = $('#token').value;
     function getToken(){
         $.ajax({
-            url:'/admin/token'
-
-
+            url:'/admin/token',
+            token:token,
+            success:function(data){
+                $('#token').value = data.token;
+            }
         })
     }
 
@@ -64,8 +66,6 @@ $(document).ready(function(){
                 }
 
             });
-
-
         }
     });
 
