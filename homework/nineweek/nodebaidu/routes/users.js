@@ -18,6 +18,11 @@ router.get('/getnews', function(req, res, next) {
     });
 });
 
+//token验证
+router.get('/token', function(req, res, next) {
+    var token = md5()
+    res.json(token);
+});
 //确认更新
 
 router.post('/update', function(req, res) {
@@ -41,9 +46,12 @@ router.post('/update', function(req, res) {
 router.get('/curnews', function(req, res) {
     var newsid = req.query.newsid;
     connection.query('SELECT * FROM `news` WHERE `id` = ?',[newsid],function (error, rows) {
+        console.log();
         res.json(rows);
     });
 });
+
+
 
 //删除新闻的功能
 

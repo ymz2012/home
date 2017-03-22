@@ -9,6 +9,16 @@ $(document).ready(function(){
     refreshNews();
     //添加新闻
 
+    //获取token
+    var token = "";
+    function getToken(){
+        $.ajax({
+            url:'/admin/token'
+
+
+        })
+    }
+
     $('#btnsubmit').click(function(e){
         e.preventDefault();
         //输入判断
@@ -55,17 +65,7 @@ $(document).ready(function(){
 
             });
 
-            //将传入的非法字符串进行转码传入后端
-            function htmlEncode(html){
-                //1.首先动态创建一个容器标签元素，如DIV
-                var temp = document.createElement ("div");
-                //2.然后将要转换的字符串设置为这个元素的innerText(ie支持)或者textContent(火狐，google支持)
-                (temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
-                //3.最后返回这个元素的innerHTML，即得到经过HTML编码转换的字符串了
-                var output = temp.innerHTML;
-                temp = null;
-                return output;
-            }
+
         }
     });
 
@@ -104,12 +104,12 @@ $(document).ready(function(){
             data:{newsid:updateId},
             success:function(data){
                 console.log(data);
-                $('#unewstitle').val(data[0].newstitle);
-                $('#unewstype').val(data[0].newstype);
-                $('#unewsimg').val(data[0].newsimg);
-                $('#unewssrc').val(data[0].newssrc);
+                $('#unewstitle').val(htmlspecialchars_decode(data[0].newstitle));
+                $('#unewstype').val(htmlspecialchars_decode(data[0].newstype));
+                $('#unewsimg').val(htmlspecialchars_decode(data[0].newsimg));
+                $('#unewssrc').val(htmlspecialchars_decode(data[0].newssrc));
                 var utime = data[0].newstime.split('T')[0];
-                $('#unewstime').val(utime);
+                $('#unewstime').val(htmlspecialchars_decode(utime));
             }
         })
     });
@@ -121,11 +121,11 @@ $(document).ready(function(){
             url:'/admin/update',
             type:'post',
             data:{
-                newstitle:$('#unewstitle').val(),
-                newstype:$('#unewstype').val(),
-                newsimg:$('#unewsimg').val(),
-                newstime:$('#unewstime').val(),
-                newssrc:$('#unewssrc').val(),
+                newstitle:htmlEncode($('#unewstitle').val()),
+                newstype:htmlEncode($('#unewstype').val()),
+                newsimg:htmlEncode($('#unewsimg').val()),
+                newstime:htmlEncode($('#unewstime').val()),
+                newssrc:htmlEncode($('#unewssrc').val()),
                 id:updateId
             },
             success:function(data){
@@ -161,6 +161,27 @@ $(document).ready(function(){
                 })
             }
         });
+    }
+
+    //将特殊字符转换回来
+    function htmlspecialchars_decode(str){
+        str = str.replace(/&amp;/g, '&');
+        str = str.replace(/&lt;/g, '<');
+        str = str.replace(/&gt;/g, '>');
+        str = str.replace(/&quot;/g, "''");
+        str = str.replace(/&#039;/g, "'");
+        return str;
+    }
+    //将传入的非法字符串进行转码传入后端
+    function htmlEncode(html){
+        //1.首先动态创建一个容器标签元素，如DIV
+        var temp = document.createElement ("div");
+        //2.然后将要转换的字符串设置为这个元素的innerText(ie支持)或者textContent(火狐，google支持)
+        (temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
+        //3.最后返回这个元素的innerHTML，即得到经过HTML编码转换的字符串了
+        var output = temp.innerHTML;
+        temp = null;
+        return output;
     }
 });
 
