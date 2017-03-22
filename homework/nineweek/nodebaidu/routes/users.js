@@ -10,9 +10,7 @@ var connection = mysql.createPool({
   database : 'baidunews'
 });
 
-
 /* 后台路由页面 */
-
 
 router.get('/getnews', function(req, res, next) {
     connection.query('SELECT * FROM `news` WHERE `status` = 1 order by id desc',function (error, rows) {
@@ -63,11 +61,31 @@ router.post('/delete', function(req, res) {
 
 //insert
 router.post('/insert', function(req, res) {
+/*    var newstype = htmlDecode(req.body.newstype),
+        newstitle = htmlDecode(req.body.newstitle),
+        newsimg = htmlDecode(req.body.newsimg),
+        newstime = htmlDecode(req.body.newstime),
+        newssrc = htmlDecode(req.body.newssrc);*/
     var newstype = req.body.newstype,
         newstitle = req.body.newstitle,
         newsimg = req.body.newsimg,
         newstime = req.body.newstime,
         newssrc = req.body.newssrc;
+
+/*    //将传过来的字段进行解码传进数据库(之前想不解码直接穿进去,发现不好使好像是因为有&这个符号)
+    function htmlDecode(str){
+        var s = "";
+        if(str.length == 0) return "";
+        s = str.replace(/&amp;/g,"&");
+        s = s.replace(/&lt;/g,"<");
+        s = s.replace(/&gt;/g,">");
+        s = s.replace(/&nbsp;/g," ");
+        s = s.replace(/&#39;/g,"\'");
+        s = s.replace(/&quot;/g,"\"");
+        return String(s);
+    }
+    console.log(newstitle);
+    console.log(newstype);*/
     connection.query('INSERT INTO `news` (`newstitle`,`newstype`,`newsimg`,`newstime`,`newssrc`) VALUES (?,?,?,?,?)',[newstitle,newstype,newsimg,newstime,newssrc],function (error, result) {
         if(!error){
             res.json('success');
@@ -78,4 +96,9 @@ router.post('/insert', function(req, res) {
 });
 
 
+
+
+
 module.exports = router;
+
+

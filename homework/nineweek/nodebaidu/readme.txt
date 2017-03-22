@@ -1,0 +1,4 @@
+xss防御
+在nodebaidu/public/src/js/admin1.js的58行到69行定义了一个函数，对input输入的特殊字符进行处理
+csrf防御
+在admin.html73行增加一个input输入框type为hidden 在app.js的14到33行增加了一个模块

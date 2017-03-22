@@ -35,11 +35,11 @@ $(document).ready(function(){
             }
         }else {
             var jsonNews = {
-                newstitle:$('#newstitle').val(),
-                newstype:$('#newstype').val(),
-                newsimg:$('#newsimg').val(),
-                newstime:$('#newstime').val(),
-                newssrc:$('#newssrc').val()
+                newstitle:htmlEncode($('#newstitle').val()),
+                newstype:htmlEncode($('#newstype').val()),
+                newsimg:htmlEncode($('#newsimg').val()),
+                newstime:htmlEncode($('#newstime').val()),
+                newssrc:htmlEncode($('#newssrc').val())
             }
             //提交添加
             $.ajax({
@@ -55,6 +55,17 @@ $(document).ready(function(){
 
             });
 
+            //将传入的非法字符串进行转码传入后端
+            function htmlEncode(html){
+                //1.首先动态创建一个容器标签元素，如DIV
+                var temp = document.createElement ("div");
+                //2.然后将要转换的字符串设置为这个元素的innerText(ie支持)或者textContent(火狐，google支持)
+                (temp.textContent != undefined ) ? (temp.textContent = html) : (temp.innerText = html);
+                //3.最后返回这个元素的innerHTML，即得到经过HTML编码转换的字符串了
+                var output = temp.innerHTML;
+                temp = null;
+                return output;
+            }
         }
     });
 
@@ -123,12 +134,6 @@ $(document).ready(function(){
             }
         })
     });
-
-
-
-
-
-
     function refreshNews(){
         //清空所有新闻列表
         $newsTable.empty();
