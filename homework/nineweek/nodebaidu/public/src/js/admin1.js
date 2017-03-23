@@ -7,6 +7,7 @@
 $(document).ready(function(){
     var $newsTable = $('#newstable tbody');
     refreshNews();
+
     //添加新闻
 
     //获取token
@@ -14,8 +15,10 @@ $(document).ready(function(){
     function getToken(){
         $.ajax({
             url:'/admin/token',
-            token:token,
+            type:'get',
+            datatype:'json',
             success:function(data){
+                console.log(data.token);
                 $('#token').value = data.token;
             }
         })
@@ -46,6 +49,8 @@ $(document).ready(function(){
                 $('#newssrc').parent().removeClass('has-error');
             }
         }else {
+
+            getToken();
             var jsonNews = {
                 newstitle:htmlEncode($('#newstitle').val()),
                 newstype:htmlEncode($('#newstype').val()),
@@ -59,6 +64,7 @@ $(document).ready(function(){
                 type:'post',
                 data:jsonNews,
                 datatype:'json',
+                token:'token',
                 success:function(data){
                     console.log(data);
                     refreshNews();
@@ -182,6 +188,17 @@ $(document).ready(function(){
         var output = temp.innerHTML;
         temp = null;
         return output;
+    }
+
+    function getToken(){
+        var token = $('#token').value;
+        $.ajax({
+            url:'/admin/token',
+            token:token,
+            success:function(data){
+                $('#token').value = data.token;
+            }
+        })
     }
 });
 

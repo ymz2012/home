@@ -1,4 +1,4 @@
 xss防御
 在nodebaidu/public/src/js/admin1.js的156行到176行定义了两个函数，对特殊字符进行转换和转出
 csrf防御
-在admin.html73行增加一个input输入框type为hidden 在app.js的14到33行增加了一个模块
+传token 验证  没整好

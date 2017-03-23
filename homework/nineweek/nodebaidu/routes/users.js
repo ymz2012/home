@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
+var crypto = require('crypto');
+var md5 = crypto.createHash('md5');
+var session = require('session');
 
 var connection = mysql.createPool({
   host     : 'localhost',
@@ -20,26 +23,32 @@ router.get('/getnews', function(req, res, next) {
 
 //token验证
 router.get('/token', function(req, res, next) {
-    var token = md5()
+    var myDate = String(new Date());
+    md5.update(myDate)
+    var token = md5.digest('hex');
+    session['token'] = token;
+    console.log(token);
     res.json(token);
 });
 //确认更新
 
 router.post('/update', function(req, res) {
-    var newsid = req.body.id,
-        newstype = req.body.newstype,
-        newstitle = req.body.newstitle,
-        newsimg = req.body.newsimg,
-        newstime = req.body.newstime,
-        newssrc = req.body.newssrc;
-    connection.query('UPDATE `news` SET `newstitle`=?,`newstype`=?,`newsimg`=?,`newstime`=?,`newssrc`=? WHERE `id` = ?',[newstitle,newstype,newsimg,newstime,newssrc,newsid],function (error, rows) {
-        if(!error){
-            res.json('success');
-            console.log(rows.changedRows);
-        }
+    if(req.body.token == session.token){
+        var newsid = req.body.id,
+            newstype = req.body.newstype,
+            newstitle = req.body.newstitle,
+            newsimg = req.body.newsimg,
+            newstime = req.body.newstime,
+            newssrc = req.body.newssrc;
+        connection.query('UPDATE `news` SET `newstitle`=?,`newstype`=?,`newsimg`=?,`newstime`=?,`newssrc`=? WHERE `id` = ?',[newstitle,newstype,newsimg,newstime,newssrc,newsid],function (error, rows) {
+            if(!error){
+                res.json('success');
+                console.log(rows.changedRows);
+            }
+            /*res.json(rows);*/
+        });
+    }
 
-        /*res.json(rows);*/
-    });
 });
 
 //模态框取值
@@ -69,16 +78,26 @@ router.post('/delete', function(req, res) {
 
 //insert
 router.post('/insert', function(req, res) {
+    if(req.body.token == session.token){
+        var newstype = req.body.newstype,
+            newstitle = req.body.newstitle,
+            newsimg = req.body.newsimg,
+            newstime = req.body.newstime,
+            newssrc = req.body.newssrc;
+        connection.query('INSERT INTO `news` (`newstitle`,`newstype`,`newsimg`,`newstime`,`newssrc`) VALUES (?,?,?,?,?)',[newstitle,newstype,newsimg,newstime,newssrc],function (error, result) {
+            if(!error){
+                res.json('success');
+                console.log(result.insertId);
+            }
+
+        });
+    }
 /*    var newstype = htmlDecode(req.body.newstype),
         newstitle = htmlDecode(req.body.newstitle),
         newsimg = htmlDecode(req.body.newsimg),
         newstime = htmlDecode(req.body.newstime),
         newssrc = htmlDecode(req.body.newssrc);*/
-    var newstype = req.body.newstype,
-        newstitle = req.body.newstitle,
-        newsimg = req.body.newsimg,
-        newstime = req.body.newstime,
-        newssrc = req.body.newssrc;
+
 
 /*    //将传过来的字段进行解码传进数据库(之前想不解码直接穿进去,发现不好使好像是因为有&这个符号)
     function htmlDecode(str){
@@ -94,13 +113,7 @@ router.post('/insert', function(req, res) {
     }
     console.log(newstitle);
     console.log(newstype);*/
-    connection.query('INSERT INTO `news` (`newstitle`,`newstype`,`newsimg`,`newstime`,`newssrc`) VALUES (?,?,?,?,?)',[newstitle,newstype,newsimg,newstime,newssrc],function (error, result) {
-        if(!error){
-            res.json('success');
-            console.log(result.insertId);
-        }
 
-    });
 });
 
 
