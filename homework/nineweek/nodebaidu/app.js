@@ -7,31 +7,7 @@ var bodyParser = require('body-parser');
 var router = express.Router();
 var index = require('./routes/index');
 var users = require('./routes/users');
-
 var app = express();
-
-
-//预防CSRF
-var session = require('express-session');
-app.use(session({　　　　　　　　//生成一个session实例
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: false
-}));
-
-//使用CSRF模块
-
-var csurf = require('csurf');   //引入模块
-
-var csrfProtection = csurf();   //设置路由中间件
-router.use(csrfProtection);
-
-router.get('/signup',function(req,res,next){
-  res.render('signup',{
-    csrfToken: req.csrfToken()
-  });
-});
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

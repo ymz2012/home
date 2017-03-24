@@ -9,7 +9,7 @@
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
     "crypto": "0.0.3",
-    "csurf": "*",
+    "csurf": "^1.9.0",
     "debug": "~2.6.0",
     "ejs": "~2.5.5",
     "express": "~4.14.1",

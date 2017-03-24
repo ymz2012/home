@@ -5,24 +5,23 @@
 //打开后台页面的时候发送请求 刷新新闻列表
 
 $(document).ready(function(){
+    var token;
     var $newsTable = $('#newstable tbody');
     refreshNews();
-
     //添加新闻
-
     //获取token
-    var token = $('#token').value;
     function getToken(){
         $.ajax({
-            url:'/admin/token',
+            url:'/admin/getToken',
             type:'get',
             datatype:'json',
             success:function(data){
-                console.log(data.token);
-                $('#token').value = data.token;
+                token = data.token;
+                console.log(token);
             }
         })
     }
+    getToken();
 
     $('#btnsubmit').click(function(e){
         e.preventDefault();
@@ -49,14 +48,13 @@ $(document).ready(function(){
                 $('#newssrc').parent().removeClass('has-error');
             }
         }else {
-
-            getToken();
             var jsonNews = {
                 newstitle:htmlEncode($('#newstitle').val()),
                 newstype:htmlEncode($('#newstype').val()),
                 newsimg:htmlEncode($('#newsimg').val()),
                 newstime:htmlEncode($('#newstime').val()),
-                newssrc:htmlEncode($('#newssrc').val())
+                newssrc:htmlEncode($('#newssrc').val()),
+                token:token
             }
             //提交添加
             $.ajax({
@@ -64,7 +62,6 @@ $(document).ready(function(){
                 type:'post',
                 data:jsonNews,
                 datatype:'json',
-                token:'token',
                 success:function(data){
                     console.log(data);
                     refreshNews();
@@ -88,7 +85,9 @@ $(document).ready(function(){
             $.ajax({
                 url:'/admin/delete',
                 type:'post',
-                data:{newsid:deleteId},
+                data:{newsid:deleteId,
+                      token:token
+                     },
                 success:function(){
                     console.log('删除成功');
                     $('#deleteModal').modal('hide');
@@ -132,7 +131,8 @@ $(document).ready(function(){
                 newsimg:htmlEncode($('#unewsimg').val()),
                 newstime:htmlEncode($('#unewstime').val()),
                 newssrc:htmlEncode($('#unewssrc').val()),
-                id:updateId
+                id:updateId,
+                token:token
             },
             success:function(data){
                 $('#updateModal').modal('hide');
@@ -190,7 +190,7 @@ $(document).ready(function(){
         return output;
     }
 
-    function getToken(){
+/*    function getToken(){
         var token = $('#token').value;
         $.ajax({
             url:'/admin/token',
@@ -199,6 +199,6 @@ $(document).ready(function(){
                 $('#token').value = data.token;
             }
         })
-    }
+    }*/
 });
 

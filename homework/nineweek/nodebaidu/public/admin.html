@@ -38,7 +38,8 @@
                     <h3 class="panel-title">新闻编辑</h3>
                 </div>
                 <div class="panel-body">
-                    <form>
+                    <form action="/process" method="POST">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
                         <div class="form-group">
                             <label for="newstitle">新闻标题</label>
                             <input type="text" class="form-control" id="newstitle" placeholder="请输入新闻标题">
@@ -143,7 +144,8 @@
                 <h4 class="modal-title">编辑</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="/process" method="POST">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
                     <div class="form-group">
                         <label for="unewstitle">新闻标题</label>
                         <input type="text" class="form-control" id="unewstitle" placeholder="请输入新闻标题">

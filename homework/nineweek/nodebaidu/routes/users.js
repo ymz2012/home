@@ -13,6 +13,31 @@ var connection = mysql.createPool({
   database : 'baidunews'
 });
 
+//定义token验证
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var csrf = require('csurf')
+// setup route middlewares
+var csrfProtection = csrf({ cookie: true })
+var parseForm = bodyParser.urlencoded({ extended: false })
+// parse cookies
+// we need this because "cookie" is true in csrfProtection
+router.use(cookieParser())
+
+router.get('/getToken', csrfProtection, function (req, res) {
+    // pass the csrfToken to the view
+    //将token传出去让验证的时候可以调用
+    global.token = {"token":req.csrfToken()};
+    res.json(token);
+    //res.render('send', { csrfToken: req.csrfToken() })
+})
+
+router.post('/process', parseForm, csrfProtection, function (req, res) {
+    res.send('data is being processed')
+})
+
+
+
 /* 后台路由页面 */
 
 router.get('/getnews', function(req, res, next) {
@@ -21,19 +46,15 @@ router.get('/getnews', function(req, res, next) {
     });
 });
 
-//token验证
-router.get('/token', function(req, res, next) {
-    var myDate = String(new Date());
-    md5.update(myDate)
-    var token = md5.digest('hex');
-    session['token'] = token;
-    console.log(token);
-    res.json(token);
-});
 //确认更新
 
 router.post('/update', function(req, res) {
-    if(req.body.token == session.token){
+    var tokenKey = token["token"];
+    console.log(req.body.token);
+    console.log("====");
+    console.log(tokenKey);
+    //判断token值是否一致
+    if(req.body.token == tokenKey){
         var newsid = req.body.id,
             newstype = req.body.newstype,
             newstitle = req.body.newstitle,
@@ -45,7 +66,6 @@ router.post('/update', function(req, res) {
                 res.json('success');
                 console.log(rows.changedRows);
             }
-            /*res.json(rows);*/
         });
     }
 
@@ -65,20 +85,24 @@ router.get('/curnews', function(req, res) {
 //删除新闻的功能
 
 router.post('/delete', function(req, res) {
-    var newsid = req.body.newsid;
-    connection.query('UPDATE `news` SET `status` = 2 WHERE `id` = ?',[newsid],function (error, result) {
-        if(!error){
-            res.json('success');
-            console.log(result.affectedRows);
-        }
+    var tokenKey = token["token"];
+    if(req.body.token == tokenKey){
+        var newsid = req.body.newsid;
+        connection.query('UPDATE `news` SET `status` = 2 WHERE `id` = ?',[newsid],function (error, result) {
+            if(!error){
+                res.json('success');
+                console.log(result.affectedRows);
+            }
 
-        /*res.json(rows);*/
-    });
+            /*res.json(rows);*/
+        });
+    }
 });
 
 //insert
 router.post('/insert', function(req, res) {
-    if(req.body.token == session.token){
+    var tokenKey = token["token"];
+    if(req.body.token == tokenKey){
         var newstype = req.body.newstype,
             newstitle = req.body.newstitle,
             newsimg = req.body.newsimg,
@@ -92,28 +116,6 @@ router.post('/insert', function(req, res) {
 
         });
     }
-/*    var newstype = htmlDecode(req.body.newstype),
-        newstitle = htmlDecode(req.body.newstitle),
-        newsimg = htmlDecode(req.body.newsimg),
-        newstime = htmlDecode(req.body.newstime),
-        newssrc = htmlDecode(req.body.newssrc);*/
-
-
-/*    //将传过来的字段进行解码传进数据库(之前想不解码直接穿进去,发现不好使好像是因为有&这个符号)
-    function htmlDecode(str){
-        var s = "";
-        if(str.length == 0) return "";
-        s = str.replace(/&amp;/g,"&");
-        s = s.replace(/&lt;/g,"<");
-        s = s.replace(/&gt;/g,">");
-        s = s.replace(/&nbsp;/g," ");
-        s = s.replace(/&#39;/g,"\'");
-        s = s.replace(/&quot;/g,"\"");
-        return String(s);
-    }
-    console.log(newstitle);
-    console.log(newstype);*/
-
 });
 
 
