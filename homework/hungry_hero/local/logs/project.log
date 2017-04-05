@@ -1,0 +1,52 @@
+2017-03-28T08:29:43.617Z - normal: Load ~/.CocosCreator/settings.json
+2017-03-28T08:29:43.623Z - normal: checking language setting...
+2017-03-28T08:29:43.624Z - normal: Language: zh
+2017-03-28T08:29:45.386Z - success: protocol editor-framework registered
+2017-03-28T08:29:45.386Z - success: protocol app registered
+2017-03-28T08:29:45.387Z - success: protocol theme registered
+2017-03-28T08:29:45.387Z - success: protocol profile registered
+2017-03-28T08:29:45.387Z - success: protocol packages registered
+2017-03-28T08:29:45.391Z - success: protocol unpack registerred
+2017-03-28T08:29:45.391Z - success: protocol disable-commonjs registerred
+2017-03-28T08:29:45.506Z - normal: connected!
+2017-03-28T08:29:45.510Z - normal: Check project /download/cocos2d-js/hungry_hero
+2017-03-28T08:29:45.512Z - normal: Initializing Cocos2d
+2017-03-28T08:29:45.828Z - normal: Initializing Asset Database
+2017-03-28T08:29:45.870Z - success: protocol uuid registerred
+2017-03-28T08:29:45.870Z - success: protocol db registerred
+2017-03-28T08:29:45.871Z - success: protocol thumbnail registerred
+2017-03-28T08:29:45.871Z - normal: Loading editor/builtin packages
+2017-03-28T08:29:46.058Z - success: assets loaded
+2017-03-28T08:29:46.076Z - success: builder loaded
+2017-03-28T08:29:46.082Z - success: hierarchy loaded
+2017-03-28T08:29:46.088Z - success: inspector loaded
+2017-03-28T08:29:46.090Z - success: keystore loaded
+2017-03-28T08:29:46.098Z - success: node-library loaded
+2017-03-28T08:29:46.105Z - success: preferences loaded
+2017-03-28T08:29:46.123Z - success: project-importer loaded
+2017-03-28T08:29:46.127Z - success: project-settings loaded
+2017-03-28T08:29:46.144Z - success: ui-kit loaded
+2017-03-28T08:29:46.154Z - success: ui-grid loaded
+2017-03-28T08:29:46.160Z - success: scene loaded
+2017-03-28T08:29:46.161Z - success: sprite-editor loaded
+2017-03-28T08:29:46.358Z - success: store loaded
+2017-03-28T08:29:46.372Z - success: timeline loaded
+2017-03-28T08:29:46.372Z - normal: Loading builtin packages
+2017-03-28T08:29:46.392Z - success: anysdk loaded
+2017-03-28T08:29:46.408Z - success: asset-db-debugger loaded
+2017-03-28T08:29:46.411Z - success: code-editor loaded
+2017-03-28T08:29:46.426Z - success: color-picker loaded
+2017-03-28T08:29:46.433Z - success: console loaded
+2017-03-28T08:29:46.438Z - success: package-manager loaded
+2017-03-28T08:29:46.444Z - success: tester loaded
+2017-03-28T08:29:46.448Z - success: ui-kit-preview-extra loaded
+2017-03-28T08:29:46.454Z - success: ui-kit-preview loaded
+2017-03-28T08:29:46.460Z - success: ui-tree loaded
+2017-03-28T08:29:46.552Z - normal: Initializing project /download/cocos2d-js/hungry_hero
+2017-03-28T08:29:46.565Z - warn: Profile profile://local/local.json warning: reset profile field: last-edit
+2017-03-28T08:29:46.568Z - normal: Loading packages
+2017-03-28T08:29:46.574Z - normal: Watching packages
+2017-03-28T08:29:46.590Z - normal: Run Application
+2017-03-28T08:29:47.653Z - success: preview server running at http://localhost:7456
+2017-03-28T08:29:53.613Z - normal: 1.4.0
+2017-03-28T08:41:53.236Z - info: shutdown preview server
