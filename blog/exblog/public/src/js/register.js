@@ -46,7 +46,7 @@ $(document).ready(function(){
 	            datatype:'json',
 	            success:function(data){
 	                console.log(data);
-	                window.location.href = '/admin.html';
+	                window.location.href = '/login.html';
 	            }
 	        });
 		}

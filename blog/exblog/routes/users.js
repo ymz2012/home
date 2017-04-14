@@ -32,7 +32,7 @@ router.get('/getToken', csrfProtection, function (req, res) {
     res.json(token);
     //res.render('send', { csrfToken: req.csrfToken() })
 })
-
+//注册用户存入数据库
 router.post('/doRegister',function (req, res) {
     var userId = req.body.userId,
 	    passwd = req.body.passwd,
@@ -48,10 +48,9 @@ router.post('/doRegister',function (req, res) {
             }
         });
 })
+//验证登录
 
-/* 后台路由页面 */
-
-router.get('/getnews', function(req, res, next) {
+router.post('/login', function(req, res) {
     connection.query('SELECT * FROM `news` WHERE `status` = 1 order by id desc',function (error, rows) {
         res.json(rows);
     });

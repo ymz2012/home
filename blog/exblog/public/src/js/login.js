@@ -17,7 +17,7 @@ $(document).ready(function(){
 		function verify(){
 			$.ajax({
 				type:"get",
-				url:"/admin/",
+				url:"/admin/login",
 				async:true
 			});
 		}
