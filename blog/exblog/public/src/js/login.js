@@ -15,11 +15,17 @@ $(document).ready(function(){
             }
 		}
 		function verify(){
+			var userID = $('#userID').val();
 			$.ajax({
-				type:"get",
+				type:"post",
 				url:"/admin/login",
-				async:true
+				datatype:'json',
+				data:{userId:userID},
+				success:function(data){
+					console.log(data);		
+				}
 			});
 		}
+		verify();
 	})
 })

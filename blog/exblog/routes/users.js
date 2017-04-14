@@ -51,7 +51,10 @@ router.post('/doRegister',function (req, res) {
 //验证登录
 
 router.post('/login', function(req, res) {
-    connection.query('SELECT * FROM `news` WHERE `status` = 1 order by id desc',function (error, rows) {
+	var userId = req.body.userId;
+	console.log(userId);
+    connection.query('SELECT * FROM `user` WHERE `name` = ?',[userId],function (error, rows) {
+    		console.log(rows);
         res.json(rows);
     });
 });
