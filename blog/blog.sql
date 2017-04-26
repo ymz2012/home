@@ -16,6 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `blog_table`
+--
+
+DROP TABLE IF EXISTS `blog_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `blog_table` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `newstype` char(200) DEFAULT NULL,
+  `newstitle` varchar(200) DEFAULT NULL,
+  `newscontent` varchar(1000) DEFAULT NULL,
+  `newstime` datetime DEFAULT NULL,
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `blog_table`
+--
+
+LOCK TABLES `blog_table` WRITE;
+/*!40000 ALTER TABLE `blog_table` DISABLE KEYS */;
+INSERT INTO `blog_table` VALUES (1,'杂文','ceshi','ceshicontent						','2017-04-01 00:00:00');
+/*!40000 ALTER TABLE `blog_table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user`
 --
 
@@ -51,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-12 18:50:55
+-- Dump completed on 2017-04-26 19:03:17
