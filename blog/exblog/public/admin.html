@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>后台管理</title>
@@ -7,35 +8,125 @@
 		<link rel="stylesheet" href="./src/css/cdn/bootstrap.min.css" />
 		<link rel="stylesheet" href="./src/css/admin.css" />
 	</head>
+
 	<body>
 		<!--导航条start-->
 		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">很明显我在扯淡</a>
-		    </div>
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
-		        <li><a href="#">全部文章</a></li>
-		      </ul>
-		      <form class="navbar-form navbar-left">
-		        <div class="form-group">
-		          <input type="text" class="form-control" placeholder="Search">
-		        </div>
-		        <button type="submit" class="btn btn-default">搜索文章</button>
-		      </form>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">GitHub</a></li>
-		        <li><a href="#">新浪微博</a></li>
-		        <li><a href="#">简书</a></li>
-		      </ul>
-		    </div>
-		  </div>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">很明显我在扯淡</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="#">全部文章</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">搜索文章</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">GitHub</a>
+						</li>
+						<li>
+							<a href="#">新浪微博</a>
+						</li>
+						<li>
+							<a href="#">简书</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 		<!--导航条end-->
+		<!--内容start-->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">文章编辑</h3>
+						</div>
+						<div class="panel-body">
+							<form action="/process" method="POST">
+								<div class="form-group">
+									<label for="newstitle">文章标题</label>
+									<input type="text" class="form-control" id="newstitle" placeholder="请输入文章标题">
+								</div>
+								<div class="form-group">
+									<label for="newstype">文章类型</label>
+									<select class="form-control" id="newstype">
+										<option>杂文</option>
+										<option>技术</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="newscontent">文章内容</label>
+									<textarea rows="5" wrap="hard" class="form-control" id="newscontent" placeholder="请输入文章内容">
+										
+									</textarea>
+								</div>
+
+								<div class="form-group">
+									<label for="newstime">编辑时间</label>
+									<input type="date" class="form-control" id="newstime">
+								</div>
+								<button class="btn btn-primary" id="btnsubmit">完成编辑</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<!--新闻列表-->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">文章列表</h3>
+						</div>
+						<div class="panel-body" id="panel-body">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--内容END-->
+		<script type="text/html" id="ejs_panel-body">
+			<table class="table" id="newstable">
+				<thead>
+					<tr>
+						<th>item_id</th>
+						<th>文章类型</th>
+						<th>文章标题</th>
+						<th>编辑时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>123</td>
+						<td>百家</td>
+						<td>测试</td>
+						<td>2017-03-02</td>
+						<td>
+							<button class="btn btn-primary btn-xs">编辑</button>
+							<button class="btn btn-danger btn-xs">删除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</script>
 		<script type="text/javascript" src="src/js/cdn/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="src/js/cdn/ejs_production.js"></script>
 		<script type="text/javascript" src="src/js/cdn/bootstrap.min.js"></script>
 		<script type="text/javascript" src="src/js/admin.js"></script>
 	</body>
+
 </html>
