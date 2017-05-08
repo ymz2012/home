@@ -55,7 +55,7 @@
 							<h3 class="panel-title">文章编辑</h3>
 						</div>
 						<div class="panel-body">
-							<form action="/process" method="POST">
+							<form>
 								<div class="form-group">
 									<label for="newstitle">文章标题</label>
 									<input type="text" class="form-control" id="newstitle" placeholder="请输入文章标题">
@@ -85,7 +85,7 @@
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<!--新闻列表-->
-					<div class="panel panel-default">
+					<div class="panel panel-default" id="panelDefault">
 						<div class="panel-heading">
 							<h3 class="panel-title">文章列表</h3>
 						</div>
@@ -97,6 +97,67 @@
 			</div>
 		</div>
 		<!--内容END-->
+		<!-- Modal delete-->
+		<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title">警告</h4>
+		            </div>
+		            <div class="modal-body">
+		                删除无法恢复
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		                <button type="button" class="btn btn-primary" id="confirmDelete">确认</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Modal update-->
+		<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">文章编辑</h4>
+					</div>
+					<div class="modal-body">
+						<form action="/process" method="POST">
+							<input type="hidden" name="_csrf" value="{{csrfToken}}">
+							<div class="form-group">
+								<label for="unewstitle">文章标题</label>
+								<input type="text" class="form-control" id="unewstitle" placeholder="请输入新闻标题">
+							</div>
+							<div class="form-group">
+								<label for="unewstype">文章类型</label>
+								<select class="form-control" id="unewstype">
+									<option>杂文</option>
+									<option>技术</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="unewscontent">文章内容</label>
+								<textarea rows="5" wrap="hard" class="form-control" id="unewscontent" placeholder="请输入文章内容">
+									
+								</textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="unewstime">编辑时间</label>
+								<input type="date" class="form-control" id="unewstime">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary" id="confirmUpdate">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--渲染数据-->
 		<script type="text/html" id="ejs_panel-body">
 			<table class="table" id="newstable">
 				<thead>
@@ -110,16 +171,18 @@
 				</thead>
 
 				<tbody>
-					<tr>
-						<td>123</td>
-						<td>百家</td>
-						<td>测试</td>
-						<td>2017-03-02</td>
+					[% for(var i=0;i
+					< data.length;i++){%] <tr>
+						<td>[%=data[i].item_id%]</td>
+						<td>[%=data[i].newstype%]</td>
+						<td>[%=data[i].newstitle%]</td>
+						<td>[%=data[i].newstime%]</td>
 						<td>
-							<button class="btn btn-primary btn-xs">编辑</button>
-							<button class="btn btn-danger btn-xs">删除</button>
+							<button class="btn btn-primary btn-xs btnEdit">编辑</button>
+							<button class="btn btn-danger btn-xs btnDel">删除</button>
 						</td>
-					</tr>
+						</tr>
+						[%}%]
 				</tbody>
 			</table>
 		</script>
