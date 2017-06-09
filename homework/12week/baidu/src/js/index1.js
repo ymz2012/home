@@ -19,7 +19,6 @@
         this.bindEven();
     };
     baidu.prototype.func = function(){
-
         var storage = window.localStorage;
         this.evenFun = {
             //加载存储的颜色
