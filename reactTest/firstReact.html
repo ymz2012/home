@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第一个react的程序</title>
+	</head>
+	<body>
+		<script src="./build/react-0.13.4.js"></script>
+		<script src="./build/JSXTransformer.js"></script>
+		<script type="text/jsx">
+			var style = {
+				color:'red',
+				border: '1px #000 solid',
+			};
+			/**var HelloWorld = React.createClass({
+				render: function(){
+					return <p>Hello {this.props.name ? this.props.name : "World"}</p>
+				}
+			});**/
+			var HelloWorld = React.createClass({
+				render: function(){
+					return <p>Hello {this.props.name || "World"}</p>
+				}
+			});
+			React.render(<div style={style}><HelloWorld name = "ymz"></HelloWorld></div>,document.body);
+		</script>
+	</body>
+</html>
